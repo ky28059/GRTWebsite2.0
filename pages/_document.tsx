@@ -47,7 +47,7 @@ class GRTDocument extends Document {
                     <meta property="og:url" content="http://gunnrobotics.grtboosters.com" />
                     <meta property="og:image" content="http://gunnrobotics.grtboosters.com/icons/apple-icon.png" />
                 </Head>
-                <body>
+                <body className="font-['Roboto',_sans-serif]">
                     <Main />
                     <NextScript />
                 </body>
