@@ -28,10 +28,31 @@ export default function NavBar() {
                 </nav>
             </header>
 
-            <SubNav
-                match="/FIRST"
-                routes={[{name: 'FIRST', href: ''}, {name: 'Accolades', href: '/accolades'}]}
-            />
+            {/* Subnav */}
+            <nav className="flex bg-black text-white px-5">
+                <Match href="/FIRST">
+                    <SubNavLink href="/FIRST">FIRST</SubNavLink>
+                    <SubNavLink href="/FIRST/accolades">Accolades</SubNavLink>
+                </Match>
+                <Match href="/subgroups">
+                    <SubNavLink href="/subgroups">Subgroups</SubNavLink>
+                    <SubNavLink href="/subgroups/controls">Controls</SubNavLink>
+                    <SubNavLink href="/subgroups/drivetrain">Drivetrain</SubNavLink>
+                    <SubNavLink href="/subgroups/cnc">CNC</SubNavLink>
+                    <SubNavLink href="/subgroups/pneumatics">Pneumatics</SubNavLink>
+                    <SubNavLink href="/subgroups/animation">Animation</SubNavLink>
+                    <SubNavLink href="/subgroups/welding">Welding</SubNavLink>
+                    <SubNavLink href="/subgroups/business">Business</SubNavLink>
+                </Match>
+                <Match href="/mentors">
+                    <SubNavLink href="/mentors">Mentors</SubNavLink>
+                    <SubNavLink href="/mentors/kristina">Kristina</SubNavLink>
+                    <SubNavLink href="/mentors/seth">Seth</SubNavLink>
+                    <SubNavLink href="/mentors/karl">Karl</SubNavLink>
+                    <SubNavLink href="/mentors/phil">Phil</SubNavLink>
+                    <SubNavLink href="/mentors/zach">Zach</SubNavLink>
+                </Match>
+            </nav>
         </div>
     )
 }
@@ -58,24 +79,17 @@ function NavLink(props: NavLinkProps) {
     )
 }
 
-// A page-specific subnav. These will render if the path passed to `props.match` matches the current URL, mapping
-// the provided route objects to links.
-// TODO: this is not a great way to implement subnavs, and does not support changing subnavs on hover without
-// complicating props further.
-type SubNavProps = {match: string, routes: {name: string, href: string}[]};
-function SubNav(props: SubNavProps) {
-    const {match, routes} = props;
+// A `<Match>` component which renders its children if the current path matches the provided `href`.
+// TODO: does this component need to exist?
+// TODO: is there a better way of implementing subnavs? This still does not work with hover without complicating
+// props.
+type MatchProps = {href: string, children: ReactNode};
+function Match(props: MatchProps) {
+    const {href, children} = props;
     const {pathname} = useRouter();
 
-    if (!pathname.startsWith(match)) return null;
-
-    return (
-        <nav className="flex bg-black text-white px-5">
-            {routes.map(({name, href}) => (
-                <SubNavLink href={props.match + href}>{name}</SubNavLink>
-            ))}
-        </nav>
-    )
+    if (!pathname.startsWith(href)) return null;
+    return <>{children}</>;
 }
 
 function SubNavLink(props: NavLinkProps) {
