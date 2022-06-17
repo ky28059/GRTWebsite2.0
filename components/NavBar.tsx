@@ -38,10 +38,21 @@ export default function NavBar() {
 
 type NavLinkProps = {href: string, children: ReactNode};
 function NavLink(props: NavLinkProps) {
+    const {href, children} = props;
+    const {pathname} = useRouter();
+    const active = pathname.startsWith(href);
+
     return (
-        <Link href={props.href}>
-            <a className="p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
-                {props.children}
+        <Link href={href}>
+            <a className="relative p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+                {children}
+                {active && (
+                    // CSS triangle; the width of the triangle is `2 * border-x-width`, and the height is
+                    // `border-b-width`. The color of the triangle is the color of the bottom border.
+                    <span
+                        className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent"
+                    />
+                )}
             </a>
         </Link>
     )
@@ -73,8 +84,14 @@ function SubNavLink(props: NavLinkProps) {
 
     return (
         <Link href={props.href}>
-            <a className={'p-5 text-sm ' + (active ? 'text-white' : 'text-[rgb(150_150_150)]')}>
+            <a className={'relative p-5 text-sm transition duration-200 ' + (active ? 'text-white' : 'text-[rgb(150_150_150)] hover:text-white')}>
                 {props.children}
+                {active && (
+                    // CSS triangle; see comment above.
+                    <span
+                        className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-white border-x-[16px] border-x-transparent"
+                    />
+                )}
             </a>
         </Link>
     )
