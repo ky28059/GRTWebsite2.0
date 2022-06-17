@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'theme': 'rgb(117 10 10)'
+      }
+    },
     container: {
       center: true,
       padding: {

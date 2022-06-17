@@ -1,10 +1,11 @@
 import {ReactNode} from 'react';
 import Head from 'next/head';
+import Layout from '../../components/Layout';
 
 
 export default function Accolades() {
     return (
-        <main className="container py-8">
+        <Layout>
             <Head>
                 <title>Accolades | GRT</title>
             </Head>
@@ -244,7 +245,7 @@ export default function Accolades() {
                     </Event>
                 </Season>
             </div>
-        </main>
+        </Layout>
     )
 }
 
