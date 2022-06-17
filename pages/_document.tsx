@@ -4,7 +4,7 @@ import Document, {Html, Head, Main, NextScript} from 'next/document';
 class GRTDocument extends Document {
     render() {
         return (
-            <Html>
+            <Html className="h-full">
                 <Head>
                     <meta charSet="utf-8" />
 
@@ -47,7 +47,7 @@ class GRTDocument extends Document {
                     <meta property="og:url" content="http://gunnrobotics.grtboosters.com" />
                     <meta property="og:image" content="http://gunnrobotics.grtboosters.com/icons/apple-icon.png" />
                 </Head>
-                <body className="font-['Roboto']">
+                <body className="font-['Roboto'] h-full">
                     <Main />
                     <NextScript />
                 </body>

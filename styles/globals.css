@@ -7,3 +7,7 @@
         @apply text-theme;
     }
 }
+
+#__next {
+    @apply h-full;
+}

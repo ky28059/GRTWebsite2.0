@@ -98,7 +98,7 @@ function SubNavLink(props: NavLinkProps) {
 
     return (
         <Link href={props.href}>
-            <a className={'relative p-5 text-sm transition duration-200 ' + (active ? 'text-white' : 'text-[rgb(150_150_150)] hover:text-white')}>
+            <a className={'relative p-5 text-sm transition duration-200 ' + (active ? 'text-white' : 'text-secondary hover:text-white')}>
                 {props.children}
                 {active && (
                     // CSS triangle; see comment above.

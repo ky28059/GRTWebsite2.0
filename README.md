@@ -10,11 +10,13 @@ this entirely at some point, perhaps after the port is finished.
 - Next.js as a framework, instead of PHP and vanilla JS
 - `tailwindcss` instead of raw CSS and style tags
 - React instead of raw HTML
+- PWA capabilities with `next-pwa` (this isn't strictly necessary, but we had the manifest already so I thought "why not?")
 
 #### Bug fixes
 - Fixed navbar wrapping and disappearing issues with `display: flex`
 - Fixed subnavbar wrapping and expanding issues with `display: flex`
 - Fixed navbar caret off centering the navlinks with `position: absolute`
+- Fixed footer not staying at the bottom of the page when the content doesn't fill the whole screen
 
 #### UI changes / improvements
 - Added block quote for `firstinspires.org` quotes in `/FIRST` instead of having them be separate sections
@@ -22,3 +24,4 @@ this entirely at some point, perhaps after the port is finished.
 - Added jumbotron for "teach a man to fish" quote in `/mentors`
 - Added captions to images in `/mentors/*`
 - Used block quote for interview responses in `/mentors/*`
+- Generally more semantic HTML; `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.

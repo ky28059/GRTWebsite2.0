@@ -66,7 +66,7 @@ export function MentorImage(props: MentorImageProps) {
                 {...imageProps}
                 className="w-full mb-2"
             />
-            <p className="text-sm text-gray-500 italic">{children}</p>
+            <p className="text-sm text-secondary italic">{children}</p>
         </div>
     )
 }
