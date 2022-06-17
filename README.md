@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GRTWebsite2.0
+A Next.js port of the GRT website, with the aims of keeping the theme the same but improving code readability and 
+maintainability, as well as modernizing the CSS and JS logic.
 
-## Getting Started
+### Changelog
+The following is an incomplete changelog of differences from the old PHP website. I may move this to an issue or remove
+this entirely at some point, perhaps after the port is finished.
 
-First, run the development server:
+#### Fundamental changes
+- Next.js as a framework, instead of PHP and vanilla JS
+- `tailwindcss` instead of raw CSS and style tags
+- React instead of raw HTML
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+#### Bug fixes
+- Fixed navbar wrapping and disappearing issues with `display: flex`
+- Fixed subnavbar wrapping and expanding issues with `display: flex`
+- Fixed navbar caret off centering the navlinks with `position: absolute`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### UI changes / improvements
+- Added block quote for `firstinspires.org` quotes in `/FIRST` instead of having them be separate sections
+- Made 2019 and 2018 in `/FIRST/accolades` obey the same award formatting as the other years
+- Added jumbotron for "teach a man to fish" quote in `/mentors`
+- Added captions to images in `/mentors/*`
+- Used block quote for interview responses in `/mentors/*`
