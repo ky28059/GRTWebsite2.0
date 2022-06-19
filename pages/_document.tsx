@@ -4,7 +4,7 @@ import Document, {Html, Head, Main, NextScript} from 'next/document';
 class GRTDocument extends Document {
     render() {
         return (
-            <Html className="h-full">
+            <Html className="h-full scroll-smooth">
                 <Head>
                     <meta charSet="utf-8" />
 
