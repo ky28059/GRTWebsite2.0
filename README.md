@@ -27,5 +27,6 @@ this entirely at some point, perhaps after the port is finished.
 - Added captions to images in `/mentors/*`
 - Used block quote for interview responses in `/mentors/*`
 - Redid list styling, expanded on list items in `/join`
+- Used disclosures for Q&A in `/summer`
 - Removed unnecessary one-item subnav for pages with no subpages
 - Generally more semantic HTML; `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.

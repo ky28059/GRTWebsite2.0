@@ -76,6 +76,10 @@ export default function Join() {
                 Whether your interest is in programming or poster design, industrial machining or DIY projects, GRT has
                 a place for you. {/* "Come join our family! Apply now." but less cheesy perhaps */}
             </p>
+
+            {/* TODO: try abstracting this with mentors' `<MentorImage>`? */}
+            {/* It's a little hard because of `<MentorImage>`'s need to control the width of the `<img>` element */}
+            {/* but perhaps a solution still exists. */}
             <img src="/assets/join/2019-20Camping.jpeg" alt="GRT 2019-2020" className="mb-2" />
             <p className="text-sm text-secondary italic">GRT 2019-2020</p>
         </Layout>
