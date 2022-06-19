@@ -31,4 +31,5 @@ this entirely at some point, perhaps after the port is finished.
 - Added "elevator pitch" blurb section in `/summer`
 - Added alert-ish box for the "sign-ups available" text in `/summer`
 - Removed unnecessary one-item subnav for pages with no subpages
+- Added a black overlay for text contrast on the home page slideshow
 - Generally more semantic HTML; `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.
