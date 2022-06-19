@@ -82,7 +82,7 @@ export default function FIRST() {
 function Section(props: {heading: string, children: ReactNode}) {
     return (
         <section className="space-y-6 font-light">
-            <h3 className="text-2xl font-medium text-center mb-2">{props.heading}</h3>
+            <h3 className="text-2xl font-medium text-center">{props.heading}</h3>
             {props.children}
         </section>
     )

@@ -17,6 +17,8 @@ this entirely at some point, perhaps after the port is finished.
 - Fixed subnavbar wrapping and expanding issues with `display: flex`
 - Fixed navbar caret off centering the navlinks with `position: absolute`
 - Fixed footer not staying at the bottom of the page when the content doesn't fill the whole screen
+- Fixed page title saying "GRT | FIRST" on `/join`
+- Fixed favicon on non-index pages
 
 #### UI changes / improvements
 - Added block quote for `firstinspires.org` quotes in `/FIRST` instead of having them be separate sections
@@ -24,4 +26,6 @@ this entirely at some point, perhaps after the port is finished.
 - Added jumbotron for "teach a man to fish" quote in `/mentors`
 - Added captions to images in `/mentors/*`
 - Used block quote for interview responses in `/mentors/*`
+- Redid list styling, expanded on list items in `/join`
+- Removed unnecessary one-item subnav for pages with no subpages
 - Generally more semantic HTML; `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.

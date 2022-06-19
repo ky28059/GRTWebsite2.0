@@ -29,7 +29,7 @@ export default function NavBar() {
             </header>
 
             {/* Subnav */}
-            <nav className="flex bg-black text-white px-5">
+            <nav className="flex justify-center bg-black text-white min-h-[1rem] px-5">
                 <Match href="/FIRST">
                     <SubNavLink href="/FIRST">FIRST</SubNavLink>
                     <SubNavLink href="/FIRST/accolades">Accolades</SubNavLink>
