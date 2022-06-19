@@ -19,18 +19,30 @@ export default function Summer() {
                 Gunn Robotics Summer Camp
             </h1>
 
-            {showRegistration ? (
-                <p className="font-light mb-8">
-                    Sign-ups are now open for the Gunn Robotics Summer Camp, held-in person at Gunn High School for rising
-                    5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer">here</a>!
-                    (tinyurl.com/gunnroboticscamp)
+            <div className="px-6 py-4 -mx-4 rounded-lg shadow-lg bg-gray-100 text-sm mb-8">
+                {showRegistration ? (
+                    <>
+                        Sign-ups are now open for the Gunn Robotics Summer Camp, held-in person at Gunn High School for rising
+                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer">here</a>!
+                        (tinyurl.com/gunnroboticscamp)
+                    </>
+                ) : (
+                    <>
+                        Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
+                        back next year for more information!
+                    </>
+                )}
+            </div>
+
+            <div className="flex gap-6 mb-8">
+                <img src="/assets/summer/candidate_4.png" className="max-w-lg" alt="Summer camp" />
+                <p className='flex-grow'>
+                    {/* TODO: add blurb later */}
+                    A cantilever is a rigid structural element that extends horizontally and is supported at only one end.
+                    Typically it extends from a flat vertical surface such as a wall, to which it must be firmly attached.
+                    Like other structural elements, a cantilever can be formed as a beam, plate, truss, or slab.
                 </p>
-            ) : (
-                <p className="font-light mb-8">
-                    Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
-                    back next year for more information!
-                </p>
-            )}
+            </div>
 
             {/* TODO: can this be abstracted with FIRST's <Section>s? */}
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>
