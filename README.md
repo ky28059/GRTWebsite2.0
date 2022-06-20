@@ -21,6 +21,7 @@ this entirely at some point, perhaps after the port is finished.
 - Fixed favicon on non-index pages
 
 #### UI changes / improvements
+- Changed `GRT | Page` titles to `Page | GRT`
 - Added block quote for `firstinspires.org` quotes in `/FIRST` instead of having them be separate sections
 - Made 2019 and 2018 in `/FIRST/accolades` obey the same award formatting as the other years
 - Added jumbotron for "teach a man to fish" quote in `/mentors`
@@ -32,4 +33,6 @@ this entirely at some point, perhaps after the port is finished.
 - Added alert-ish box for the "sign-ups available" text in `/summer`
 - Removed unnecessary one-item subnav for pages with no subpages
 - Added a black overlay for text contrast on the home page slideshow
-- Generally more semantic HTML; `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.
+- Added carets and shadow to home page timeline boxes
+- Generally more semantic HTML: `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.
+- Generally less dependence on images: svg icon for down arrow on home page, css-only triangles for navs, css-only timeline and dots (replacing the images the old website used for the nav triangles, down arrow, and timeline)

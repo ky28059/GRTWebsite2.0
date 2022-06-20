@@ -1,4 +1,4 @@
-import {Fragment, useEffect, useState} from 'react';
+import {Fragment, ReactNode, useEffect, useState} from 'react';
 import {Transition} from '@headlessui/react';
 import Head from 'next/head';
 import {BsChevronCompactDown} from 'react-icons/bs';
@@ -27,7 +27,7 @@ export default function Home() {
     return (
         <div className="relative h-full">
             <Head>
-                <title>GRT | Home</title>
+                <title>Home | GRT</title>
             </Head>
 
             <HomeNavBar />
@@ -51,7 +51,7 @@ export default function Home() {
                 ))}
             </section>
 
-            <section id="about" className="container pt-16 pb-24">
+            <section id="about" className="container pt-16 mb-12">
                 <h3 className="text-2xl font-medium text-center mb-6">ABOUT US</h3>
                 <div className="flex gap-6">
                     <div className="flex-grow font-light space-y-6">
@@ -72,6 +72,26 @@ export default function Home() {
                     </div>
                     <img src="/assets/about/team.JPG" alt="GRT" className="w-1/2" />
                 </div>
+            </section>
+
+            <section className="container pb-24">
+                <h3 className="text-2xl font-medium text-center mb-6">OUR HISTORY</h3>
+                <div className="flex gap-2 mb-5">
+                    <TimelineItem>
+                        GRT was founded In 1996 by Bill Dunbar, a mechanical engineer turned physics teacher at Henry M.
+                        Gunn High School in Palo Alto, CA. The team took over the campus wood and metal shop, at the time
+                        abandoned and slated for demolition.
+                    </TimelineItem>
+                    <TimelineItem>
+                        The Gunn robotics team entered the FIRST Robotics competition In 1997, and that summer traveled
+                        to the National Championships In Orlando, Florida.
+                    </TimelineItem>
+                    <TimelineItem>
+                        GRT has grown into a popular program at Henry M. Gunn HS, with two full classes meeting throughout
+                        the school year, plus regular after-hour and weekend shop sessions.
+                    </TimelineItem>
+                </div>
+                <hr className="border-t-secondary border-t-2" />
             </section>
 
             <Footer />
@@ -95,9 +115,26 @@ function SlideshowImage(props: SlideshowImageProps) {
         >
             <img
                 src={`/assets/slideshow/${props.src}`}
-                alt=""
+                alt="" // TODO
                 className="absolute inset-0 w-full h-full object-cover object-center"
             />
         </Transition>
+    )
+}
+
+// An item on the page timeline. This renders its children in a div, a caret below the div pointing to the timeline,
+// and a dot on the timeline. Any edits to the spacing of the timeline and items requires editing the positioning of
+// the dot.
+// TODO: responsive design
+function TimelineItem(props: {children: ReactNode}) {
+    return (
+        <div className="relative shadow-lg font-light basis-1/3 p-6">
+            {props.children}
+
+            {/* CSS triangle; see comment in `/components/NavBar.tsx` */}
+            <span className="absolute top-full inset-x-0 mx-auto w-0 h-0 border-t-[12px] border-t-white border-x-[16px] border-x-transparent drop-shadow-lg" />
+            {/* Top: 100% + 20px (mb-5) - 6px (w-3 / 2) + 1px (centered within 2px border) */}
+            <span className="absolute top-[calc(100%_+_15px)] inset-x-0 mx-auto w-3 h-3 rounded-full bg-secondary" />
+        </div>
     )
 }
