@@ -80,22 +80,24 @@ export default function Home() {
 
             <section className="container pb-24">
                 <h3 className="text-2xl font-medium text-center mb-6">OUR HISTORY</h3>
-                <div className="flex gap-2 mb-5">
-                    <TimelineItem>
-                        GRT was founded In 1996 by Bill Dunbar, a mechanical engineer turned physics teacher at Henry M.
-                        Gunn High School in Palo Alto, CA. The team took over the campus wood and metal shop, at the time
-                        abandoned and slated for demolition.
-                    </TimelineItem>
-                    <TimelineItem>
-                        The Gunn robotics team entered the FIRST Robotics competition In 1997, and that summer traveled
-                        to the National Championships In Orlando, Florida.
-                    </TimelineItem>
-                    <TimelineItem>
-                        GRT has grown into a popular program at Henry M. Gunn HS, with two full classes meeting throughout
-                        the school year, plus regular after-hour and weekend shop sessions.
-                    </TimelineItem>
+                <div className="flex flex-row-reverse md:flex-col gap-5">
+                    <div className="flex flex-col md:flex-row gap-2">
+                        <TimelineItem>
+                            GRT was founded In 1996 by Bill Dunbar, a mechanical engineer turned physics teacher at Henry M.
+                            Gunn High School in Palo Alto, CA. The team took over the campus wood and metal shop, at the time
+                            abandoned and slated for demolition.
+                        </TimelineItem>
+                        <TimelineItem>
+                            The Gunn robotics team entered the FIRST Robotics competition In 1997, and that summer traveled
+                            to the National Championships In Orlando, Florida.
+                        </TimelineItem>
+                        <TimelineItem>
+                            GRT has grown into a popular program at Henry M. Gunn HS, with two full classes meeting throughout
+                            the school year, plus regular after-hour and weekend shop sessions.
+                        </TimelineItem>
+                    </div>
+                    <hr className="border-l-2 md:border-l-0 md:border-t-2 border-secondary h-auto" />
                 </div>
-                <hr className="border-t-secondary border-t-2" />
             </section>
 
             <Footer />
@@ -136,9 +138,9 @@ function TimelineItem(props: {children: ReactNode}) {
             {props.children}
 
             {/* CSS triangle; see comment in `/components/NavBar.tsx` */}
-            <span className="absolute top-full inset-x-0 mx-auto w-0 h-0 border-t-[12px] border-t-white border-x-[16px] border-x-transparent drop-shadow-lg" />
+            <span className="absolute right-full md:top-full inset-y-0 md:bottom-auto md:inset-x-0 my-auto md:mx-auto w-0 h-0 border-r-[12px] border-y-[16px] md:border-l-[16px] md:border-r-[16px] md:border-b-0 md:border-t-[12px] border-x-white border-y-transparent md:border-x-transparent md:border-y-white md:drop-shadow-lg" />
             {/* Top: 100% + 20px (mb-5) - 6px (w-3 / 2) + 1px (centered within 2px border) */}
-            <span className="absolute top-[calc(100%_+_15px)] inset-x-0 mx-auto w-3 h-3 rounded-full bg-secondary" />
+            <span className="absolute right-[calc(100%_+_15px)] md:top-[calc(100%_+_15px)] inset-y-0 my-auto md:bottom-auto md:inset-x-0 md:mx-auto w-3 h-3 rounded-full bg-secondary" />
         </div>
     )
 }
