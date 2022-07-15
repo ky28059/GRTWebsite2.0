@@ -17,7 +17,7 @@ this entirely at some point, perhaps after the port is finished.
 - Fixed subnavbar wrapping and expanding issues with `display: flex`
 - Fixed navbar caret off centering the navlinks with `position: absolute`
 - Fixed footer not staying at the bottom of the page when the content doesn't fill the whole screen
-- Fixed page title saying "GRT | FIRST" on `/join`
+- Fixed page title saying "GRT | FIRST" on `/join`, `/donations`
 - Fixed favicon on non-index pages
 
 #### UI changes / improvements
@@ -34,5 +34,6 @@ this entirely at some point, perhaps after the port is finished.
 - Removed unnecessary one-item subnav for pages with no subpages
 - Added a black overlay for text contrast on the home page slideshow
 - Added carets and shadow to home page timeline boxes
+- Used block quote for payment details in `/donations` instead of manually spaced `<p>`s
 - Generally more semantic HTML: `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.
 - Generally less dependence on images: svg icon for down arrow on home page, css-only triangles for navs, css-only timeline and dots (replacing the images the old website used for the nav triangles, down arrow, and timeline)
