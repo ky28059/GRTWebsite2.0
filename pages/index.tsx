@@ -37,7 +37,7 @@ export default function Home() {
                     <h1 className="text-6xl font-medium tracking-widest mb-3">
                         GRT 192
                     </h1>
-                    <p className="mb-6">
+                    <p className="mb-6 max-w-prose text-center">
                         A robotics team from Henry M. Gunn High School (Palo Alto, CA) competing since 1997 in the annual
                         FIRST robotics FRC competition as Team 192.
                     </p>
@@ -53,7 +53,7 @@ export default function Home() {
 
             <section id="about" className="container pt-16 mb-12">
                 <h3 className="text-2xl font-medium text-center mb-6">ABOUT US</h3>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap-reverse lg:flex-nowrap gap-6">
                     <div className="flex-grow font-light space-y-6">
                         <p>
                             The Gunn Robotics Team (GRT) is a student-managed team that competes in the FIRST Robotics
@@ -70,7 +70,11 @@ export default function Home() {
                             assist us with resources and training.
                         </p>
                     </div>
-                    <img src="/assets/about/team.JPG" alt="GRT" className="w-1/2" />
+                    <img
+                        src="/assets/about/team.JPG"
+                        alt="GRT"
+                        className="w-full lg:max-w-[50%] h-fit"
+                    />
                 </div>
             </section>
 
