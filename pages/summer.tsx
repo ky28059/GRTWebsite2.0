@@ -23,7 +23,7 @@ export default function Summer() {
                 {showRegistration ? (
                     <>
                         Sign-ups are now open for the Gunn Robotics Summer Camp, held-in person at Gunn High School for rising
-                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer">here</a>!
+                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer">here</a>:
                         (tinyurl.com/gunnroboticscamp)
                     </>
                 ) : (
@@ -36,12 +36,12 @@ export default function Summer() {
 
             <div className="flex gap-6 mb-8">
                 <img src="/assets/summer/candidate_4.png" className="max-w-lg" alt="Summer camp" />
-                <p className='flex-grow'>
-                    {/* TODO: add blurb later */}
-                    A cantilever is a rigid structural element that extends horizontally and is supported at only one end.
-                    Typically it extends from a flat vertical surface such as a wall, to which it must be firmly attached.
-                    Like other structural elements, a cantilever can be formed as a beam, plate, truss, or slab.
+                <p className="flex-grow">
+                    The Gunn Robotics Team invites your rising 5th-9th grade students to our weeklong summer robotics camp!
+                    Students will have a blast learning to design, build, and program a Vex IQ robot to compete with at the end
+                    of the week. Snacks will be provided!
                 </p>
+                {/* TODO: expand on this blurb probably */}
             </div>
 
             {/* TODO: can this be abstracted with FIRST's <Section>s? */}
@@ -97,9 +97,9 @@ function Question(props: {name: string, children: ReactNode}) {
     return (
         <Disclosure as="div" className="flex flex-col gap-2">
             {({open}) => (<>
-                <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-gray-50 px-4 py-2">
+                <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2">
                     {props.name}
-                    <HiChevronDown className={'w-5 h-5' + (open ? ' rotate-180' : '')} />
+                    <HiChevronDown className={'w-5 h-5 transition-transform duration-300 ease-in-out' + (open ? ' rotate-180' : '')} />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-3 pt-2 pb-3 font-light">
                     {props.children}
