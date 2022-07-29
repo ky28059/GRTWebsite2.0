@@ -49,8 +49,8 @@ export default function Drivetrain() {
                 reduction, which allows the use of 6 inch or larger wheels (a larger wheel would otherwise gear up the
                 transmission).
             </p>
-            <CaptionedImage src="/assets/subgroups/2-speed-dt.jpg" alt="2-speed gearbox" className="max-w-2xl mx-auto mb-4">
-                2018 2-speed gearbox design
+            <CaptionedImage src="/assets/subgroups/2016-2-speed-dt.jpg" alt="2-speed gearbox" className="max-w-2xl mx-auto mb-4">
+                2016 2-speed gearbox design
             </CaptionedImage>
             <p className="font-light mb-10">
                 Our gearboxes are designed to minimize space requirement, with a footprint extending
