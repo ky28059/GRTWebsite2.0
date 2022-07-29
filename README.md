@@ -35,5 +35,6 @@ this entirely at some point, perhaps after the port is finished.
 - Added a black overlay for text contrast on the home page slideshow
 - Added carets and shadow to home page timeline boxes
 - Used block quote for payment details in `/donations` instead of manually spaced `<p>`s
+- General typo fixes, wording improvements
 - Generally more semantic HTML: `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.
 - Generally less dependence on images: svg icon for down arrow on home page, css-only triangles for navs, css-only timeline and dots (replacing the images the old website used for the nav triangles, down arrow, and timeline)

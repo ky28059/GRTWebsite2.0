@@ -1,6 +1,7 @@
 import {ReactNode} from 'react';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import CaptionedImage, {CaptionedImageProps} from '../../components/CaptionedImage';
 
 
 export default function Kristina() {
@@ -15,7 +16,7 @@ export default function Kristina() {
             </h1>
 
             <MentorImage src="/assets/mentors/Granlund.jpg" alt="Granlund">
-                Kristina Granlund-Moyer, 2021.
+                Kristina Granlund-Moyer outside the GRT classroom, 2021.
             </MentorImage>
 
             <div className="space-y-6">
@@ -56,17 +57,7 @@ export function Question(props: {name: string, children: ReactNode}) {
 
 // Renders a wrapper around the captioned images in the mentor interview pages.
 // Pass the caption as children, and the image `src` and `alt` as props.
-type MentorImageProps = {src: string, alt: string, children: ReactNode};
-export function MentorImage(props: MentorImageProps) {
-    const {children, ...imageProps} = props;
-
-    return (
-        <div className="w-full max-w-3xl mb-8 mx-auto">
-            <img
-                {...imageProps}
-                className="w-full mb-2"
-            />
-            <p className="text-sm text-secondary italic">{children}</p>
-        </div>
-    )
+// TODO: does this component need to exist?
+export function MentorImage(props: CaptionedImageProps) {
+    return <CaptionedImage {...props} className="w-full max-w-3xl mb-8 mx-auto" />
 }
