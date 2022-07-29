@@ -27,7 +27,7 @@ export default function Pneumatics() {
             </CaptionedImage>
 
             <h3 className="text-lg font-medium mb-3">Training</h3>
-            <p className="font-light mb-6">
+            <p className="font-light">
                 To start pneumatics training, members learn how to be safe using compressed air, and then go on to
                 pneumatic components (e.g. tubing, actuators, solenoids, tanks, and safety equipment) so everyone
                 understands the basic concepts behind each piece of equipment. Practice exercises are assigned, such as
