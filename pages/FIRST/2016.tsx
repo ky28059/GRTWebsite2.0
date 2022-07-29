@@ -28,16 +28,15 @@ export default function GRT2016() {
                     Our robot: the Red Giant
                 </h2>
                 <p className="font-light mb-6">
-                    For FIRST Stronghold, GRT built [...].
+                    For FIRST Stronghold, GRT built the 'Red Giant', [...].
                 </p>
                 <img src="/assets/first/2016-red-giant.jpg" alt="2016 robot" className="max-w-3xl mx-auto mb-6" />
                 <p className="font-light">
-                    The pickup mechanism on the 'Red Giant' used two car window motors attached to a roller arm to move
+                    The pickup mechanism on the Red Giant used two car window motors attached to a roller arm to move
                     the ball into the shooter mechanism. The roller arm was made of surgical tubing tied to a metal roller.
-                    This 'Chalupa' mechanism slapped the ball into the robot. The roller arm itself was to cross defenses,
-                    such as the Cheval de Frise and the Portcullis. Wheels were added to the roller arm to move the
-                    portcullis up and over the robot, while the entire roller arm was capable of moving up and down in
-                    order to cross the Cheval de Frise.
+                    This 'Chalupa' mechanism slapped the ball into the robot. The roller arm was built to cross defenses:
+                    wheels were added to the roller arm to move the portcullis up and over the robot, while the entire
+                    roller arm is capable of moving up and down in order to cross the Cheval de Frise.
                 </p>
             </WriteupSection>
 
