@@ -19,8 +19,8 @@ export default function Donations() {
 
             <strong className="block font-medium mb-2">Financial donations</strong>
             <p className="font-light mb-4">
-                If you have the financial means to do so, we greatly appreciate your monetary support. your donation
-                helps cover purchasing and mainenance of equipment and tools, materials, and costs associated with
+                If you have the financial means to do so, we greatly appreciate your monetary support. Your donation
+                helps cover purchasing and maintenance of equipment and tools, materials, and costs associated with
                 competition. To donate, there are several options:
             </p>
             <p className="font-light mb-3">

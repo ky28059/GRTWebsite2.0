@@ -1,32 +1,14 @@
 import {ReactNode} from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+import NavHeader from './NavHeader';
 
 
 // The red navbar displayed on evey page except for the home page.
 export default function NavBar() {
     return (
         <div>
-            <header className="bg-theme flex items-stretch justify-between px-5">
-                <Link href="/">
-                    <a className="flex items-center">
-                        <img src="/logo.svg" alt="GRT Logo" className="w-20 my-3" />
-                    </a>
-                </Link>
-
-                <nav className="flex">
-                    <NavLink href="/#about">About</NavLink>
-                    <NavLink href="/updates">Updates</NavLink>
-                    <NavLink href="/FIRST">FIRST</NavLink>
-                    <NavLink href="/subgroups">Subgroups</NavLink>
-                    <NavLink href="/mentors">Mentors</NavLink>
-                    <NavLink href="/resources">Resources</NavLink>
-                    <NavLink href="/#sponsors">Sponsors</NavLink>
-                    <NavLink href="/join">Join</NavLink>
-                    <NavLink href="/summer">Summer</NavLink>
-                    <NavLink href="/donations">Donations</NavLink>
-                </nav>
-            </header>
+            <NavHeader component={NavLink} className="bg-theme" />
 
             {/* Subnav */}
             <nav className="flex justify-center bg-black text-white min-h-[1rem] px-5">

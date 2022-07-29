@@ -37,7 +37,7 @@ export default function Home() {
                     <h1 className="text-6xl font-medium tracking-widest mb-3">
                         GRT 192
                     </h1>
-                    <p className="mb-6 max-w-prose text-center">
+                    <p className="mb-6 max-w-prose text-center mx-2">
                         A robotics team from Henry M. Gunn High School (Palo Alto, CA) competing since 1997 in the annual
                         FIRST robotics FRC competition as Team 192.
                     </p>
