@@ -41,7 +41,7 @@ export default function CNC() {
                 main production tasks require an intense knowledge of our chosen CAM software, MasterCAM, as well as of
                 the machining process in general.
             </p>
-            <CaptionedImage src="/assets/subgroups/cnc.jpg" alt="2-speed gearbox" className="max-w-2xl mx-auto mb-4">
+            <CaptionedImage src="/assets/subgroups/cnc.jpg" alt="CNC mill" className="max-w-2xl mx-auto mb-4">
                 A CNC member inserts a collet into the CNC mill.
             </CaptionedImage>
             <p className="font-light mb-10">
