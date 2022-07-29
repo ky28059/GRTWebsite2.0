@@ -15,6 +15,13 @@ export default function NavBar() {
                 <Match href="/FIRST">
                     <SubNavLink href="/FIRST">FIRST</SubNavLink>
                     <SubNavLink href="/FIRST/accolades">Accolades</SubNavLink>
+                    <SubNavLink href="/FIRST/2019">2019</SubNavLink>
+                    <SubNavLink href="/FIRST/2018">2018</SubNavLink>
+                    <SubNavLink href="/FIRST/2016">2016</SubNavLink>
+                    <SubNavLink href="/FIRST/2015">2015</SubNavLink>
+                    <SubNavLink href="/FIRST/2014">2014</SubNavLink>
+                    <SubNavLink href="/FIRST/2013">2013</SubNavLink>
+                    <SubNavLink href="/FIRST/2012">2012</SubNavLink>
                 </Match>
                 <Match href="/subgroups">
                     <SubNavLink href="/subgroups">Subgroups</SubNavLink>
