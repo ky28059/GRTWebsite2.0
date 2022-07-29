@@ -3,11 +3,11 @@ import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
-export default function GRT2016() {
+export default function GRT2015() {
     return (
         <WriteupLayout>
             <Head>
-                <title>2016 | GRT</title>
+                <title>2015 | GRT</title>
             </Head>
 
             <WriteupSection>
