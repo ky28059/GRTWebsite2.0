@@ -24,6 +24,8 @@ this entirely at some point, perhaps after the port is finished.
 - Changed `GRT | Page` titles to `Page | GRT`
 - Added block quote for `firstinspires.org` quotes in `/FIRST` instead of having them be separate sections
 - Made 2019 and 2018 in `/FIRST/accolades` obey the same award formatting as the other years
+- Added year subheadings to `/FIRST` writeups
+- Split and rearranged long paragraphs and sections in `/FIRST` writeups, used a side-by-side flex layout for tall images
 - Added jumbotron for "teach a man to fish" quote in `/mentors`
 - Added captions to images in `/mentors/*`
 - Used block quote for interview responses in `/mentors/*`
