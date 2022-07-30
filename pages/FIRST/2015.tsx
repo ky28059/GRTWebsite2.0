@@ -28,20 +28,22 @@ export default function GRT2015() {
             </WriteupSection>
 
             <WriteupSection secondary>
-                <h2 className="text-2xl font-medium text-center mb-6">
-                    Our robot: Brontosaurus Rex
-                </h2>
                 {/* TODO: unsure how to handle this image. the aspect ratio combined with the low resolution makes it */}
                 {/* look bad on its own, but even in a flex layout there's still too much whitespace */}
-                <div className="md:flex gap-8">
+                <div className="flex flex-wrap-reverse md:flex-nowrap gap-6 md:gap-8">
                     <img src="/assets/first/2015-brontosaurus-rex.jpg" alt="2015 robot" className="mx-auto mb-6 md:mb-0" />
-                    <p className="font-light mb-6">
-                        For Recycle Rush, GRT built Brontosaurus Rex, a robot weighing 120 pounds with a dedicated bin grabber
-                        that is optimized to quickly make a 4-stack and put a bin on top. A large, flat chassis allows the
-                        robot to steadily, yet quickly navigate the field without fear of toppling our stacks over. The tote
-                        lifter has self-adjusting fingers that conform to the tote's contour in order to quickly grab the tote
-                        with minimal driver intervention.
-                    </p>
+                    <div>
+                        <h2 className="text-2xl font-medium text-center md:text-left mb-6">
+                            Our robot: Brontosaurus Rex
+                        </h2>
+                        <p className="font-light">
+                            For Recycle Rush, GRT built Brontosaurus Rex, a robot weighing 120 pounds with a dedicated bin grabber
+                            that is optimized to quickly make a 4-stack and put a bin on top. A large, flat chassis allows the
+                            robot to steadily, yet quickly navigate the field without fear of toppling our stacks over. The tote
+                            lifter has self-adjusting fingers that conform to the tote's contour in order to quickly grab the tote
+                            with minimal driver intervention.
+                        </p>
+                    </div>
                 </div>
             </WriteupSection>
 
