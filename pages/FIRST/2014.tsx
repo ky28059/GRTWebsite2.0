@@ -91,7 +91,7 @@ export default function GRT2014() {
                     Shooter
                 </h2>
                 <p className="font-light mb-6">
-                    A simple spring-powered catapult, Redshifts short throw allows us to fire from distance reliably and
+                    A simple spring-powered catapult, Redshift's short throw allows us to fire from distance reliably and
                     without any rev-up time. The catapult is powered by a custom ball-shift winch which will shift into
                     neutral to release the ball and fire. Unlike traditional catapults, Redshift's catapult has practically
                     no leverage, meaning the catapult is compact enough to fit entirely onto the base of the robot.
