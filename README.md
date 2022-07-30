@@ -36,6 +36,7 @@ this entirely at some point, perhaps after the port is finished.
 - Removed unnecessary one-item subnav for pages with no subpages
 - Added a black overlay for text contrast on the home page slideshow
 - Added carets and shadow to home page timeline boxes
+- Redesigned home page sponsors section to eliminate awkward grid, hover color, and overflow
 - Used block quote for payment details in `/donations` instead of manually spaced `<p>`s
 - General typo fixes, wording improvements
 - Generally more semantic HTML: `<footer>` for the footer, `<header>` and `<nav>` for the navbar, etc.

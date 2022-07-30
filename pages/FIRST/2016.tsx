@@ -32,11 +32,11 @@ export default function GRT2016() {
                 </p>
                 <img src="/assets/first/2016-red-giant.jpg" alt="2016 robot" className="max-w-3xl mx-auto mb-6" />
                 <p className="font-light">
-                    The pickup mechanism on the Red Giant used two car window motors attached to a roller arm to move
-                    the ball into the shooter mechanism. The roller arm was made of surgical tubing tied to a metal roller.
-                    This 'Chalupa' mechanism slapped the ball into the robot. The roller arm was built to cross defenses:
-                    wheels were added to the roller arm to move the portcullis up and over the robot, while the entire
-                    roller arm is capable of moving up and down in order to cross the Cheval de Frise.
+                    The pickup mechanism on the Red Giant uses two car window motors attached to a roller arm to move
+                    the ball into the shooter mechanism. The roller arm consists of a metal roller to which was tied
+                    surgical tubing (called 'Chalupa') that served to slap the ball into the robot. The arm was built to
+                    cross defenses: wheels were added to the roller arm to move the portcullis up and over the robot,
+                    while the entire roller arm is capable of moving up and down in order to cross the Cheval de Frise.
                 </p>
             </WriteupSection>
 
