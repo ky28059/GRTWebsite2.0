@@ -73,7 +73,7 @@ export default function Home() {
                     <img
                         src="/assets/about/team.JPG"
                         alt="GRT"
-                        className="lg:max-w-[50%]"
+                        className="lg:max-w-[50%] h-max"
                     />
                 </div>
             </section>

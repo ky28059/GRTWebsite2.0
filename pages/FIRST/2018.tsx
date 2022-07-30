@@ -31,7 +31,7 @@ export default function GRT2018() {
                     Following this change, Omega machining began and identical robots Omega 1 and 2 were created. One of
                     these robots was sent to competition while the other remained at the shop for continued testing.
                 </p>
-                <CaptionedImage src="/assets/first/grt-2018.jpg" alt="GRT 2018" className="max-w-3xl mx-auto">
+                <CaptionedImage src="/assets/first/grt-2018.jpg" alt="GRT 2017-2018" className="max-w-3xl mx-auto">
                     GRT 2017-2018
                 </CaptionedImage>
             </WriteupSection>
