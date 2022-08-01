@@ -69,6 +69,8 @@ this entirely at some point, perhaps after the port is finished.
 - Added jumbotron for "teach a man to fish" quote in `/mentors`
 - Added captions to images in `/mentors/*`
 - Used block quote for interview responses in `/mentors/*`
+- Rewrote, reorganized, and added images to several sections in `/subgroups/*`
+- Used `aspect-ratio` and rounded borders for the video embed in `/subgroups/animation`
 - Redid list styling, expanded on list items in `/join`
 - Used disclosures for Q&A in `/summer`
 - Added "elevator pitch" blurb section in `/summer`
