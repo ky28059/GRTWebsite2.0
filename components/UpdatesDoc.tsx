@@ -10,7 +10,7 @@ export default function UpdatesDoc(props: docs_v1.Schema$Document) {
         <section className="whitespace-pre-wrap max-w-4xl mx-auto">
             <DocumentContext.Provider value={{inlineObjects: props.inlineObjects}}>
                 {props.body?.content?.map(element => (
-                    <StructuralElement {...element} />
+                    <StructuralElement {...element} key={element.startIndex} />
                 ))}
             </DocumentContext.Provider>
         </section>
@@ -30,9 +30,11 @@ function StructuralElement(props: docs_v1.Schema$StructuralElement) {
 function Table(props: docs_v1.Schema$Table) {
     return (
         <table className="w-full">
-            {props.tableRows?.map(row => (
-                <TableRow {...row} />
-            ))}
+            <tbody>
+                {props.tableRows?.map(row => (
+                    <TableRow {...row} key={row.startIndex} />
+                ))}
+            </tbody>
         </table>
     )
 }
@@ -43,7 +45,7 @@ function TableRow(props: docs_v1.Schema$TableRow) {
     return (
         <tr>
             {props.tableCells?.map(cell => (
-                <TableCell {...cell} />
+                <TableCell {...cell} key={cell.startIndex} />
             ))}
         </tr>
     )
@@ -55,7 +57,7 @@ function TableCell(props: docs_v1.Schema$TableCell) {
     return (
         <td className="p-2 border border-gray-600" style={{backgroundColor: parseColor(props.tableCellStyle?.backgroundColor)}}>
             {props.content?.map(element => (
-                <StructuralElement {...element} />
+                <StructuralElement {...element} key={element.startIndex} />
             ))}
         </td>
     )
@@ -67,7 +69,7 @@ function Paragraph(props: docs_v1.Schema$Paragraph) {
     if (props.paragraphStyle?.headingId) return (
         <h3 className="font-medium text-2xl text-center">
             {props.elements?.map(element => (
-                <ParagraphElement {...element} />
+                <ParagraphElement {...element} key={element.startIndex} />
             ))}
         </h3>
     );
@@ -75,7 +77,7 @@ function Paragraph(props: docs_v1.Schema$Paragraph) {
     return (
         <p className={'font-light' + (props.paragraphStyle?.alignment === 'CENTER' ? ' text-center' : props.paragraphStyle?.alignment ==='END' ? ' text-right' : '')}>
             {props.elements?.map(element => (
-                <ParagraphElement {...element} />
+                <ParagraphElement {...element} key={element.startIndex} />
             ))}
         </p>
     )
