@@ -11,37 +11,39 @@ export default function NavBar() {
             <NavHeader component={NavLink} className="bg-theme" />
 
             {/* Subnav */}
-            <nav className="flex justify-center bg-black text-white min-h-[1rem] px-5">
-                <Match href="/FIRST">
-                    <SubNavLink href="/FIRST">FIRST</SubNavLink>
-                    <SubNavLink href="/FIRST/accolades">Accolades</SubNavLink>
-                    <SubNavLink href="/FIRST/2019">2019</SubNavLink>
-                    <SubNavLink href="/FIRST/2018">2018</SubNavLink>
-                    <SubNavLink href="/FIRST/2016">2016</SubNavLink>
-                    <SubNavLink href="/FIRST/2015">2015</SubNavLink>
-                    <SubNavLink href="/FIRST/2014">2014</SubNavLink>
-                    <SubNavLink href="/FIRST/2013">2013</SubNavLink>
-                    <SubNavLink href="/FIRST/2012">2012</SubNavLink>
-                </Match>
-                <Match href="/subgroups">
-                    <SubNavLink href="/subgroups">Subgroups</SubNavLink>
-                    <SubNavLink href="/subgroups/controls">Controls</SubNavLink>
-                    <SubNavLink href="/subgroups/drivetrain">Drivetrain</SubNavLink>
-                    <SubNavLink href="/subgroups/cnc">CNC</SubNavLink>
-                    <SubNavLink href="/subgroups/pneumatics">Pneumatics</SubNavLink>
-                    <SubNavLink href="/subgroups/animation">Animation</SubNavLink>
-                    <SubNavLink href="/subgroups/welding">Welding</SubNavLink>
-                    <SubNavLink href="/subgroups/business">Business</SubNavLink>
-                </Match>
-                <Match href="/mentors">
-                    <SubNavLink href="/mentors">Mentors</SubNavLink>
-                    <SubNavLink href="/mentors/kristina">Kristina</SubNavLink>
-                    <SubNavLink href="/mentors/seth">Seth</SubNavLink>
-                    <SubNavLink href="/mentors/karl">Karl</SubNavLink>
-                    <SubNavLink href="/mentors/phil">Phil</SubNavLink>
-                    <SubNavLink href="/mentors/zach">Zach</SubNavLink>
-                </Match>
-            </nav>
+            <div className="overflow-x-auto bg-black text-white">
+                <nav className="flex w-max mx-auto min-h-[1rem] px-5">
+                    <Match href="/FIRST">
+                        <SubNavLink href="/FIRST">FIRST</SubNavLink>
+                        <SubNavLink href="/FIRST/accolades">Accolades</SubNavLink>
+                        <SubNavLink href="/FIRST/2019">2019</SubNavLink>
+                        <SubNavLink href="/FIRST/2018">2018</SubNavLink>
+                        <SubNavLink href="/FIRST/2016">2016</SubNavLink>
+                        <SubNavLink href="/FIRST/2015">2015</SubNavLink>
+                        <SubNavLink href="/FIRST/2014">2014</SubNavLink>
+                        <SubNavLink href="/FIRST/2013">2013</SubNavLink>
+                        <SubNavLink href="/FIRST/2012">2012</SubNavLink>
+                    </Match>
+                    <Match href="/subgroups">
+                        <SubNavLink href="/subgroups">Subgroups</SubNavLink>
+                        <SubNavLink href="/subgroups/controls">Controls</SubNavLink>
+                        <SubNavLink href="/subgroups/drivetrain">Drivetrain</SubNavLink>
+                        <SubNavLink href="/subgroups/cnc">CNC</SubNavLink>
+                        <SubNavLink href="/subgroups/pneumatics">Pneumatics</SubNavLink>
+                        <SubNavLink href="/subgroups/animation">Animation</SubNavLink>
+                        <SubNavLink href="/subgroups/welding">Welding</SubNavLink>
+                        <SubNavLink href="/subgroups/business">Business</SubNavLink>
+                    </Match>
+                    <Match href="/mentors">
+                        <SubNavLink href="/mentors">Mentors</SubNavLink>
+                        <SubNavLink href="/mentors/kristina">Kristina</SubNavLink>
+                        <SubNavLink href="/mentors/seth">Seth</SubNavLink>
+                        <SubNavLink href="/mentors/karl">Karl</SubNavLink>
+                        <SubNavLink href="/mentors/phil">Phil</SubNavLink>
+                        <SubNavLink href="/mentors/zach">Zach</SubNavLink>
+                    </Match>
+                </nav>
+            </div>
         </div>
     )
 }

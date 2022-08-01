@@ -23,7 +23,7 @@ export default function About() {
                 <img
                     src="/assets/about/team.JPG"
                     alt="GRT"
-                    className="lg:max-w-[50%] h-max"
+                    className="lg:max-w-[50%] self-start"
                 />
             </div>
         </section>

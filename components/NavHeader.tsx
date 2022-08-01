@@ -50,7 +50,7 @@ export default function NavHeader(props: NavHeaderProps) {
                     <Popover.Button>
                         <BsThreeDots className="text-white text-3xl p-1" />
                     </Popover.Button>
-                    <AnimatedPopover className="absolute top-full right-0 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
+                    <AnimatedPopover className="absolute top-full right-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
                         <div className="sm:hidden">
                             <PopoverNavLink href="/#about">About</PopoverNavLink>
                             <PopoverNavLink href="/updates">Updates</PopoverNavLink>

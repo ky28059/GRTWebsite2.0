@@ -38,7 +38,7 @@ function Sponsor(props: SponsorProps) {
                 <img
                     src={props.src}
                     alt={props.name}
-                    className="max-w-[18rem] mx-auto sm:max-w-[12rem] sm:min-w-[12rem] lg:max-w-[18rem] lg:min-w-[18rem] h-max"
+                    className="max-w-[18rem] mx-auto sm:max-w-[12rem] sm:min-w-[12rem] lg:max-w-[18rem] lg:min-w-[18rem]"
                 />
                 <div>
                     <h5 className="font-medium text-lg mb-2">{props.name}</h5>
