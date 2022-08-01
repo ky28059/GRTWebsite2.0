@@ -47,7 +47,7 @@ export default function GRT2013() {
                     into a flat position when needed, allowing the robot to drive below the pyramids to take a more direct
                     path around the field or to avoid opponents.
                 </p>
-                <img src="/assets/first/2013-robot-shooter.jpg" alt="2013 shooter" className="max-w-3xl mx-auto" />
+                <img src="/assets/first/2013-robot-shooter.jpg" alt="2013 shooter" className="w-full max-w-3xl mx-auto" />
                 {/* TODO: caption? */}
             </WriteupSection>
 

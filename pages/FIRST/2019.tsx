@@ -46,7 +46,7 @@ export default function GRT2019() {
 
             <WriteupSection>
                 <div className="flex flex-wrap-reverse md:flex-nowrap gap-6 md:gap-8 mb-16">
-                    <img src="/assets/first/2019-jonah.jpg" alt="2019 robot" className="md:max-w-xs lg:max-w-md mx-auto h-max" />
+                    <img src="/assets/first/2019-jonah.jpg" alt="2019 robot" className="md:max-w-xs lg:max-w-md mx-auto self-start" />
                     <div>
                         <h2 className="text-2xl font-medium text-center md:text-left mb-6">
                             Beta and Omega

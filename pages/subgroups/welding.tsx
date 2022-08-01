@@ -56,7 +56,7 @@ export default function Welding() {
                 current welding subgroup members will be graduating this year and a tentative plan for training new
                 welders in late summer/early fall is currently in discussion.
             </p>
-            <img src="/assets/subgroups/welding-masks.JPG" alt="Welding masks" className="max-w-2xl mx-auto" />
+            <img src="/assets/subgroups/welding-masks.JPG" alt="Welding masks" className="w-full max-w-2xl mx-auto" />
         </Layout>
     )
 }

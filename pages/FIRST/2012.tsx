@@ -47,7 +47,7 @@ export default function GRT2012() {
                     three top hoop shots in less than 3 seconds. A camera-based tracking system allows the robot to shoot
                     from any location, range permitting. The same system allows for reliable autonomous scoring.
                 </p>
-                <img src="/assets/first/2012-steakhouse-rodriguez.jpg" alt="2012 robot" className="max-w-3xl mx-auto" />
+                <img src="/assets/first/2012-steakhouse-rodriguez.jpg" alt="2012 robot" className="w-full max-w-3xl mx-auto" />
             </WriteupSection>
 
             <WriteupSection>
@@ -121,7 +121,7 @@ export default function GRT2012() {
                     mechanism. This surgical tubing allowed us to pick balls up quickly, easily collect balls that are
                     bouncing or rolling away from us, and retrieve balls from against the wall or corners of the field.
                 </p>
-                <img src="/assets/first/2012-ball-pickup.png" alt="2012 ball pickup" className="max-w-2xl mx-auto" />
+                <img src="/assets/first/2012-ball-pickup.png" alt="2012 ball pickup" className="w-full max-w-2xl mx-auto" />
                 {/* TODO: caption? */}
             </WriteupSection>
         </WriteupLayout>

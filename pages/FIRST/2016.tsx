@@ -30,7 +30,7 @@ export default function GRT2016() {
                 <p className="font-light mb-6">
                     For FIRST Stronghold, GRT built the 'Red Giant', [...].
                 </p>
-                <img src="/assets/first/2016-red-giant.jpg" alt="2016 robot" className="max-w-3xl mx-auto mb-6" />
+                <img src="/assets/first/2016-red-giant.jpg" alt="2016 robot" className="w-full max-w-3xl mx-auto mb-6" />
                 <p className="font-light">
                     The pickup mechanism on the Red Giant uses two car window motors attached to a roller arm to move
                     the ball into the shooter mechanism. The roller arm consists of a metal roller to which was tied
