@@ -5,7 +5,7 @@ import {ReactNode} from 'react';
 export default function Sponsors() {
     return (
         <section id="sponsors" className="container pt-16 pb-24">
-            <h3 className="text-2xl font-medium text-center mb-6">SPONSORS</h3>
+            <h3 className="text-2xl font-medium text-center">SPONSORS</h3>
             <div className="divide-y divide-gray-400">
                 <Sponsor name="Bosch" src="/assets/sponsors/bosch.svg" href="https://www.bosch.us/">
                     Bosch, a leading home appliance and auto parts manufacturer, sponsors many FRC teams. They have

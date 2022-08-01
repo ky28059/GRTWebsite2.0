@@ -2,6 +2,46 @@
 A Next.js port of the GRT website, with the aims of keeping the theme the same but improving code readability and 
 maintainability, as well as modernizing the CSS and JS logic.
 
+### Running locally
+Make sure you have a compatible version of Node installed.
+
+This project uses `googleapis` for build-time static props similarly to [`events-app`](https://github.com/gunnsec/events-app#running-locally).
+The website uses the same service account as [`guava-bot-slack`](https://github.com/ky28059/guava-bot-slack); go there for
+info about creating a service account and downloading a credentials file. In addition to the steps outlined in the 
+`guava-bot-slack` README, enable the Google Docs API.
+
+![image](https://user-images.githubusercontent.com/60120929/182207596-6274a973-107a-46cd-bc4c-cb35b67361cd.png)
+
+You should have a `keys.json` that looks something like this:
+```json
+{
+  "type": "service_account",
+  "project_id": "...",
+  "private_key_id": "...",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n...\n...\n...\n...\n...\n-----END PRIVATE KEY-----\n",
+  "client_email": "...",
+  "client_id": "...",
+  "auth_uri": "...",
+  "token_uri": "...",
+  "auth_provider_x509_cert_url": "...",
+  "client_x509_cert_url": "..."
+}
+```
+Instead of using a `keyFile` to authenticate, for this app credentials are passed via the `credentials` property from 
+environment variables. To define these variables locally, create a `.env.local` file in the root directory that declares 
+your `CLIENT_EMAIL`, `PRIVATE_KEY`, and the ID of the updates google doc. Your `.env.local` should look something like 
+this:
+```
+CLIENT_EMAIL=...
+PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\n...\n...\n...\n...\n...\n-----END PRIVATE KEY-----\n
+DOC_ID=...
+```
+For the `PRIVATE_KEY`, make sure that the `\n` newline characters are kept as `\n` and not converted to actual newlines,
+or the `.env` will not be parsed correctly.
+
+After defining environment variables, run `npm install` to install dependencies and `npm run dev` to start the dev server
+on `localhost:3000`.
+
 ### Changelog
 The following is an incomplete changelog of differences from the old PHP website. I may move this to an issue or remove
 this entirely at some point, perhaps after the port is finished.
