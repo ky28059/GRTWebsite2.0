@@ -33,8 +33,8 @@ export default function Drivetrain() {
                 happen, but swerve drive maintains traction by using a normal wheel housed in a rotating fork. GRT first
                 started using swerve drive in the 2017 FIRST game, Steamworks, becoming one of the first teams to pioneer
                 the then new drive system. Though swerve has now entered the mainstream, with several manufacturers selling
-                premade modules to teams wanting to try out the unique drive, GRT continues to improve and iterate upon
-                our custom swerve designs, [...].
+                prefabbed modules to teams wanting to try out the unique drive, GRT continues to design and manufacture
+                our own custom swerve, improving and iterating upon previous designs.
             </p>
             {/* TODO: swerve module image (2020? 2023 when that gets completed?) */}
             <p className="font-light mb-10">
