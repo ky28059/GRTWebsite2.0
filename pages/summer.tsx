@@ -19,11 +19,11 @@ export default function Summer() {
                 Gunn Robotics Summer Camp
             </h1>
 
-            <div className="px-6 py-4 -mx-4 rounded-lg shadow-lg bg-gray-100 text-sm mb-8">
+            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8">
                 {showRegistration ? (
                     <>
                         Sign-ups are now open for the Gunn Robotics Summer Camp, held-in person at Gunn High School for rising
-                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer">here</a>:
+                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer" className="text-[#ff594c]">here</a>:
                         (tinyurl.com/gunnroboticscamp)
                     </>
                 ) : (
@@ -34,9 +34,9 @@ export default function Summer() {
                 )}
             </div>
 
-            <div className="flex gap-6 mb-8">
-                <img src="/assets/summer/candidate_4.png" className="max-w-lg" alt="Summer camp" />
-                <p className="flex-grow">
+            <div className="flex flex-wrap lg:flex-nowrap gap-6 mb-8">
+                <img src="/assets/summer/candidate_4.png" className="lg:max-w-[50%] self-start" alt="Summer camp" />
+                <p className="font-light">
                     The Gunn Robotics Team invites your rising 5th-9th grade students to our weeklong summer robotics camp!
                     Students will have a blast learning to design, build, and program a Vex IQ robot to compete with at the end
                     of the week. Snacks will be provided!
