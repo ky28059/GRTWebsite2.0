@@ -50,11 +50,12 @@ export default function Welding() {
             {/* TODO: update with past tense, how welding recovered / the future of welding */}
             <h3 className="text-lg font-medium mb-3">COVID-19</h3>
             <p className="font-light mb-6">
-                Due to the coronavirus pandemic, no new members were able to be trained in welding this year. The tight
+                Due to the coronavirus pandemic, there was a period of time where no one was able to be trained in or
+                consistently practicing welding, and thus a lot of knowledge and skills were lost. The tight
                 proximity of the welding room and the hands-on nature of welding made it impossible to teach, and virtual
-                lessons and videos — although incredibly insightful — are no substitute for practice. Unfortunately, all
-                current welding subgroup members will be graduating this year and a tentative plan for training new
-                welders in late summer/early fall is currently in discussion.
+                lessons and videos — although incredibly insightful — are no substitute for practice. However, this past
+                year the subgroup slowly started to rebuild by reaching out to old welding leads, and has thankfully
+                regained much of its expertise.
             </p>
             <img src="/assets/subgroups/welding-masks.JPG" alt="Welding masks" className="w-full max-w-2xl mx-auto" />
         </Layout>

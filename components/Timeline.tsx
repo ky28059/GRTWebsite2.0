@@ -16,8 +16,8 @@ export default function Timeline() {
                             abandoned and slated for demolition.
                         </TimelineItem>
                         <TimelineItem>
-                            The Gunn robotics team entered the FIRST Robotics competition In 1997, and that summer traveled
-                            to the National Championships In Orlando, Florida.
+                            The Gunn Robotics Team entered the FIRST Robotics competition in 1997, and that summer traveled
+                            to the National Championships in Orlando, Florida.
                         </TimelineItem>
                         <TimelineItem>
                             GRT has grown into a popular program at Henry M. Gunn HS, with two full classes meeting throughout
