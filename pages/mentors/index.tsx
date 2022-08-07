@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import ImageBox from '../../components/ImageBox';
 
 
 export default function Mentors() {
@@ -28,10 +29,29 @@ export default function Mentors() {
                 which means they all have something unique and valuable to teach us. Our mentors are extremely adept at
                 giving us the tools we need to find answers and innovate; they "teach us to fish."
             </p>
-            <p className="font-light">
+            <p className="font-light mb-10">
                 GRT would like to thank our 5 amazing mentors:
             </p>
-            {/* TODO: insert mentor cards with name + description that link to their corresponding pages */}
+
+            {/* TODO: replace images with better / more recent ones instead of repeating the ones on the page? */}
+            <section className="flex flex-wrap justify-center gap-6">
+                <ImageBox name="Kristina Granlund-Moyer" src="/assets/mentors/Granlund.jpg" href="/mentors/kristina">
+                    Supervising mentor and engineering teacher at Gunn.
+                </ImageBox>
+                <ImageBox name="Seth Mallory" src="/assets/mentors/Seth.jpg" href="/mentors/seth">
+                    Supervising mentor, Transit Mechanic at VTA.
+                </ImageBox>
+                <ImageBox name="Karl Van Dyk" src="/assets/mentors/Karl.jpg" href="/mentors/karl">
+                    Mentor, Mechanical Engineer. {/* TODO: position */}
+                </ImageBox>
+                <ImageBox name="Phil Roan" src="/assets/mentors/Phil.jpg" href="/mentors/phil">
+                    Mentor, Principal Engineer of Robotics at BSH Home Appliances.
+                </ImageBox>
+                {/* TODO: image */}
+                <ImageBox name="Zach Walker" src="/assets/mentors/Zach.jpg" href="/mentors/zach">
+                    Mentor, Senior Manager at Lucid Motors.
+                </ImageBox>
+            </section>
         </Layout>
     )
 }
