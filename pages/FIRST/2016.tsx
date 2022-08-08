@@ -28,7 +28,8 @@ export default function GRT2016() {
                     Our robot: the Red Giant
                 </h2>
                 <p className="font-light mb-6">
-                    For FIRST Stronghold, GRT built the 'Red Giant', [...].
+                    For FIRST Stronghold, GRT built the 'Red Giant', a short robot specially engineered to overcome the
+                    challenging terrain presented in the game.
                 </p>
                 <img src="/assets/first/2016-red-giant.jpg" alt="2016 robot" className="w-full max-w-3xl mx-auto mb-6" />
                 <p className="font-light">
@@ -55,7 +56,7 @@ export default function GRT2016() {
                     launching the ball at the goal.
                 </p>
                 <CaptionedImage src="/assets/first/2016-outreach.jpg" alt="2016 robot on display" className="max-w-2xl mx-auto mb-4">
-                    The Red Giant on display at [...].
+                    The Red Giant on display. {/* TODO: "at ..." */}
                 </CaptionedImage>
                 <p className="font-light">
                     The shooting mechanism is supported by several aluminum plates and incorporates an adjustable hood
