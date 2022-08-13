@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Layout from '../components/Layout';
-import UpdatesDoc, {UpdatesDocProps} from '../components/UpdatesDoc';
+import Layout from '../../components/Layout';
+import UpdatesDoc, {UpdatesDocProps} from '../../components/UpdatesDoc';
 import {google} from 'googleapis';
 
 
