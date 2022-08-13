@@ -34,15 +34,22 @@ export default function Summer() {
                 )}
             </div>
 
-            <div className="flex flex-wrap lg:flex-nowrap gap-6 mb-8">
-                <img src="/assets/summer/candidate_4.png" className="lg:max-w-[50%] self-start" alt="Summer camp" />
+            <section className="mb-8">
+                <div className="group relative py-2 mb-4">
+                    <a href="https://photos.app.goo.gl/rUCEPKt8TXbyJiye9" target="_blank" rel="noopener noreferrer" className="hidden group-hover:flex items-center justify-center absolute z-20 inset-0 bg-black/60 text-white hover:no-underline">
+                        View 2022 summer camp photos in Google Photos.
+                    </a>
+                    <img src="/assets/summer/candidate_1.png" className="hidden md:block absolute rounded-md max-w-md inset-y-0 my-auto left-0 opacity-75" alt="Summer camp 1" />
+                    <img src="/assets/summer/candidate_4.png" className="relative w-full z-10 rounded-md shadow-lg max-w-xl mx-auto" alt="Summer camp 2" />
+                    <img src="/assets/summer/candidate_2.png" className="hidden md:block absolute rounded-md max-w-md inset-y-0 my-auto right-0 opacity-75" alt="Summer camp 3" />
+                </div>
                 <p className="font-light">
                     The Gunn Robotics Team invites your rising 5th-9th grade students to our weeklong summer robotics camp!
                     Students will have a blast learning to design, build, and program a Vex IQ robot to compete with at the end
                     of the week. Snacks will be provided!
                 </p>
                 {/* TODO: expand on this blurb probably */}
-            </div>
+            </section>
 
             {/* TODO: can this be abstracted with FIRST's <Section>s? */}
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>

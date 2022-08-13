@@ -91,9 +91,11 @@ export default function Updates2022() {
                         <ScrollSnapImage src="/assets/updates/2022/beach-trip-5.jpg" alt="Beach trip 5" />
                     </ScrollSection>
 
-                    <CaptionedImage src="/assets/updates/2022/beach-trip-1.png" alt="Beach trip 1" className="max-w-2xl mx-auto">
-                        GRT 2021-2022
-                    </CaptionedImage>
+                    <div className="container">
+                        <CaptionedImage src="/assets/updates/2022/beach-trip-1.png" alt="Beach trip 1" className="max-w-2xl mx-auto">
+                            GRT 2021-2022
+                        </CaptionedImage>
+                    </div>
                 </Update>
             </section>
         </WriteupLayout>
