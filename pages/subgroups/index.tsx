@@ -43,7 +43,7 @@ export default function Subgroups() {
                     Responsible for operating our welder.
                 </ImageBox>
                 {/* TODO: image */}
-                <ImageBox name="Business" src="/assets/subgroups/2022-grt-may-fete.png" href="/subgroups/business">
+                <ImageBox name="Business" src="/assets/subgroups/2022-grt-may-fete.jpg" href="/subgroups/business">
                     Responsible for organizing outreach events and writing grants and essays.
                 </ImageBox>
             </section>

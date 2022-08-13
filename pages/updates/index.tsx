@@ -42,8 +42,8 @@ export default function Updates2022() {
                         FIRST robotics tournament.
                     </p>
                     <div className="flex flex-wrap justify-center gap-2">
-                        <img src="/assets/updates/2022/november-update-1.png" alt="November update 1" />
-                        <img src="/assets/updates/2022/november-update-2.png" alt="November update 2" />
+                        <img src="/assets/updates/2022/november-update-1.jpg" alt="November update 1" />
+                        <img src="/assets/updates/2022/november-update-2.jpg" alt="November update 2" />
                     </div>
                 </Update>
 
