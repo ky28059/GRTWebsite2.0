@@ -92,7 +92,7 @@ export default function Updates2022() {
                     </ScrollSection>
 
                     <div className="container">
-                        <CaptionedImage src="/assets/updates/2022/beach-trip-1.png" alt="Beach trip 1" className="max-w-2xl mx-auto">
+                        <CaptionedImage src="/assets/updates/2022/beach-trip-1.jpg" alt="Beach trip 1" className="max-w-2xl mx-auto">
                             GRT 2021-2022
                         </CaptionedImage>
                     </div>

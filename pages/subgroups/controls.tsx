@@ -39,7 +39,7 @@ export default function Controls() {
                 moves in any direction without changing orientation, allowing the driver to quickly move across the field
                 around defense robots and then make accurate movements to score points.
             </p>
-            <CaptionedImage src="/assets/subgroups/vscode.png" alt="Swerve code" className="max-w-2xl mx-auto mb-4">
+            <CaptionedImage src="/assets/subgroups/vscode.jpg" alt="Swerve code" className="max-w-2xl mx-auto mb-4">
                 2023 preseason swerve code
             </CaptionedImage>
             <p className="font-light mb-10">

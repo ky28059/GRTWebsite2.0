@@ -28,7 +28,7 @@ export default function Business() {
                 Palo Alto May Fete Parade, Apricot STEM Fair, and the Nixon Elementary School Science Night to showcase
                 our robot.
             </p>
-            <CaptionedImage src="/assets/subgroups/2022-grt-may-fete.png" alt="May fete parade" className="max-w-2xl mx-auto">
+            <CaptionedImage src="/assets/subgroups/2022-grt-may-fete.jpg" alt="May fete parade" className="max-w-2xl mx-auto">
                 GRT in the 2022 Palo Alto May Fete parade.
             </CaptionedImage>
 
