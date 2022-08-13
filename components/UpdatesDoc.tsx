@@ -2,14 +2,21 @@ import {createContext, useContext} from 'react';
 import {docs_v1} from 'googleapis';
 
 
-type GlobalDocumentData = Pick<docs_v1.Schema$Document, 'inlineObjects'>
-const DocumentContext = createContext<GlobalDocumentData>({});
+type GlobalDocumentData = Pick<docs_v1.Schema$Document, 'inlineObjects'> & {parsedUris: {[key: string]: string}}
+const DocumentContext = createContext<GlobalDocumentData>({parsedUris: {}});
 
-export default function UpdatesDoc(props: docs_v1.Schema$Document) {
+// The parsed Google Docs api response from `getStaticProps()`. `parsedUris` is an object containing parsed
+// base64 image URIs, keyed by inline object ID.
+export type UpdatesDocProps = {
+    document: docs_v1.Schema$Document,
+    parsedUris: {[key: string]: string}
+};
+export default function UpdatesDoc(props: UpdatesDocProps) {
+    const {document, parsedUris} = props;
     return (
         <section className="whitespace-pre-wrap max-w-4xl mx-auto">
-            <DocumentContext.Provider value={{inlineObjects: props.inlineObjects}}>
-                {props.body?.content?.map(element => (
+            <DocumentContext.Provider value={{inlineObjects: document.inlineObjects, parsedUris}}>
+                {document.body?.content?.map(element => (
                     <StructuralElement {...element} key={element.startIndex} />
                 ))}
             </DocumentContext.Provider>
@@ -108,13 +115,13 @@ function TextRun(props: docs_v1.Schema$TextRun) {
 }
 
 function InlineObject(props: docs_v1.Schema$InlineObjectElement) {
-    const {inlineObjects} = useContext(DocumentContext);
+    const {inlineObjects, parsedUris} = useContext(DocumentContext);
     if (!inlineObjects || !props.inlineObjectId) return null;
 
     const object = inlineObjects[props.inlineObjectId].inlineObjectProperties?.embeddedObject;
-    if (object?.imageProperties?.contentUri) return (
+    if (object) return (
         <img
-            src={object.imageProperties.contentUri}
+            src={parsedUris[props.inlineObjectId]}
             alt={(object.title && object.description) ? `${object.title}: ${object.description}` : object.title ?? object.description ?? 'Unknown docs image'}
         />
     )
