@@ -51,7 +51,7 @@ export default function FIRST() {
                         pathways for students that give them meaningful, contextual engineering experience while still in high
                         school.
                     </p>
-                    <img src="/assets/first/mentor.jpg" alt="Mentor" />
+                    <img src="/assets/first/mentor.jpg" className="brightness-105 contrast-[1.05] saturate-[1.2]" alt="Mentor" />
                 </Section>
 
                 <Section heading="Mentors to Veterans to Rookies">

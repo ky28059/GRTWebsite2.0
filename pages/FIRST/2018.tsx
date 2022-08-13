@@ -31,7 +31,7 @@ export default function GRT2018() {
                     Following this change, Omega machining began and identical robots Omega 1 and 2 were created. One of
                     these robots was sent to competition while the other remained at the shop for continued testing.
                 </p>
-                <CaptionedImage src="/assets/first/grt-2018.JPG" alt="GRT 2017-2018" className="max-w-3xl mx-auto">
+                <CaptionedImage src="/assets/first/grt-2018.jpg" alt="GRT 2017-2018" className="max-w-3xl mx-auto">
                     GRT 2017-2018
                 </CaptionedImage>
             </WriteupSection>
@@ -72,7 +72,7 @@ export default function GRT2018() {
                     the Creativity Award and Safety Award from the Silicon Valley Regional and the Innovation in Controls
                     Award from the Lone Star Central Regional.
                 </p>
-                <CaptionedImage src="/assets/first/2018-lone-star.JPG" alt="Robot depositing power cube" className="max-w-2xl mx-auto mb-16">
+                <CaptionedImage src="/assets/first/2018-lone-star.jpg" alt="Robot depositing power cube" className="max-w-2xl mx-auto mb-16">
                     The robot depositing a power cube at Lone Star Regional.
                 </CaptionedImage>
 
@@ -89,7 +89,7 @@ export default function GRT2018() {
                     small competitions at the GRT shop. A few GRT students also went to the Apricot STEM Fair on June 24,
                     where they ran the 2018 robot.
                 </p>
-                <img src="/assets/first/2018-comps.JPG" alt="2018 robot at competition" className="w-full max-w-2xl mx-auto" />
+                <img src="/assets/first/2018-comps.jpg" alt="2018 robot at competition" className="w-full max-w-2xl mx-auto" />
                 {/* TODO: caption? where is this? */}
             </WriteupSection>
         </WriteupLayout>

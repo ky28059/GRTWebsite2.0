@@ -52,7 +52,7 @@ export default function GRT2012() {
 
             <WriteupSection>
                 <div className="flex gap-8">
-                    <img src="/assets/first/2012-shooter.png" alt="2012 shooter" className="hidden md:block md:max-w-xs lg:max-w-md h-max" />
+                    <img src="/assets/first/2012-shooter.jpg" alt="2012 shooter" className="hidden md:block md:max-w-xs lg:max-w-md h-max" />
                     <div>
                         <h2 className="text-2xl font-medium text-center md:text-left mb-6">
                             Shooter
@@ -121,7 +121,7 @@ export default function GRT2012() {
                     mechanism. This surgical tubing allowed us to pick balls up quickly, easily collect balls that are
                     bouncing or rolling away from us, and retrieve balls from against the wall or corners of the field.
                 </p>
-                <img src="/assets/first/2012-ball-pickup.png" alt="2012 ball pickup" className="w-full max-w-2xl mx-auto" />
+                <img src="/assets/first/2012-ball-pickup.jpg" alt="2012 ball pickup" className="w-full max-w-2xl mx-auto" />
                 {/* TODO: caption? */}
             </WriteupSection>
         </WriteupLayout>
