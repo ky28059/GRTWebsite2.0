@@ -35,8 +35,8 @@ export default function Summer() {
             </div>
 
             <section className="mb-8">
-                <div className="group relative py-2 mb-4">
-                    <a href="https://photos.app.goo.gl/rUCEPKt8TXbyJiye9" target="_blank" rel="noopener noreferrer" className="hidden group-hover:flex items-center justify-center absolute z-20 inset-0 bg-black/60 text-white hover:no-underline">
+                <div className="group relative md:py-2 mb-4">
+                    <a href="https://photos.app.goo.gl/rUCEPKt8TXbyJiye9" target="_blank" rel="noopener noreferrer" className="hidden group-hover:flex items-center justify-center absolute z-20 inset-0 bg-black/60 text-white hover:no-underline text-center px-4 rounded-md">
                         View 2022 summer camp photos in Google Photos.
                     </a>
                     <img src="/assets/summer/summer-left.jpg" className="hidden md:block absolute rounded-md max-w-md inset-y-0 my-auto left-0 opacity-75 saturate-[1.2]" alt="Summer camp left" />
@@ -104,7 +104,7 @@ function Question(props: {name: string, children: ReactNode}) {
     return (
         <Disclosure as="div" className="flex flex-col gap-2">
             {({open}) => (<>
-                <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2">
+                <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2 text-left">
                     {props.name}
                     <HiChevronDown className={'w-5 h-5 transition-transform duration-300 ease-in-out' + (open ? ' rotate-180' : '')} />
                 </Disclosure.Button>
