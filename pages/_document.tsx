@@ -4,7 +4,7 @@ import Document, {Html, Head, Main, NextScript} from 'next/document';
 class GRTDocument extends Document {
     render() {
         return (
-            <Html className="h-full scroll-smooth">
+            <Html lang="en" className="h-full scroll-smooth">
                 <Head>
                     <meta charSet="utf-8" />
 
@@ -31,7 +31,9 @@ class GRTDocument extends Document {
                     <link rel="manifest" href="/manifest.json" />
                     {/* <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" /> */}
                     <link rel="shortcut icon" href="/favicon.ico" />
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+
+                    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
 
                     <meta name="twitter:card" content="summary" />
                     <meta name="twitter:url" content="https://www.gunnrobotics.com" />
