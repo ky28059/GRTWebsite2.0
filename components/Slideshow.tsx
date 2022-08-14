@@ -8,7 +8,7 @@ export default function Slideshow() {
     const [imageIndex, setImageIndex] = useState(0);
     const images = [
         'drill_bits.jpg', 'spools.jpg', 'pipes.jpg', 'bandsaw.jpg', /* 'plate.jpg', */
-        'lathe.jpg', 'panel.jpg', /* 'robot_driving.JPG', */ 'robot_aiming.jpg', 'robot_podium.jpg'
+        'lathe.jpg', 'panel.jpg', /* 'robot_driving.JPG', */ 'robot_aiming.JPG', 'robot_podium.JPG'
     ];
 
     // Transition the image slideshow every 8 seconds
