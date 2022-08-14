@@ -40,7 +40,7 @@ function Sponsor(props: SponsorProps) {
                     alt={props.name}
                     className="max-w-[18rem] mx-auto sm:max-w-[12rem] sm:min-w-[12rem] lg:max-w-[18rem] lg:min-w-[18rem]"
                 />
-                <div>
+                <div className="flex-grow">
                     <h5 className="font-medium text-lg mb-2">{props.name}</h5>
                     <p className="font-light">
                         {props.children}
