@@ -32,6 +32,7 @@ export default function Slideshow() {
                 </p>
                 <a href="#about" className="text-inherit text-4xl">
                     <BsChevronCompactDown className="animate-bounce" />
+                    <span className="sr-only">Jump to About</span>
                 </a>
             </div>
 

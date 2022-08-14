@@ -18,7 +18,7 @@ export default function NavHeader(props: NavHeaderProps) {
     const NavLink = props.component;
 
     return (
-        <header className={'flex items-stretch justify-between px-5' + (props.className ? ` ${props.className}` : '')}>
+        <header className={'flex items-stretch justify-between px-2 md:px-5' + (props.className ? ` ${props.className}` : '')}>
             <Link href="/">
                 <a className="flex items-center">
                     <img src="/logo.svg" alt="GRT Logo" className="w-20 my-3" />
@@ -47,7 +47,7 @@ export default function NavHeader(props: NavHeaderProps) {
                 </div>
 
                 <Popover className="relative self-center px-3 pt-1 h-max lg:hidden">
-                    <Popover.Button>
+                    <Popover.Button aria-label="Expand nav">
                         <BsThreeDots className="text-white text-3xl p-1" />
                     </Popover.Button>
                     <AnimatedPopover className="absolute top-full right-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
