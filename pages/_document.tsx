@@ -20,11 +20,10 @@ class GRTDocument extends Document {
                     <meta name="msapplication-tap-highlight" content="no" />
                     <meta name="theme-color" content="#000000" />
 
-                    <link rel="apple-touch-icon" href="/icons/apple-icon.png" />
+                    <link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" />
                     <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png" />
-                    {/* <link rel="apple-touch-icon" sizes="167x167" href="/apple-icon-167x167.png" /> */}
+                    <link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-icon-167x167.png" />
                     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png" />
-                    <link rel="apple-touch-icon-precomposed" href="/icons/apple-icon-precomposed.png" />
 
                     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
                     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
@@ -35,17 +34,17 @@ class GRTDocument extends Document {
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
 
                     <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:url" content="http://gunnrobotics.grtboosters.com" />
+                    <meta name="twitter:url" content="https://www.gunnrobotics.com" />
                     <meta name="twitter:title" content="GRT" />
                     <meta name="twitter:description" content="The official website of FRC Team 192." />
-                    <meta name="twitter:image" content="http://gunnrobotics.grtboosters.com/icons/android-icon-192x192.png" />
+                    <meta name="twitter:image" content="https://www.gunnrobotics.com/icons/apple-icon.png" />
 
                     <meta property="og:type" content="website" />
                     <meta property="og:title" content="GRT" />
                     <meta property="og:description" content="The official website of FRC Team 192." />
                     <meta property="og:site_name" content="GRT" />
-                    <meta property="og:url" content="http://gunnrobotics.grtboosters.com" />
-                    <meta property="og:image" content="http://gunnrobotics.grtboosters.com/icons/apple-icon.png" />
+                    <meta property="og:url" content="https://www.gunnrobotics.com" />
+                    <meta property="og:image" content="https://www.gunnrobotics.com/icons/apple-icon.png" />
                 </Head>
                 <body className="font-['Roboto'] h-full">
                     <Main />
