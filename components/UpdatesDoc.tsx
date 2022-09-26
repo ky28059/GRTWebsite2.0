@@ -74,7 +74,7 @@ function TableCell(props: docs_v1.Schema$TableCell) {
 // https://googleapis.dev/nodejs/googleapis/latest/docs/interfaces/Schema$Paragraph.html
 function Paragraph(props: docs_v1.Schema$Paragraph) {
     if (props.paragraphStyle?.headingId) return (
-        <h3 className="font-medium text-2xl text-center">
+        <h3 className="font-medium text-2xl text-center mb-4">
             {props.elements?.map(element => (
                 <ParagraphElement {...element} key={element.startIndex} />
             ))}
@@ -123,6 +123,7 @@ function InlineObject(props: docs_v1.Schema$InlineObjectElement) {
         <img
             src={parsedUris[props.inlineObjectId]}
             alt={(object.title && object.description) ? `${object.title}: ${object.description}` : object.title ?? object.description ?? 'Unknown docs image'}
+            className="inline mb-1"
         />
     )
 
