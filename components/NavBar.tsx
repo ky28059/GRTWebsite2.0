@@ -42,6 +42,10 @@ export default function NavBar() {
                         <SubNavLink href="/mentors/phil">Phil</SubNavLink>
                         <SubNavLink href="/mentors/zach">Zach</SubNavLink>
                     </Match>
+                    <Match href="/updates">
+                        <SubNavLink href="/updates">2023</SubNavLink>
+                        <SubNavLink href="/updates/2022">2022</SubNavLink>
+                    </Match>
                 </nav>
             </div>
         </div>
