@@ -40,6 +40,7 @@ export async function getStaticProps() {
     }
 
     return {
-        props: {document: res.data, parsedUris}
+        props: {document: res.data, parsedUris},
+        revalidate: 60
     }
 }
