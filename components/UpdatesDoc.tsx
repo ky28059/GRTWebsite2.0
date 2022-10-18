@@ -82,7 +82,7 @@ function Paragraph(props: docs_v1.Schema$Paragraph) {
     );
 
     return (
-        <p className={'font-light' + (props.paragraphStyle?.alignment === 'CENTER' ? ' text-center' : props.paragraphStyle?.alignment ==='END' ? ' text-right' : '')}>
+        <p className={'font-light flex gap-1.5 min-h-[1rem]' + (props.paragraphStyle?.alignment === 'CENTER' ? ' text-center justify-center' : props.paragraphStyle?.alignment === 'END' ? ' text-right justify-end' : '')}>
             {props.elements?.map(element => (
                 <ParagraphElement {...element} key={element.startIndex} />
             ))}
@@ -123,7 +123,7 @@ function InlineObject(props: docs_v1.Schema$InlineObjectElement) {
         <img
             src={parsedUris[props.inlineObjectId]}
             alt={(object.title && object.description) ? `${object.title}: ${object.description}` : object.title ?? object.description ?? 'Unknown docs image'}
-            className="inline mb-1"
+            className="flex-1 mb-1 min-w-0"
         />
     )
 
