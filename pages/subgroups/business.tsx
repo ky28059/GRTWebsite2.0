@@ -17,7 +17,7 @@ export default function Business() {
             {/* <h3 className="text-lg font-medium mb-3">About</h3> */}
             <p className="font-light mb-6">
                 The Business group of the Gunn Robotics Team is primarily responsible for funding and outreach. We represent
-                GRT when applying for grants, sponsorhips, and competing for awards. Additionally, we write all of the
+                GRT when applying for grants, sponsorships, and competing for awards. Additionally, we write all of the
                 essays that are needed for awards and manage our interactions with other entities, such as corporations
                 and community members.
             </p>
