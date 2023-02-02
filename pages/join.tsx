@@ -64,7 +64,7 @@ export default function Join() {
                     <li>Programming a robot in Java (Controls)</li>
                     <li>Gearbox ratios for drivetrains and mechanisms (DT)</li>
                     <li>3D animation in Autodesk Maya (Animation)</li>
-                    <li>Operating and generating instructions for a CNC router (CNC)</li> {/* reword? */}
+                    <li>Operating and generating instructions for a CNC mill (CNC)</li> {/* reword? */}
                     <li>Connecting and powering pneumatic systems (Pneumatics)</li>
                     <li>TIG welding (Welding)</li>
                     <li>Professional writing and fundraising (Business)</li>
