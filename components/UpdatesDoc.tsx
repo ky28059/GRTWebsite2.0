@@ -79,21 +79,17 @@ function Paragraph(props: docs_v1.Schema$Paragraph) {
     const alignment = props.paragraphStyle?.alignment ?? namedStyle?.paragraphStyle?.alignment;
     const spaceAbove = props.paragraphStyle?.spaceAbove ?? namedStyle?.paragraphStyle?.spaceAbove;
     const spaceBelow = props.paragraphStyle?.spaceBelow ?? namedStyle?.paragraphStyle?.spaceBelow;
-    const fontSize = namedStyle?.textStyle?.fontSize;
-    const fontColor = namedStyle?.textStyle?.foregroundColor;
-    const bold = namedStyle?.textStyle?.bold;
-    const italic = namedStyle?.textStyle?.italic;
 
     return (
         <p
-            className={'font-light flex gap-1.5 min-h-[1rem]' + (alignment === 'CENTER' ? ' text-center justify-center' : alignment === 'END' ? ' text-right justify-end' : '')}
+            className={'font-light min-h-[1rem]' + (alignment === 'CENTER' ? ' text-center' : alignment === 'END' ? ' text-right' : '')}
             style={{
-                marginTop: spaceAbove?.magnitude && spaceAbove?.unit ? spaceAbove.magnitude + spaceAbove.unit : undefined,
-                marginBottom: spaceBelow?.magnitude && spaceBelow?.unit ? spaceBelow.magnitude + spaceBelow.unit : undefined,
-                fontSize: fontSize?.magnitude && fontSize?.unit ? fontSize.magnitude + fontSize.unit! : undefined,
-                fontWeight: bold ? 500 : undefined,
-                fontStyle: italic ? 'italic' : undefined,
-                color: parseColor(fontColor)
+                marginTop: parseDimension(spaceAbove),
+                marginBottom: parseDimension(spaceBelow),
+                fontSize: parseDimension(namedStyle?.textStyle?.fontSize),
+                fontWeight: namedStyle?.textStyle?.bold ? 500 : undefined,
+                fontStyle: namedStyle?.textStyle?.italic ? 'italic' : undefined,
+                color: parseColor(namedStyle?.textStyle?.foregroundColor)
             }}
         >
             {props.elements?.map(element => (
@@ -125,14 +121,11 @@ function TextRun(props: docs_v1.Schema$TextRun) {
     if (props.textStyle?.link?.url)
         content = <a href={props.textStyle.link.url} target="_blank" rel="noopener noreferrer">{content}</a>;
 
-    const fontSize = props.textStyle?.fontSize;
-    const fontColor = props.textStyle?.foregroundColor;
-
     return (
         <span
             style={{
-                fontSize: fontSize?.magnitude && fontSize?.unit ? fontSize.magnitude + fontSize.unit! : undefined,
-                color: parseColor(fontColor)
+                fontSize: parseDimension(props.textStyle?.fontSize),
+                color: parseColor(props.textStyle?.foregroundColor)
             }}
         >
             {content}
@@ -149,9 +142,17 @@ function InlineObject(props: docs_v1.Schema$InlineObjectElement) {
         <img
             src={parsedUris[props.inlineObjectId]}
             alt={(object.title && object.description) ? `${object.title}: ${object.description}` : object.title ?? object.description ?? 'Unknown docs image'}
-            className="flex-1 mb-1 min-w-0"
+            style={{
+                width: parseDimension(object.size?.width),
+                maxHeight: parseDimension(object.size?.height),
+                // marginTop: parseDimension(object.marginTop),
+                // marginRight: parseDimension(object.marginRight),
+                // marginBottom: parseDimension(object.marginBottom),
+                // marginLeft: parseDimension(object.marginLeft)
+            }}
+            className="inline mx-0.5 my-1"
         />
-    )
+    );
 
     return null;
 }
@@ -160,4 +161,9 @@ function parseColor(color?: docs_v1.Schema$OptionalColor) {
     const rgb = color?.color?.rgbColor;
     if (!rgb) return;
     return `rgb(${(rgb.red ?? 0) * 255} ${(rgb.green ?? 0) * 255} ${(rgb.blue ?? 0) * 255})`;
+}
+
+function parseDimension(dimension?: docs_v1.Schema$Dimension) {
+    if (!dimension?.magnitude || !dimension?.unit) return;
+    return dimension.magnitude + dimension.unit;
 }
