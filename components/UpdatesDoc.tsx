@@ -2,7 +2,7 @@ import {createContext, useContext} from 'react';
 import {docs_v1} from 'googleapis';
 
 
-type GlobalDocumentData = Pick<docs_v1.Schema$Document, 'inlineObjects'> & {parsedUris: {[key: string]: string}}
+type GlobalDocumentData = Pick<docs_v1.Schema$Document, 'inlineObjects' | 'namedStyles'> & {parsedUris: {[key: string]: string}}
 const DocumentContext = createContext<GlobalDocumentData>({parsedUris: {}});
 
 // The parsed Google Docs api response from `getStaticProps()`. `parsedUris` is an object containing parsed
@@ -15,7 +15,7 @@ export default function UpdatesDoc(props: UpdatesDocProps) {
     const {document, parsedUris} = props;
     return (
         <section className="whitespace-pre-wrap max-w-4xl mx-auto">
-            <DocumentContext.Provider value={{inlineObjects: document.inlineObjects, parsedUris}}>
+            <DocumentContext.Provider value={{inlineObjects: document.inlineObjects, namedStyles: document.namedStyles, parsedUris}}>
                 {document.body?.content?.map(element => (
                     <StructuralElement {...element} key={element.startIndex} />
                 ))}
@@ -73,16 +73,29 @@ function TableCell(props: docs_v1.Schema$TableCell) {
 // Renders a heading or paragraph from a `Schema$Paragraph` object.
 // https://googleapis.dev/nodejs/googleapis/latest/docs/interfaces/Schema$Paragraph.html
 function Paragraph(props: docs_v1.Schema$Paragraph) {
-    if (props.paragraphStyle?.headingId) return (
-        <h3 className="font-medium text-2xl text-center mb-4">
-            {props.elements?.map(element => (
-                <ParagraphElement {...element} key={element.startIndex} />
-            ))}
-        </h3>
-    );
+    const {namedStyles} = useContext(DocumentContext);
+    const namedStyle = namedStyles?.styles?.find(x => x.namedStyleType === props.paragraphStyle?.namedStyleType);
+
+    const alignment = props.paragraphStyle?.alignment ?? namedStyle?.paragraphStyle?.alignment;
+    const spaceAbove = props.paragraphStyle?.spaceAbove ?? namedStyle?.paragraphStyle?.spaceAbove;
+    const spaceBelow = props.paragraphStyle?.spaceBelow ?? namedStyle?.paragraphStyle?.spaceBelow;
+    const fontSize = namedStyle?.textStyle?.fontSize;
+    const fontColor = namedStyle?.textStyle?.foregroundColor;
+    const bold = namedStyle?.textStyle?.bold;
+    const italic = namedStyle?.textStyle?.italic;
 
     return (
-        <p className={'font-light flex gap-1.5 min-h-[1rem]' + (props.paragraphStyle?.alignment === 'CENTER' ? ' text-center justify-center' : props.paragraphStyle?.alignment === 'END' ? ' text-right justify-end' : '')}>
+        <p
+            className={'font-light flex gap-1.5 min-h-[1rem]' + (alignment === 'CENTER' ? ' text-center justify-center' : alignment === 'END' ? ' text-right justify-end' : '')}
+            style={{
+                marginTop: spaceAbove?.magnitude && spaceAbove?.unit ? spaceAbove.magnitude + spaceAbove.unit : undefined,
+                marginBottom: spaceBelow?.magnitude && spaceBelow?.unit ? spaceBelow.magnitude + spaceBelow.unit : undefined,
+                fontSize: fontSize?.magnitude && fontSize?.unit ? fontSize.magnitude + fontSize.unit! : undefined,
+                fontWeight: bold ? 500 : undefined,
+                fontStyle: italic ? 'italic' : undefined,
+                color: parseColor(fontColor)
+            }}
+        >
             {props.elements?.map(element => (
                 <ParagraphElement {...element} key={element.startIndex} />
             ))}
@@ -110,8 +123,21 @@ function TextRun(props: docs_v1.Schema$TextRun) {
     if (props.textStyle?.baselineOffset === 'SUPERSCRIPT') content = <sup>{content}</sup>
     if (props.textStyle?.baselineOffset === 'SUBSCRIPT') content = <sub>{content}</sub>
     if (props.textStyle?.link?.url)
-        content = <a href={props.textStyle.link.url} target="_blank" rel="noopener noreferrer">{content}</a>
-    return content;
+        content = <a href={props.textStyle.link.url} target="_blank" rel="noopener noreferrer">{content}</a>;
+
+    const fontSize = props.textStyle?.fontSize;
+    const fontColor = props.textStyle?.foregroundColor;
+
+    return (
+        <span
+            style={{
+                fontSize: fontSize?.magnitude && fontSize?.unit ? fontSize.magnitude + fontSize.unit! : undefined,
+                color: parseColor(fontColor)
+            }}
+        >
+            {content}
+        </span>
+    );
 }
 
 function InlineObject(props: docs_v1.Schema$InlineObjectElement) {
@@ -131,7 +157,7 @@ function InlineObject(props: docs_v1.Schema$InlineObjectElement) {
 }
 
 function parseColor(color?: docs_v1.Schema$OptionalColor) {
-    if (!color) return;
-    const rgb = color.color?.rgbColor;
-    return `rgb(${(rgb?.red ?? 1) * 255} ${(rgb?.green ?? 1) * 255} ${(rgb?.blue ?? 1) * 255})`;
+    const rgb = color?.color?.rgbColor;
+    if (!rgb) return;
+    return `rgb(${(rgb.red ?? 0) * 255} ${(rgb.green ?? 0) * 255} ${(rgb.blue ?? 0) * 255})`;
 }
