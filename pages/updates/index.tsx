@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 import UpdatesDoc, {UpdatesDocProps} from '../../components/UpdatesDoc';
+import sharp from 'sharp';
 import {google} from 'googleapis';
 
 
@@ -31,12 +32,39 @@ export async function getStaticProps() {
     // Parse temporary `contentUri` links to base64 encoded data URIs so they are always valid.
     const parsedUris: {[key: string]: string} = {};
     if (res.data.inlineObjects) for (const [key, object] of Object.entries(res.data.inlineObjects)) {
-        const uri = object.inlineObjectProperties?.embeddedObject?.imageProperties?.contentUri;
-        if (!uri) continue;
+        const embeddedObject = object.inlineObjectProperties?.embeddedObject;
+        if (!embeddedObject?.imageProperties?.contentUri) continue;
 
-        const blob = await (await fetch(uri)).blob();
-        const buffer = Buffer.from(await blob.arrayBuffer())
-        parsedUris[key] = `data:image/png;base64,${buffer.toString('base64')}`;
+        const blob = await (await fetch(embeddedObject.imageProperties.contentUri)).blob();
+        const buffer = Buffer.from(await blob.arrayBuffer());
+
+        let img = sharp(buffer, {animated: true});
+        const stats = await img.metadata();
+        const width = stats.width ?? 0;
+        const height = (stats.height ?? 0) / (stats.pages ?? 1);
+
+        const crop = embeddedObject.imageProperties.cropProperties;
+        const offsetLeftPx = (crop?.offsetLeft ?? 0) * width;
+        const offsetRightPx = (crop?.offsetRight ?? 0) * width;
+        const offsetTopPx = (crop?.offsetTop ?? 0) * height;
+        const offsetBottomPx = (crop?.offsetBottom ?? 0) * height;
+
+        if (offsetLeftPx || offsetRightPx || offsetTopPx || offsetBottomPx) img = img.extract({
+            left: Math.round(offsetLeftPx),
+            top: Math.round(offsetTopPx),
+            width: Math.round( width - offsetLeftPx - offsetRightPx),
+            height: Math.round(height - offsetTopPx - offsetBottomPx)
+        });
+        // TODO: fix
+        if (crop?.angle) img = img.rotate(crop.angle * 180 / Math.PI).resize({
+            width, //: Math.round(width - offsetLeftPx - offsetRightPx),
+            height, //: Math.round(height - offsetTopPx - offsetBottomPx),
+            fit: 'cover'
+        });
+
+        parsedUris[key] = stats.pages
+            ? `data:image/webp;base64,${(await img.webp().toBuffer()).toString('base64')}`
+            : `data:image/jpeg;base64,${(await img.jpeg().toBuffer()).toString('base64')}`;
     }
 
     return {
