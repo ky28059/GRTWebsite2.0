@@ -52,7 +52,7 @@ export async function getStaticProps() {
         if (offsetLeftPx || offsetRightPx || offsetTopPx || offsetBottomPx) img = img.extract({
             left: Math.round(offsetLeftPx),
             top: Math.round(offsetTopPx),
-            width: Math.round( width - offsetLeftPx - offsetRightPx),
+            width: Math.round(width - offsetLeftPx - offsetRightPx),
             height: Math.round(height - offsetTopPx - offsetBottomPx)
         });
         // TODO: fix

@@ -23,6 +23,9 @@ export default function CNC() {
                 and the control hardware began to sporadically fail. With a generous grant from our sponsor the Palo Alto
                 Partners In Education, we were able to purchase a Milltronics VKM4 mill in 2009.
             </p>
+            <CaptionedImage src="/assets/subgroups/cam.jpg" alt="CNC CAM software" className="max-w-2xl mx-auto mb-4">
+                Autodesk Inventor is used to generate toolpaths for the CNC mill.
+            </CaptionedImage>
             <p className="font-light mb-10">
                 The CNC is much more complex than using a manual mill. Because of this, we require all students who wish
                 to be trained on the CNC to be well versed with our Bridgeport manual mills. During Fall 2010, a few of
@@ -61,7 +64,7 @@ export default function CNC() {
                 not be uncommon for us to have to create mounting fixtures, such as aluminum or wooden sub-plates that we
                 bolt and clamp the stock to. Sheet metal tends to be difficult to mount effectively due to bending and the
                 necessity of using a mount plate. The challenge of workholding is greatest when machining very large parts,
-                especially when those parts exceed Fluffys travel range and require multiple CAMs and remounting, as zeroes
+                especially when those parts exceed Fluffy's travel range and require multiple CAMs and remounting, as zeroes
                 and orientation must be maintained when repositioning the part.
             </p>
         </Layout>
