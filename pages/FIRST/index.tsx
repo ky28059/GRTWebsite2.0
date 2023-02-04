@@ -32,11 +32,11 @@ export default function FIRST() {
                         <p>(<a href="https://firstinspires.org">firstinspires.org</a>)</p>
                     </div>
 
-                    {/* TODO: rewrite this with better grammar */}
                     <p className="font-light">
-                        GRT was one of the first FRC teams in the state of California, when we entered in 1997. We have competed
-                        since then, earning numerous awards. More importantly, however, we serve as a model for other FIRST
-                        programs and other engineering opportunities around the San Francisco Bay Area.
+                        GRT was one of the first FRC teams in the state of California when it was founded in 1997. We have
+                        since competed in countless FIRST Robotics competitions, earning numerous awards. More importantly,
+                        however, we serve as a model for FIRST programs and other engineering opportunities around the
+                        San Francisco Bay Area.
                     </p>
                 </section>
 
