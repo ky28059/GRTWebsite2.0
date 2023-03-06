@@ -48,7 +48,7 @@ export default function GRT2018() {
                     power cubes while the elevator lifted the cubes into the air. Both pickup mechanisms used flywheels,
                     which allowed the blocks to be spun out of the robot and onto the switches and scale during the game.
                 </p>
-                <img src="/assets/first/2018-design.jpg" alt="Prototyping and design" className="w-full max-w-3xl mx-auto mb-6" />
+                <img src="/assets/first/2018-design.jpg" alt="Prototyping and design" className="rounded w-full max-w-3xl mx-auto mb-6" />
                 <p className="font-light">
                     The controls teams this year converted the code from past years from Python to Java. The subgroup
                     also experimented with virtual reality this year, attempting to allow the driver to have a first person
@@ -89,7 +89,7 @@ export default function GRT2018() {
                     small competitions at the GRT shop. A few GRT students also went to the Apricot STEM Fair on June 24,
                     where they ran the 2018 robot.
                 </p>
-                <img src="/assets/first/2018-comps.JPG" alt="2018 robot at competition" className="w-full max-w-2xl mx-auto" />
+                <img src="/assets/first/2018-comps.JPG" alt="2018 robot at competition" className="rounded w-full max-w-2xl mx-auto" />
                 {/* TODO: caption? where is this? */}
             </WriteupSection>
         </WriteupLayout>

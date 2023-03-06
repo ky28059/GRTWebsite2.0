@@ -36,24 +36,27 @@ export default function Drivetrain() {
                 prefabbed modules to teams wanting to try out the unique drive, GRT continues to design and manufacture
                 our own custom swerve, improving and iterating upon previous designs.
             </p>
-            {/* TODO: swerve module image (2020? 2023 when that gets completed?) */}
+            <CaptionedImage src="/assets/subgroups/2017-swerve-module.jpg" alt="2017 swerve" className="max-w-2xl mx-auto mb-4">
+                GRT's original 2017 swerve module design.
+            </CaptionedImage>
             <p className="font-light mb-10">
                 Historically, GRT has manufactured our own gearbox modules using a variety of machines. For our 2019
                 gearbox, we used a laser cutter to make custom gears and pulleys, a CNC mill to make gearbox plates, a
                 3D printer to make swerve gearbox forks, and a lathe to turn all the axles and modify sprockets.
             </p>
+            {/* TODO: 2020 or 2023 swerve module image plus section about today's swerve? */}
 
             <h3 className="text-lg font-medium mb-3">2-speed drive</h3>
             <p className="font-light mb-6">
-                Earlier GRT gearbox designed featured 2-speed, ball-shifting gearboxes. Pictured is a 3-stage
-                reduction, which allows the use of 6 inch or larger wheels (a larger wheel would otherwise gear up the
+                Earlier GRT drivetrains featured 2-speed, ball-shifting gearboxes. Pictured is a shifting gearbox with a
+                3-stage reduction, which allows the use of 6 inch or larger wheels (a larger wheel would otherwise gear up the
                 transmission).
             </p>
             <CaptionedImage src="/assets/subgroups/2016-2-speed-dt.jpg" alt="2-speed gearbox" className="max-w-2xl mx-auto mb-4">
-                2016 2-speed gearbox design
+                2016 2-speed gearbox design.
             </CaptionedImage>
-            <p className="font-light mb-10">
-                Our gearboxes are designed to minimize space requirement, with a footprint extending
+            <p className="font-light mb-4">
+                GRT gearboxes are designed to minimize space requirement, with a footprint extending
                 from the transmissions only 2.7 inches. This comes courtesy of several innovations, most notable of which
                 are the inverted shifters: these are the pneumatics that drive the shifting cluster, turned around and
                 set within the gearbox itself, cutting about 2 inches out of the width. Using this linkage to pull the
@@ -62,6 +65,9 @@ export default function Drivetrain() {
                 through a belt drive on the face of the box. This further reduces profile, and allows the motors to be
                 turned backwards, with most of their volume outside of the robot base area.
             </p>
+            <CaptionedImage src="/assets/subgroups/2014-awards.jpeg" alt="2014 awards" className="max-w-3xl mx-auto mb-10">
+                The 2014 shifter gearbox, accompanied by GRT's 3 engineering excellence awards that year.
+            </CaptionedImage>
 
             <h3 className="text-lg font-medium mb-3">Belt-in-tube transmission</h3>
             <p className="font-light">

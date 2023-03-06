@@ -11,7 +11,7 @@ export default function CaptionedImage(props: CaptionedImageProps) {
         <div className={className}>
             <img
                 {...imageProps}
-                className="w-full mb-2"
+                className="rounded w-full mb-2"
             />
             <p className="text-sm text-secondary italic">{children}</p>
         </div>

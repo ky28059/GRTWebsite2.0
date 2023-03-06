@@ -49,7 +49,7 @@ export default function GRT2014() {
                     A compact, high-efficiency, two-speed gearbox lets Redshift traverse the field very quickly, yet have
                     enough torque to win most pushing matches.
                 </p>
-                <img src="/assets/first/2014-redshift.jpg" alt="2014 robot" className="w-full max-w-3xl mx-auto" />
+                <img src="/assets/first/2014-redshift.jpg" alt="2014 robot" className="rounded w-full max-w-3xl mx-auto" />
                 {/* TODO: caption? "Redshift at Nixon elementary school ..." */}
             </WriteupSection>
 
