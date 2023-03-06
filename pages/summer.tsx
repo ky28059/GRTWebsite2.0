@@ -85,7 +85,7 @@ export default function Summer() {
                 </Question>
                 <Question name="What is the price?">
                     No payment is required for our summer camp. However, a recommended donation of $350 (or however much
-                    you can afford) to our PayPal at <Link href="/donations"><a>GRT Boosters / grtboosters@gmail.com</a></Link> helps us keep running the camp
+                    you can afford) to our PayPal at <Link href="/donations">GRT Boosters / grtboosters@gmail.com</Link> helps us keep running the camp
                     and our team year after year.
                 </Question>
             </div>

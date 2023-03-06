@@ -19,10 +19,8 @@ export default function NavHeader(props: NavHeaderProps) {
 
     return (
         <header className={'flex items-stretch justify-between px-2 md:px-5' + (props.className ? ` ${props.className}` : '')}>
-            <Link href="/">
-                <a className="flex items-center">
-                    <img src="/logo.svg" alt="GRT Logo" className="w-20 my-3" />
-                </a>
+            <Link href="/" className="flex items-center">
+                <img src="/logo.svg" alt="GRT Logo" className="w-20 my-3" />
             </Link>
 
             <nav className="flex">
@@ -80,10 +78,8 @@ function PopoverNavLink(props: {href: string, children: ReactNode}) {
     const active = pathname.startsWith(href);
 
     return (
-        <Link href={href}>
-            <a className={'block text-white hover:no-underline hover:bg-black/40 px-4 py-2 transition duration-100' + (active ? ' bg-black/40' : '')}>
-                {children}
-            </a>
+        <Link href={href} className={'block text-white hover:no-underline hover:bg-black/40 px-4 py-2 transition duration-100' + (active ? ' bg-black/40' : '')}>
+            {children}
         </Link>
     )
 }

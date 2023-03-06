@@ -59,17 +59,15 @@ function NavLink(props: NavLinkProps) {
     const active = pathname.startsWith(href);
 
     return (
-        <Link href={href}>
-            <a className="relative p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
-                {children}
-                {active && (
-                    // CSS triangle; the width of the triangle is `2 * border-x-width`, and the height is
-                    // `border-b-width`. The color of the triangle is the color of the bottom border.
-                    <span
-                        className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent"
-                    />
-                )}
-            </a>
+        <Link href={href} className="relative p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+            {children}
+            {active && (
+                // CSS triangle; the width of the triangle is `2 * border-x-width`, and the height is
+                // `border-b-width`. The color of the triangle is the color of the bottom border.
+                <span
+                    className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent"
+                />
+            )}
         </Link>
     )
 }
@@ -92,16 +90,14 @@ function SubNavLink(props: NavLinkProps) {
     const active = pathname === props.href;
 
     return (
-        <Link href={props.href}>
-            <a className={'relative p-5 text-sm transition duration-200 ' + (active ? 'text-white' : 'text-secondary hover:text-white')}>
-                {props.children}
-                {active && (
-                    // CSS triangle; see comment above.
-                    <span
-                        className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-white border-x-[16px] border-x-transparent"
-                    />
-                )}
-            </a>
+        <Link href={props.href} className={'relative p-5 text-sm transition duration-200 ' + (active ? 'text-white' : 'text-secondary hover:text-white')}>
+            {props.children}
+            {active && (
+                // CSS triangle; see comment above.
+                <span
+                    className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-white border-x-[16px] border-x-transparent"
+                />
+            )}
         </Link>
     )
 }

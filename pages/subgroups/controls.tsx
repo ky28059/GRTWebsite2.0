@@ -40,7 +40,7 @@ export default function Controls() {
                 around defense robots and then make accurate movements to score points.
             </p>
             <CaptionedImage src="/assets/subgroups/vscode.jpg" alt="Swerve code" className="max-w-2xl mx-auto mb-4">
-                2023 preseason swerve code
+                2023 preseason swerve code.
             </CaptionedImage>
             <p className="font-light mb-10">
                 Since 2017, GRT controls members have refined and improved our swerve code based on competition performance.

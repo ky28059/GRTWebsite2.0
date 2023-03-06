@@ -6,16 +6,14 @@ import Link from 'next/link';
 type ImageBoxProps = {name: string, src: string, href: string, children: ReactNode};
 export default function ImageBox(props: ImageBoxProps) {
     return (
-        <Link href={props.href}>
-            <a className="flex text-inherit hover:no-underline">
-                <div className="rounded-lg overflow-hidden max-w-md border border-gray-300 hover:border-gray-600 transition duration-200">
-                    <img src={props.src} alt={props.name} className="h-64 w-[28rem] object-cover" />
-                    <div className="px-5 py-4">
-                        <h3 className="font-medium mb-1">{props.name}</h3>
-                        <p className="font-light text-sm">{props.children}</p>
-                    </div>
+        <Link href={props.href} className="flex text-inherit hover:no-underline">
+            <div className="rounded-lg overflow-hidden max-w-md border border-gray-300 hover:border-gray-600 transition duration-200">
+                <img src={props.src} alt={props.name} className="h-64 w-[28rem] object-cover" />
+                <div className="px-5 py-4">
+                    <h3 className="font-medium mb-1">{props.name}</h3>
+                    <p className="font-light text-sm">{props.children}</p>
                 </div>
-            </a>
+            </div>
         </Link>
     )
 }
