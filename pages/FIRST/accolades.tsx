@@ -15,9 +15,21 @@ export default function Accolades() {
             </h1>
 
             <div className="flex flex-col gap-8">
+                <Season year="2023">
+                    <Event name="Utah Regional">
+                        <Award name="Autonomous Award" />
+                    </Event>
+                </Season>
+
+                <Season year="2022">
+                    <Event name="Monterey Regional">
+                        <Award name="Team Spirit Award" />
+                    </Event>
+                </Season>
+
                 <Season year="2019">
                     <Event name="Monterey Regional">
-                        <Award name="Gracious Professionalism">
+                        <Award name="Gracious Professionalism Award">
                             Throughout the regional, GRT generously offered help to other teams, and was recognized for
                             its efforts with the gracious professionalism award.
                         </Award>
@@ -28,6 +40,12 @@ export default function Accolades() {
                             made for intuitive driving via a touchscreen.
                         </Award>
                     </Event>
+                    <Event name="Silicon Valley Regional">
+                        <Award name="Autonomous Award" />
+                    </Event>
+                </Season>
+
+                <Season year="2018">
                     <Event name="Lone Star Regional">
                         <Award name="Innovation in Controls">
                             GRT was recognized for its especially innovative controls solutions, including the usage of
@@ -35,9 +53,6 @@ export default function Accolades() {
                             tracking cubes.
                         </Award>
                     </Event>
-                </Season>
-
-                <Season year="2018">
                     <Event name="Silicon Valley Regional">
                         <Award name="Creativity Award">
                             {/* TODO: is this award text even necessary? It sounds a bit redundant */}
