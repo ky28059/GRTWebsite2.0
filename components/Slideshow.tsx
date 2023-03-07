@@ -1,6 +1,6 @@
 import {Fragment, useEffect, useState} from 'react';
 import {Transition} from '@headlessui/react';
-import {BsChevronCompactDown} from 'react-icons/bs';
+import {BsChevronCompactDown, BsYoutube, BsInstagram, BsGithub, BsEnvelope} from 'react-icons/bs';
 
 
 // The slideshow section on the home page.
@@ -26,10 +26,28 @@ export default function Slideshow() {
                 <h1 className="text-6xl font-medium tracking-widest mb-3">
                     GRT 192
                 </h1>
-                <p className="mb-6 max-w-prose text-center mx-2">
+                <p className="mb-3.5 max-w-prose text-center mx-2">
                     A robotics team from Henry M. Gunn High School (Palo Alto, CA) competing since 1997 in the annual
                     FIRST robotics FRC competition as Team 192.
                 </p>
+                <div className="flex gap-4 items-center mb-6 text-2xl">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/gunnrobotics192" className="text-white">
+                        <BsYoutube />
+                        <span className="sr-only">Youtube</span>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gunnrobotics192" className="text-white">
+                        <BsInstagram />
+                        <span className="sr-only">Instagram</span>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="mailto:gunnrobotics192@gmail.com" className="text-white">
+                        <BsEnvelope />
+                        <span className="sr-only">Email</span>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/grt192" className="text-white">
+                        <BsGithub />
+                        <span className="sr-only">Github</span>
+                    </a>
+                </div>
                 <a href="#about" className="text-inherit text-4xl">
                     <BsChevronCompactDown className="animate-bounce" />
                     <span className="sr-only">Jump to About</span>
