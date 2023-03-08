@@ -7,13 +7,13 @@ import Footer from './Footer';
 // TODO: is this component needed?
 export default function WriteupLayout(props: {children: ReactNode}) {
     return (
-        <div className="h-full flex flex-col">
+        <>
             <NavBar />
             <main className="pb-8 flex-grow">
                 {props.children}
             </main>
             <Footer />
-        </div>
+        </>
     )
 }
 

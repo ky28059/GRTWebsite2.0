@@ -21,7 +21,7 @@ export default function Slideshow() {
     }, []);
 
     return (
-        <section className="relative h-full text-white">
+        <section className="relative h-full flex-none text-white">
             <div className="absolute inset-0 flex flex-col items-center justify-center z-20 bg-black/40">
                 <h1 className="text-6xl font-medium tracking-widest mb-3">
                     GRT 192

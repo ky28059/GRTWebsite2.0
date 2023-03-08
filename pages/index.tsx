@@ -11,7 +11,7 @@ import Sponsors from '../components/Sponsors';
 
 export default function Home() {
     return (
-        <div className="relative h-full">
+        <>
             <Head>
                 <title>Home | GRT</title>
             </Head>
@@ -24,6 +24,6 @@ export default function Home() {
             <Sponsors />
 
             <Footer />
-        </div>
+        </>
     )
 }
