@@ -35,7 +35,7 @@ export default function Donations() {
             </div>
 
             <p className="font-light mb-3">
-                We also accept donations via PayPal:
+                We also accept donations via PayPal: grtboosters@gmail.com
             </p>
             {/* TODO: insert paypal image */}
 
