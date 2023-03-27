@@ -1,13 +1,13 @@
-import {ReactNode} from 'react';
-import {Disclosure} from '@headlessui/react';
+import { ReactNode } from 'react';
+import { Disclosure } from '@headlessui/react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {HiChevronDown} from 'react-icons/hi';
+import { HiChevronDown } from 'react-icons/hi';
 import Layout from '../components/Layout';
 
 
 export default function Summer() {
-    const showRegistration = false;
+    const showRegistration = true;
 
     return (
         <Layout>
@@ -19,12 +19,23 @@ export default function Summer() {
                 Gunn Robotics Summer Camp
             </h1>
 
-            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8">
+            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8
+                flex flex-col space-y-4 text-center">
                 {showRegistration ? (
                     <>
-                        Sign-ups are now open for the Gunn Robotics Summer Camp, held-in person at Gunn High School for rising
-                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer" className="text-[#ff594c]">here</a>:
-                        (tinyurl.com/gunnroboticscamp)
+                        <div className="flex flex-col space-y-2">
+                            <p>
+                                The GRT Summer Camp is back with two sessions in 2023, held in-person at Gunn High School for rising 5th-8th grade students!
+                            </p>
+                            <p>
+                                Session 1: June 12-16, 9am-3pm <br />
+                                Session 2: June 19-23, 9am-3pm <br />
+                            </p>
+                        </div>
+                        <a className="mx-auto" 
+                            href="https://tinyurl.com/GRTSummerCamp2023" target="_blank" rel="noopener noreferrer">
+                                <button className="text-white bg-theme w-32 h-10 rounded">Register now!</button>
+                        </a>
                     </>
                 ) : (
                     <>
@@ -100,10 +111,10 @@ export default function Summer() {
 // A `<Question>` component that wraps a toggleable disclosure around its answer. Pass the question as `props.name`
 // and the answer as children.
 // TODO: transitions?
-function Question(props: {name: string, children: ReactNode}) {
+function Question(props: { name: string, children: ReactNode }) {
     return (
         <Disclosure as="div" className="flex flex-col gap-2">
-            {({open}) => (<>
+            {({ open }) => (<>
                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2 text-left">
                     {props.name}
                     <HiChevronDown className={'w-5 h-5 transition-transform duration-300 ease-in-out' + (open ? ' rotate-180' : '')} />
