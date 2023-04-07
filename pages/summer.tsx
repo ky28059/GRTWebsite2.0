@@ -1,13 +1,13 @@
-import {ReactNode} from 'react';
-import {Disclosure} from '@headlessui/react';
+import { ReactNode } from 'react';
+import { Disclosure } from '@headlessui/react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {HiChevronDown} from 'react-icons/hi';
+import { HiChevronDown } from 'react-icons/hi';
 import Layout from '../components/Layout';
 
 
 export default function Summer() {
-    const showRegistration = false;
+    const showRegistration = true;
 
     return (
         <Layout>
@@ -19,12 +19,23 @@ export default function Summer() {
                 Gunn Robotics Summer Camp
             </h1>
 
-            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8">
+            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8
+                flex flex-col space-y-4 text-center">
                 {showRegistration ? (
                     <>
-                        Sign-ups are now open for the Gunn Robotics Summer Camp, held-in person at Gunn High School for rising
-                        5th-9th grade students! Register at the link <a href="https://tinyurl.com/gunnroboticscamp" target="_blank" rel="noopener noreferrer" className="text-[#ff594c]">here</a>:
-                        (tinyurl.com/gunnroboticscamp)
+                        <div className="flex flex-col space-y-2">
+                            <p>
+                                The GRT Summer Camp is back with two sessions in 2023, held in-person at Gunn High School for rising 5th-8th grade students!
+                            </p>
+                            <p>
+                                Session 1: June 12-16, 9am-3pm <br />
+                                Session 2: June 19-23, 9am-3pm <br />
+                            </p>
+                        </div>
+                        <a className="mx-auto" 
+                            href="https://tinyurl.com/GRTSummerCamp2023" target="_blank" rel="noopener noreferrer">
+                                <button className="text-white bg-theme w-32 h-10 rounded">Register now!</button>
+                        </a>
                     </>
                 ) : (
                     <>
@@ -44,7 +55,7 @@ export default function Summer() {
                     <img src="/assets/summer/summer-right.jpg" className="hidden md:block absolute rounded-md max-w-md inset-y-0 my-auto right-0 opacity-75 saturate-[1.2]" alt="Summer camp center" />
                 </div>
                 <p className="font-light">
-                    The Gunn Robotics Team invites your rising 5th-9th grade students to our weeklong summer robotics camp!
+                    The Gunn Robotics Team invites your rising 5th-8th grade students to our weeklong summer robotics camp!
                     Students will have a blast learning to design, build, and program a Vex IQ robot to compete with at the end
                     of the week. Snacks will be provided!
                 </p>
@@ -55,28 +66,27 @@ export default function Summer() {
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>
             <div className="flex flex-col gap-3 mb-8">
                 <Question name="When is the camp? How long are camp sessions?">
-                    We're running two sessions of the camp, one during the week of June 13th and the second during the
-                    week of June 20th. Each session consists of 5 days (Monday through Friday), and each day runs from
+                    We're running two sessions of the camp, one during the week of June 12th and the second during the
+                    week of June 19th. Each session consists of 5 days (Monday through Friday), and each day runs from
                     9am to 3pm. On the registration form, students can select which session they'd prefer -- both sessions
                     cover the same content.
                 </Question>
                 <Question name="Is the camp in-person?">
-                    Yes! The camp will be run in-person with school COVID guidelines in place. We're excited to see
-                    students in-person!
+                    Yes! The camp will be held in-person in GRT's shop at Gunn High School.
                 </Question>
                 <Question name="Will lunch be provided?">
                     Lunch will not be provided. Students should bring their own lunch. Snacks will be provided.
                 </Question>
-                <Question name="What COVID policies will be in-place?">
+                {/* <Question name="What COVID policies will be in-place?">
                     All students are required to have a triple COVID vaccination (2 shots + booster). Mask and social
                     distancing guidelines will likely follow school guidelines, and will be announced closer to the camp
                     date.
-                </Question>
+                </Question> TODO: awaiting info from Mrs. Granlund */}
                 <Question name="What will my student learn?">
-                    We hope your student will leave camp with a great experience! We'll be teaching basic programming,
-                    wiring, and mechanical engineering, which will allow them to build a robot. During the first 2-3 days,
-                    we'll go over the basics with interactive lessons. Then, we'll work with teams of students to build
-                    a robot to compete in the final game! This structure is similar to GRT's build season.
+                    We'll be teaching students to build a robot for competition, covering every aspect from designing to programming. 
+                    Through interactive lessons in the first portion of camp, students will build robots to tackle some challenges
+                    we've prepared. Then, students will work with their teams to develop a robot to compete in our final camp
+                    game (a friendly competition)! This structure resembles GRT's preparation and competition season.
                 </Question>
                 <Question name="Who are the instructors?">
                     All instructors are students on the Gunn Robotics Team. Our team consists of current sophomores,
@@ -84,9 +94,9 @@ export default function Summer() {
                     range of experiences, from animation and electronics to programming and mechanical design.
                 </Question>
                 <Question name="What is the price?">
-                    No payment is required for our summer camp. However, a recommended donation of $350 (or however much
-                    you can afford) to our PayPal at <Link href="/donations">GRT Boosters / grtboosters@gmail.com</Link> helps us keep running the camp
-                    and our team year after year.
+                    No payment is required for our summer camp, but we would greatly appreciate a donation of any amount (recommended 
+                    $400) to help us cover costs and keep our team running year after year. Please send donations via check or to our 
+                    PayPal at <Link href="/donations">GRT Boosters / grtboosters@gmail.com</Link>.
                 </Question>
             </div>
 
@@ -100,10 +110,10 @@ export default function Summer() {
 // A `<Question>` component that wraps a toggleable disclosure around its answer. Pass the question as `props.name`
 // and the answer as children.
 // TODO: transitions?
-function Question(props: {name: string, children: ReactNode}) {
+function Question(props: { name: string, children: ReactNode }) {
     return (
         <Disclosure as="div" className="flex flex-col gap-2">
-            {({open}) => (<>
+            {({ open }) => (<>
                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2 text-left">
                     {props.name}
                     <HiChevronDown className={'w-5 h-5 transition-transform duration-300 ease-in-out' + (open ? ' rotate-180' : '')} />
