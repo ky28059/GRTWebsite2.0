@@ -34,10 +34,14 @@ export default function Donations() {
                 <p>Palo Alto, CA, 94306</p>
             </div>
 
-            <p className="font-light mb-3">
-                We also accept donations via PayPal: grtboosters@gmail.com
+            <p className="font-light mb-2">
+                We also accept donations via PayPal: <strong>grtboosters@gmail.com</strong>
             </p>
-            {/* TODO: insert paypal image */}
+            <form action="https://www.paypal.com/donate" method="post" target="_top" className="mb-3">
+                <input type="hidden" name="hosted_button_id" value="R3R6ZTMNTFDA2" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" className="border-none" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" className="border-none" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
 
             <p className="font-light mb-4">
                 You can also use our <a href="https://www.brightfunds.org/organizations/grt-boosters" target="_blank" rel="noopener noreferrer">Bright Funds</a> site

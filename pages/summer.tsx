@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
-import { Disclosure } from '@headlessui/react';
+import {ReactNode} from 'react';
+import {Disclosure} from '@headlessui/react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { HiChevronDown } from 'react-icons/hi';
+import {HiChevronDown} from 'react-icons/hi';
 import Layout from '../components/Layout';
 
 
@@ -19,22 +19,24 @@ export default function Summer() {
                 Gunn Robotics Summer Camp
             </h1>
 
-            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8
-                flex flex-col space-y-4 text-center">
+            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8 flex flex-col space-y-4 text-center">
                 {showRegistration ? (
                     <>
-                        <div className="flex flex-col space-y-2">
-                            <p>
-                                The GRT Summer Camp is back with two sessions in 2023, held in-person at Gunn High School for rising 5th-8th grade students!
+                        <div className="flex flex-col pt-1.5 items-center">
+                            <p className="mb-2">
+                                The GRT Summer Camp is back with two sessions in 2023, held in-person at Gunn High School
+                                for rising 5th-8th grade students!
                             </p>
-                            <p>
-                                Session 1: June 12-16, 9am-3pm <br />
-                                Session 2: June 19-23, 9am-3pm <br />
-                            </p>
+                            <p className="flex gap-3 mb-1"><strong className="font-medium">Session 1:</strong> June 12-16, 9am-3pm</p>
+                            <p className="flex gap-3"><strong className="font-medium">Session 2:</strong> June 19-23, 9am-3pm</p>
                         </div>
-                        <a className="mx-auto" 
-                            href="https://tinyurl.com/GRTSummerCamp2023" target="_blank" rel="noopener noreferrer">
-                                <button className="text-white bg-theme w-32 h-10 rounded">Register now!</button>
+                        <a
+                            className="mx-auto mt-2"
+                            href="https://tinyurl.com/GRTSummerCamp2023"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className="text-white bg-theme w-32 h-10 rounded">Register now!</button>
                         </a>
                     </>
                 ) : (
@@ -77,11 +79,14 @@ export default function Summer() {
                 <Question name="Will lunch be provided?">
                     Lunch will not be provided. Students should bring their own lunch. Snacks will be provided.
                 </Question>
-                {/* <Question name="What COVID policies will be in-place?">
+                {/*
+                TODO: awaiting info from Mrs. Granlund
+                <Question name="What COVID policies will be in-place?">
                     All students are required to have a triple COVID vaccination (2 shots + booster). Mask and social
                     distancing guidelines will likely follow school guidelines, and will be announced closer to the camp
                     date.
-                </Question> TODO: awaiting info from Mrs. Granlund */}
+                </Question>
+                */}
                 <Question name="What will my student learn?">
                     We'll be teaching students to build a robot for competition, covering every aspect from designing to programming. 
                     Through interactive lessons in the first portion of camp, students will build robots to tackle some challenges
