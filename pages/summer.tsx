@@ -73,20 +73,6 @@ export default function Summer() {
                     9am to 3pm. On the registration form, students can select which session they'd prefer -- both sessions
                     cover the same content.
                 </Question>
-                <Question name="Is the camp in-person?">
-                    Yes! The camp will be held in-person in GRT's shop at Gunn High School.
-                </Question>
-                <Question name="Will lunch be provided?">
-                    Lunch will not be provided. Students should bring their own lunch. Snacks will be provided.
-                </Question>
-                {/*
-                TODO: awaiting info from Mrs. Granlund
-                <Question name="What COVID policies will be in-place?">
-                    All students are required to have a triple COVID vaccination (2 shots + booster). Mask and social
-                    distancing guidelines will likely follow school guidelines, and will be announced closer to the camp
-                    date.
-                </Question>
-                */}
                 <Question name="What will my student learn?">
                     We'll be teaching students to build a robot for competition, covering every aspect from designing to programming. 
                     Through interactive lessons in the first portion of camp, students will build robots to tackle some challenges
@@ -98,10 +84,22 @@ export default function Summer() {
                     juniors, and seniors, each bringing a unique skill to the summer camp team. Instructors have a wide
                     range of experiences, from animation and electronics to programming and mechanical design.
                 </Question>
+                <Question name="What will my student need?">
+                    Students do not need prior experience! During the camp itself, students will need a laptop with a USB port and
+                    the ability to connect to the internet. If bringing such a device is a difficulty for you and your student, please 
+                    reach out to us at <a href="mailto:gunnrobotics192@gmail.com">gunnrobotics192@gmail.com</a>!
+                </Question>
+                <Question name="Is the camp in-person?">
+                    Yes! The camp will be held in-person in GRT's shop at Gunn High School.
+                </Question>
+                <Question name="Will lunch be provided?">
+                    Lunch will not be provided. Students should bring their own lunch. Snacks will be provided.
+                </Question>
                 <Question name="What is the price?">
                     No payment is required for our summer camp, but we would greatly appreciate a donation of any amount (recommended 
-                    $400) to help us cover costs and keep our team running year after year. Please send donations via check or to our 
-                    PayPal at <Link href="/donations">GRT Boosters / grtboosters@gmail.com</Link>.
+                    $400) to help us cover costs and keep our team running year after year. Please send donations to our PayPal
+                    at <Link href="/donations">GRT Boosters / grtboosters@gmail.com</Link> or via check as detailed on our&nbsp;
+                    <Link href="/donations">donations page</Link>.
                 </Question>
             </div>
 
