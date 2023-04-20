@@ -27,20 +27,24 @@ export default function NavHeader(props: NavHeaderProps) {
                 {/* Hidden when screen width < 640px */}
                 <div className="hidden sm:flex">
                     <NavLink href="/#about">About</NavLink>
-                    <NavLink href="/updates">Updates</NavLink>
                     <NavLink href="/FIRST">FIRST</NavLink>
+                    <NavLink href="/seasons">Seasons</NavLink>
+                    <NavLink href="/updates">Updates</NavLink>
                     <NavLink href="/subgroups">Subgroups</NavLink>
-                    <NavLink href="/mentors">Mentors</NavLink>
                 </div>
                 {/* Hidden when screen width < 768px */}
                 <div className="hidden md:flex">
                     {/* <NavLink href="/resources">Resources</NavLink> */}
-                    <NavLink href="/#sponsors">Sponsors</NavLink>
+                    <NavLink href="/mentors">Mentors</NavLink>
                 </div>
                 {/* Hidden when screen width < 1024px */}
                 <div className="hidden lg:flex">
+                    <NavLink href="/#sponsors">Sponsors</NavLink>
                     <NavLink href="/join">Join</NavLink>
                     <NavLink href="/summer">Summer</NavLink>
+                </div>
+                {/* Hidden when screen width < 1280px */}
+                <div className="hidden xl:flex">
                     <NavLink href="/donations">Donations</NavLink>
                 </div>
 
