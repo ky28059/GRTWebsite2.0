@@ -19,6 +19,9 @@ export default function Accolades() {
                     <Event name="Utah Regional">
                         <Award name="Autonomous Award" />
                     </Event>
+                    <Event name="Monterey Regional">
+                        <Award name="Quality Award" />
+                    </Event>
                 </Season>
 
                 <Season year="2022">
