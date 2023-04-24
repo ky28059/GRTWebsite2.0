@@ -26,54 +26,81 @@ export default function NavHeader(props: NavHeaderProps) {
             <nav className="flex">
                 {/* Hidden when screen width < 640px */}
                 <div className="hidden sm:flex">
-                    <NavLink href="/#about">About</NavLink>
-                    <NavLink href="/FIRST">FIRST</NavLink>
-                    <NavLink href="/seasons">Seasons</NavLink>
-                    <NavLink href="/updates">Updates</NavLink>
-                    <NavLink href="/subgroups">Subgroups</NavLink>
+                    {routes.sm.map(({name, href}) => (
+                        <NavLink href={href}>{name}</NavLink>
+                    ))}
                 </div>
                 {/* Hidden when screen width < 768px */}
                 <div className="hidden md:flex">
-                    {/* <NavLink href="/resources">Resources</NavLink> */}
-                    <NavLink href="/mentors">Mentors</NavLink>
+                    {routes.md.map(({name, href}) => (
+                        <NavLink href={href}>{name}</NavLink>
+                    ))}
                 </div>
                 {/* Hidden when screen width < 1024px */}
                 <div className="hidden lg:flex">
-                    <NavLink href="/#sponsors">Sponsors</NavLink>
-                    <NavLink href="/join">Join</NavLink>
-                    <NavLink href="/summer">Summer</NavLink>
+                    {routes.lg.map(({name, href}) => (
+                        <NavLink href={href}>{name}</NavLink>
+                    ))}
                 </div>
                 {/* Hidden when screen width < 1280px */}
                 <div className="hidden xl:flex">
-                    <NavLink href="/donations">Donations</NavLink>
+                    {routes.xl.map(({name, href}) => (
+                        <NavLink href={href}>{name}</NavLink>
+                    ))}
                 </div>
 
-                <Popover className="relative self-center px-3 pt-1 h-max lg:hidden">
+                <Popover className="relative self-center px-3 pt-1 h-max xl:hidden">
                     <Popover.Button aria-label="Expand nav">
                         <BsThreeDots className="text-white text-3xl p-1" />
                     </Popover.Button>
                     <AnimatedPopover className="absolute top-full right-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
                         <div className="sm:hidden">
-                            <PopoverNavLink href="/#about">About</PopoverNavLink>
-                            <PopoverNavLink href="/updates">Updates</PopoverNavLink>
-                            <PopoverNavLink href="/FIRST">FIRST</PopoverNavLink>
-                            <PopoverNavLink href="/subgroups">Subgroups</PopoverNavLink>
-                            <PopoverNavLink href="/mentors">Mentors</PopoverNavLink>
+                            {routes.sm.map(({name, href}) => (
+                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
+                            ))}
                         </div>
                         <div className="md:hidden">
-                            {/* <PopoverNavLink href="/resources">Resources</NavLink> */}
-                            <PopoverNavLink href="/#sponsors">Sponsors</PopoverNavLink>
+                            {routes.md.map(({name, href}) => (
+                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
+                            ))}
                         </div>
                         <div className="lg:hidden">
-                            <PopoverNavLink href="/join">Join</PopoverNavLink>
-                            <PopoverNavLink href="/summer">Summer</PopoverNavLink>
-                            <PopoverNavLink href="/donations">Donations</PopoverNavLink>
+                            {routes.lg.map(({name, href}) => (
+                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
+                            ))}
+                        </div>
+                        <div className="xl:hidden">
+                            {routes.xl.map(({name, href}) => (
+                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
+                            ))}
                         </div>
                     </AnimatedPopover>
                 </Popover>
             </nav>
         </header>
     )
+}
+
+const routes = {
+    sm: [
+        {name: 'About', href: '/#about'},
+        {name: 'FIRST', href: '/FIRST'},
+        {name: 'Seasons', href: '/seasons'},
+        {name: 'Updates', href: '/updates'},
+        {name: 'Subgroups', href: '/subgroups'}
+    ],
+    md: [
+        // {name: 'Resources', href: '/resources'}
+        {name: 'Mentors', href: '/mentors'}
+    ],
+    lg: [
+        {name: 'Sponsors', href: '/#sponsors'},
+        {name: 'Join', href: '/join'},
+        {name: 'Summer', href: '/summer'}
+    ],
+    xl: [
+        {name: 'Donations', href: '/donations'}
+    ]
 }
 
 function PopoverNavLink(props: {href: string, children: ReactNode}) {
