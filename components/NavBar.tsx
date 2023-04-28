@@ -1,14 +1,21 @@
 import {ReactNode} from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
-import NavHeader from './NavHeader';
+import {Popover} from '@headlessui/react';
+
+// Components
+import NavHeader, {PopoverNavLink, RouteSegment} from './NavHeader';
+import AnimatedPopover from './AnimatedPopover';
+
+// Icons
+import {AiFillCaretDown} from 'react-icons/ai';
 
 
 // The red navbar displayed on evey page except for the home page.
 export default function NavBar() {
     return (
         <div>
-            <NavHeader component={NavLink} className="bg-theme" />
+            <NavHeader component={NavLink} dropdownComponent={NavDropdown} className="bg-theme" />
 
             {/* Subnav */}
             <div className="overflow-x-auto bg-black text-white">
@@ -51,6 +58,7 @@ export default function NavBar() {
     )
 }
 
+// TODO: move this and dropdown into own file?
 type NavLinkProps = {href: string, children: ReactNode};
 function NavLink(props: NavLinkProps) {
     const {href, children} = props;
@@ -68,6 +76,35 @@ function NavLink(props: NavLinkProps) {
                 />
             )}
         </Link>
+    )
+}
+
+type NavDropdownProps = {
+    routes: RouteSegment[],
+    children: ReactNode
+}
+function NavDropdown(props: NavDropdownProps) {
+    const {pathname} = useRouter();
+
+    // Active if any sub-route matches
+    const active = props.routes.some(({href}) => pathname.startsWith(href));
+
+    return (
+        <Popover className="relative flex">
+            {({open}) => (<>
+                <Popover.Button className="relative flex items-center gap-2 p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+                    {props.children} <AiFillCaretDown className={'transition-transform duration-200' + (open ? ' rotate-180' : '')} />
+                    {active && (
+                        <span className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent" />
+                    )}
+                </Popover.Button>
+                <AnimatedPopover className="absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
+                    {props.routes.map(({name, href}) => (
+                        <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
+                    ))}
+                </AnimatedPopover>
+            </>)}
+        </Popover>
     )
 }
 

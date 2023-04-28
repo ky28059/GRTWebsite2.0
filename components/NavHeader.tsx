@@ -1,7 +1,7 @@
 import {ReactNode} from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
-import {Popover} from '@headlessui/react';
+import {Disclosure, Popover} from '@headlessui/react';
 import AnimatedPopover from './AnimatedPopover';
 
 // Icons
@@ -15,10 +15,12 @@ import {AiFillCaretDown} from 'react-icons/ai';
 // and additional classes to apply to the `<header>` are passed to `props.className`.
 type NavHeaderProps = {
     className?: string,
-    component: (props: {href: string, children: ReactNode}) => JSX.Element
+    component: (props: {href: string, children: ReactNode}) => JSX.Element,
+    dropdownComponent: (props: {routes: RouteSegment[], children: ReactNode}) => JSX.Element
 };
 export default function NavHeader(props: NavHeaderProps) {
     const NavLink = props.component;
+    const NavDropdown = props.dropdownComponent;
 
     return (
         <header className={'flex items-stretch justify-between px-2 md:px-5' + (props.className ? ` ${props.className}` : '')}>
@@ -29,37 +31,37 @@ export default function NavHeader(props: NavHeaderProps) {
             <nav className="flex">
                 {/* Hidden when screen width < 640px */}
                 <div className="hidden sm:flex">
-                    {renderRoutes(routes.sm, NavLink)}
+                    {renderRoutes(routes.sm, NavLink, NavDropdown)}
                 </div>
                 {/* Hidden when screen width < 768px */}
                 <div className="hidden md:flex">
-                    {renderRoutes(routes.md, NavLink)}
+                    {renderRoutes(routes.md, NavLink, NavDropdown)}
                 </div>
                 {/* Hidden when screen width < 1024px */}
                 <div className="hidden lg:flex">
-                    {renderRoutes(routes.lg, NavLink)}
+                    {renderRoutes(routes.lg, NavLink, NavDropdown)}
                 </div>
                 {/* Hidden when screen width < 1280px */}
                 <div className="hidden xl:flex">
-                    {renderRoutes(routes.xl, NavLink)}
+                    {renderRoutes(routes.xl, NavLink, NavDropdown)}
                 </div>
 
                 <Popover className="relative self-center px-3 pt-1 h-max xl:hidden">
                     <Popover.Button aria-label="Expand nav">
                         <BsThreeDots className="text-white text-3xl p-1" />
                     </Popover.Button>
-                    <AnimatedPopover className="absolute top-full right-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
+                    <AnimatedPopover className="absolute top-full right-0 z-50 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
                         <div className="sm:hidden">
-                            {renderRoutes(routes.sm, PopoverNavLink)}
+                            {renderRoutes(routes.sm, PopoverNavLink, PopoverNavDropdown)}
                         </div>
                         <div className="md:hidden">
-                            {renderRoutes(routes.md, PopoverNavLink)}
+                            {renderRoutes(routes.md, PopoverNavLink, PopoverNavDropdown)}
                         </div>
                         <div className="lg:hidden">
-                            {renderRoutes(routes.lg, PopoverNavLink)}
+                            {renderRoutes(routes.lg, PopoverNavLink, PopoverNavDropdown)}
                         </div>
                         <div className="xl:hidden">
-                            {renderRoutes(routes.xl, PopoverNavLink)}
+                            {renderRoutes(routes.xl, PopoverNavLink, PopoverNavDropdown)}
                         </div>
                     </AnimatedPopover>
                 </Popover>
@@ -69,7 +71,7 @@ export default function NavHeader(props: NavHeaderProps) {
 }
 
 // TODO: abstract this to own file?
-type RouteSegment = {name: string, href: string}
+export type RouteSegment = {name: string, href: string}
 type Route = {name: string, routes: RouteSegment[]} | RouteSegment
 type Routes = {
     sm: Route[], md: Route[], lg: Route[], xl: Route[]
@@ -101,8 +103,10 @@ const routes: Routes = {
 function renderRoutes(
     r: Route[],
     component: (props: {href: string, children: ReactNode}) => JSX.Element,
+    dropdownComponent: (props: {routes: RouteSegment[], children: ReactNode}) => JSX.Element,
 ) {
     const NavLink = component;
+    const NavDropdown = dropdownComponent;
 
     return r.map((route) => 'routes' in route ? (
         <NavDropdown routes={route.routes} key={route.name}>
@@ -113,37 +117,8 @@ function renderRoutes(
     ))
 }
 
-// TODO: better abstraction, separation
-type NavDropdownProps = {
-    routes: RouteSegment[],
-    children: string
-}
-function NavDropdown(props: NavDropdownProps) {
-    const {pathname} = useRouter();
-
-    // Active if any sub-route matches
-    const active = props.routes.some(({href}) => pathname.startsWith(href));
-
-    return (
-        <Popover className="relative flex">
-            {({open}) => (<>
-                <Popover.Button className="relative flex items-center gap-2 p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
-                    {props.children} <AiFillCaretDown className={'transition-transform duration-200' + (open ? ' rotate-180' : '')} />
-                    {active && (
-                        <span className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent" />
-                    )}
-                </Popover.Button>
-                <AnimatedPopover className="absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
-                    {props.routes.map(({name, href}) => (
-                        <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
-                    ))}
-                </AnimatedPopover>
-            </>)}
-        </Popover>
-    )
-}
-
-function PopoverNavLink(props: {href: string, children: ReactNode}) {
+// TODO: abstract into own file?
+export function PopoverNavLink(props: {href: string, children: ReactNode}) {
     const {href, children} = props;
     const {pathname} = useRouter();
     const active = pathname.startsWith(href);
@@ -152,5 +127,26 @@ function PopoverNavLink(props: {href: string, children: ReactNode}) {
         <Link href={href} className={'block text-white hover:no-underline hover:bg-black/40 px-4 py-2 transition duration-100' + (active ? ' bg-black/40' : '')}>
             {children}
         </Link>
+    )
+}
+
+type PopoverNavDropdownProps = {
+    routes: RouteSegment[],
+    children: ReactNode
+}
+function PopoverNavDropdown(props: PopoverNavDropdownProps) {
+    return (
+        <Disclosure>
+            {({open}) => (<>
+                <Disclosure.Button className="flex items-center gap-2 w-full text-white hover:no-underline hover:bg-black/40 px-4 py-2 transition duration-100">
+                    {props.children} <AiFillCaretDown className={'transition-transform duration-200' + (open ? ' rotate-180' : '')} />
+                </Disclosure.Button>
+                <Disclosure.Panel className="">
+                    {props.routes.map(({name, href}) => (
+                        <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
+                    ))}
+                </Disclosure.Panel>
+            </>)}
+        </Disclosure>
     )
 }
