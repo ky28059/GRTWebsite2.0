@@ -68,7 +68,13 @@ export default function NavHeader(props: NavHeaderProps) {
     )
 }
 
-const routes = {
+// TODO: abstract this to own file?
+type RouteSegment = {name: string, href: string}
+type Route = {name: string, routes: RouteSegment[]} | RouteSegment
+type Routes = {
+    sm: Route[], md: Route[], lg: Route[], xl: Route[]
+}
+const routes: Routes = {
     sm: [
         {name: 'About', routes: [
             {name: 'About', href: '/#about'},
@@ -81,11 +87,11 @@ const routes = {
         {name: 'Updates', href: '/updates'},
     ],
     md: [
-        // {name: 'Resources', href: '/resources'}
+        // {name: 'Resources', href: '/resources'},
+        {name: 'Sponsors', href: '/#sponsors'},
     ],
     lg: [
-        {name: 'Sponsors', href: '/#sponsors'},
-        {name: 'Join', href: '/join'},
+        {name: 'Join', href: '/join'}
     ],
     xl: [
         {name: 'Donations', href: '/donations'}
@@ -93,12 +99,12 @@ const routes = {
 }
 
 function renderRoutes(
-    r: typeof routes['sm'],
+    r: Route[],
     component: (props: {href: string, children: ReactNode}) => JSX.Element,
 ) {
     const NavLink = component;
 
-    return r.map((route) => route.routes ? (
+    return r.map((route) => 'routes' in route ? (
         <NavDropdown component={NavLink} routes={route.routes} />
     ) : (
         <NavLink href={route.href}>{route.name}</NavLink>
@@ -107,7 +113,7 @@ function renderRoutes(
 
 type NavDropdownProps = {
     component: (props: {href: string, children: ReactNode}) => JSX.Element,
-    routes: typeof routes['lg']
+    routes: RouteSegment[]
 }
 function NavDropdown(props: NavDropdownProps) {
     const NavLink = props.component;
