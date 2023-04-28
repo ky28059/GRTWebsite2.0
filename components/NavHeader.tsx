@@ -77,7 +77,7 @@ type Routes = {
 const routes: Routes = {
     sm: [
         {name: 'About', routes: [
-            {name: 'About', href: '/#about'},
+            {name: 'About us', href: '/#about'},
             {name: 'FIRST', href: '/FIRST'},
             {name: 'Subgroups', href: '/subgroups'},
             {name: 'Mentors', href: '/mentors'}
@@ -105,30 +105,41 @@ function renderRoutes(
     const NavLink = component;
 
     return r.map((route) => 'routes' in route ? (
-        <NavDropdown component={NavLink} routes={route.routes} key={route.name} />
+        <NavDropdown routes={route.routes} key={route.name}>
+            {route.name}
+        </NavDropdown>
     ) : (
         <NavLink href={route.href} key={route.name}>{route.name}</NavLink>
     ))
 }
 
+// TODO: better abstraction, separation
 type NavDropdownProps = {
-    component: (props: {href: string, children: ReactNode}) => JSX.Element,
-    routes: RouteSegment[]
+    routes: RouteSegment[],
+    children: string
 }
 function NavDropdown(props: NavDropdownProps) {
-    const NavLink = props.component;
+    const {pathname} = useRouter();
+
+    // Active if any sub-route matches
+    const active = props.routes.some(({href}) => pathname.startsWith(href));
 
     return (
-        <div className="relative group flex">
-            <NavLink href={props.routes[0].href}>
-                {props.routes[0].name} <AiFillCaretDown />
-            </NavLink>
-            <div className="hidden group-hover:block absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
-                {props.routes.map(({name, href}) => (
-                    <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
-                ))}
-            </div>
-        </div>
+        <Popover className="relative flex">
+            {({open}) => (<>
+                <Popover.Button className="relative flex items-center gap-2 p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+                    {props.children} <AiFillCaretDown className={'transition-transform duration-200' + (open ? ' rotate-180' : '')} />
+                    {active && (
+                        <span className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent" />
+                    )}
+                </Popover.Button>
+                <AnimatedPopover className="absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
+                    {props.routes.map(({name, href}) => (
+                        <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
+                    ))}
+                </AnimatedPopover>
+            </>)}
+        </Popover>
     )
 }
 
