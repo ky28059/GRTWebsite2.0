@@ -21,7 +21,7 @@ export default function Controls() {
                 and controlling hardware for motors and pneumatic devices. Wiring the components requires technical skills
                 including crimping, soldering, and troubleshooting.
             </p>
-            {/* TODO: picture of spark max, or wiring on the 2022 robot? */}
+            {/* <img src="/assets/subgroups/sparkmax-wide.jpg" alt="REV SparkMax motor controller" className="max-w-2xl mx-auto mb-4 rounded"/> */}
             <p className="font-light mb-10">
                 Since the 2019 season, controls has written its software in Java, a language officially supported by FIRST.
                 All code written for competitions and outreach events are available at <a href="https://github.com/grt192" target="_blank" rel="noopener noreferrer">https://github.com/grt192.</a>

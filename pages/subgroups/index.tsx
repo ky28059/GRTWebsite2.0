@@ -22,11 +22,11 @@ export default function Subgroups() {
             </p>
 
             <section className="flex flex-wrap justify-center gap-6">
-                {/* TODO: image? */}
+                {/* TODO: use sparkmax image? */}
                 <ImageBox name="Controls" src="/assets/subgroups/2017-controls-vision.jpg" href="/subgroups/controls">
                     Responsible for robot software, wiring, and electrical components.
                 </ImageBox>
-                <ImageBox name="Drivetrain" src="/assets/subgroups/2016-2-speed-dt.jpg" href="/subgroups/drivetrain">
+                <ImageBox name="Drivetrain" src="/assets/subgroups/2017-swerve-module.jpg" href="/subgroups/drivetrain">
                     Responsible for designing and machining gearboxes for the robot's drivetrain.
                 </ImageBox>
                 <ImageBox name="CNC" src="/assets/subgroups/cnc.jpg" href="/subgroups/cnc">

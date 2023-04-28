@@ -39,12 +39,16 @@ export default function Drivetrain() {
             <CaptionedImage src="/assets/subgroups/2017-swerve-module.jpg" alt="2017 swerve" className="max-w-2xl mx-auto mb-4">
                 GRT's original 2017 swerve module design.
             </CaptionedImage>
-            <p className="font-light mb-10">
+            <p className="font-light mb-6">
                 Historically, GRT has manufactured our own gearbox modules using a variety of machines. For our 2019
                 gearbox, we used a laser cutter to make custom gears and pulleys, a CNC mill to make gearbox plates, a
                 3D printer to make swerve gearbox forks, and a lathe to turn all the axles and modify sprockets.
+                {/* TODO: info about 2023 swerve? */}
             </p>
-            {/* TODO: 2020 or 2023 swerve module image plus section about today's swerve? */}
+            <CaptionedImage src="/assets/subgroups/2023-swerve-module.jpg" alt="2023 swerve" className="max-w-2xl mx-auto mb-10">
+                GRT's 2023 swerve module design.
+            </CaptionedImage>
+            {/* TODO: info about 2023 swerve? talk about strain wave planetary gearbox? */}
 
             <h3 className="text-lg font-medium mb-3">2-speed drive</h3>
             <p className="font-light mb-6">
@@ -56,11 +60,11 @@ export default function Drivetrain() {
                 2016 2-speed gearbox design.
             </CaptionedImage>
             <p className="font-light mb-4">
-                GRT gearboxes are designed to minimize space requirement, with a footprint extending
-                from the transmissions only 2.7 inches. This comes courtesy of several innovations, most notable of which
-                are the inverted shifters: these are the pneumatics that drive the shifting cluster, turned around and
+                GRT's shifter gearboxes were designed to minimize space requirement, with a footprint extending
+                from the transmissions only 2.7 inches. This came courtesy of several innovations, most notable of which
+                are the inverted shifters: pneumatics that drive the shifting cluster that were turned around and
                 set within the gearbox itself, cutting about 2 inches out of the width. Using this linkage to pull the
-                shifter from afar, the cluster performs better than an off-the-shelf equivalent, holding a gear and shifting
+                shifter from afar, the cluster performed better than an off-the-shelf equivalent, holding a gear and shifting
                 down to 25 PSI of pressure. Other innovations include the first reduction of the gearbox, accomplished
                 through a belt drive on the face of the box. This further reduces profile, and allows the motors to be
                 turned backwards, with most of their volume outside of the robot base area.
