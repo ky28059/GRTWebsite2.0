@@ -105,9 +105,9 @@ function renderRoutes(
     const NavLink = component;
 
     return r.map((route) => 'routes' in route ? (
-        <NavDropdown component={NavLink} routes={route.routes} />
+        <NavDropdown component={NavLink} routes={route.routes} key={route.name} />
     ) : (
-        <NavLink href={route.href}>{route.name}</NavLink>
+        <NavLink href={route.href} key={route.name}>{route.name}</NavLink>
     ))
 }
 
@@ -125,7 +125,7 @@ function NavDropdown(props: NavDropdownProps) {
             </NavLink>
             <div className="hidden group-hover:block absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
                 {props.routes.map(({name, href}) => (
-                    <PopoverNavLink href={href}>{name}</PopoverNavLink>
+                    <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
                 ))}
             </div>
         </div>
