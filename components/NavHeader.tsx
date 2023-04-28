@@ -3,7 +3,10 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {Popover} from '@headlessui/react';
 import AnimatedPopover from './AnimatedPopover';
+
+// Icons
 import {BsThreeDots} from 'react-icons/bs';
+import {AiFillCaretDown} from 'react-icons/ai';
 
 
 // A nav header abstraction to render the `<header>` with the GRT logo and nav displayed on both the home and non-home
@@ -26,27 +29,19 @@ export default function NavHeader(props: NavHeaderProps) {
             <nav className="flex">
                 {/* Hidden when screen width < 640px */}
                 <div className="hidden sm:flex">
-                    {routes.sm.map(({name, href}) => (
-                        <NavLink href={href}>{name}</NavLink>
-                    ))}
+                    {renderRoutes(routes.sm, NavLink)}
                 </div>
                 {/* Hidden when screen width < 768px */}
                 <div className="hidden md:flex">
-                    {routes.md.map(({name, href}) => (
-                        <NavLink href={href}>{name}</NavLink>
-                    ))}
+                    {renderRoutes(routes.md, NavLink)}
                 </div>
                 {/* Hidden when screen width < 1024px */}
                 <div className="hidden lg:flex">
-                    {routes.lg.map(({name, href}) => (
-                        <NavLink href={href}>{name}</NavLink>
-                    ))}
+                    {renderRoutes(routes.lg, NavLink)}
                 </div>
                 {/* Hidden when screen width < 1280px */}
                 <div className="hidden xl:flex">
-                    {routes.xl.map(({name, href}) => (
-                        <NavLink href={href}>{name}</NavLink>
-                    ))}
+                    {renderRoutes(routes.xl, NavLink)}
                 </div>
 
                 <Popover className="relative self-center px-3 pt-1 h-max xl:hidden">
@@ -55,24 +50,16 @@ export default function NavHeader(props: NavHeaderProps) {
                     </Popover.Button>
                     <AnimatedPopover className="absolute top-full right-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
                         <div className="sm:hidden">
-                            {routes.sm.map(({name, href}) => (
-                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
-                            ))}
+                            {renderRoutes(routes.sm, PopoverNavLink)}
                         </div>
                         <div className="md:hidden">
-                            {routes.md.map(({name, href}) => (
-                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
-                            ))}
+                            {renderRoutes(routes.md, PopoverNavLink)}
                         </div>
                         <div className="lg:hidden">
-                            {routes.lg.map(({name, href}) => (
-                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
-                            ))}
+                            {renderRoutes(routes.lg, PopoverNavLink)}
                         </div>
                         <div className="xl:hidden">
-                            {routes.xl.map(({name, href}) => (
-                                <PopoverNavLink href={href}>{name}</PopoverNavLink>
-                            ))}
+                            {renderRoutes(routes.xl, PopoverNavLink)}
                         </div>
                     </AnimatedPopover>
                 </Popover>
@@ -83,24 +70,60 @@ export default function NavHeader(props: NavHeaderProps) {
 
 const routes = {
     sm: [
-        {name: 'About', href: '/#about'},
-        {name: 'FIRST', href: '/FIRST'},
+        {name: 'About', routes: [
+            {name: 'About', href: '/#about'},
+            {name: 'FIRST', href: '/FIRST'},
+            {name: 'Subgroups', href: '/subgroups'},
+            {name: 'Mentors', href: '/mentors'}
+        ]},
+        {name: 'Summer', href: '/summer'},
         {name: 'Seasons', href: '/seasons'},
         {name: 'Updates', href: '/updates'},
-        {name: 'Subgroups', href: '/subgroups'}
     ],
     md: [
         // {name: 'Resources', href: '/resources'}
-        {name: 'Mentors', href: '/mentors'}
     ],
     lg: [
         {name: 'Sponsors', href: '/#sponsors'},
         {name: 'Join', href: '/join'},
-        {name: 'Summer', href: '/summer'}
     ],
     xl: [
         {name: 'Donations', href: '/donations'}
     ]
+}
+
+function renderRoutes(
+    r: typeof routes['sm'],
+    component: (props: {href: string, children: ReactNode}) => JSX.Element,
+) {
+    const NavLink = component;
+
+    return r.map((route) => route.routes ? (
+        <NavDropdown component={NavLink} routes={route.routes} />
+    ) : (
+        <NavLink href={route.href}>{route.name}</NavLink>
+    ))
+}
+
+type NavDropdownProps = {
+    component: (props: {href: string, children: ReactNode}) => JSX.Element,
+    routes: typeof routes['lg']
+}
+function NavDropdown(props: NavDropdownProps) {
+    const NavLink = props.component;
+
+    return (
+        <div className="relative group flex">
+            <NavLink href={props.routes[0].href}>
+                {props.routes[0].name} <AiFillCaretDown />
+            </NavLink>
+            <div className="hidden group-hover:block absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
+                {props.routes.map(({name, href}) => (
+                    <PopoverNavLink href={href}>{name}</PopoverNavLink>
+                ))}
+            </div>
+        </div>
+    )
 }
 
 function PopoverNavLink(props: {href: string, children: ReactNode}) {

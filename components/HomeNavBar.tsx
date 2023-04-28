@@ -19,7 +19,7 @@ type HomeNavLinkProps = {href: string, children: ReactNode};
 function HomeNavLink(props: HomeNavLinkProps) {
     const {href, children} = props;
     return (
-        <Link href={href} className="relative p-4 text-white hover:bg-black/40 transition duration-200">
+        <Link href={href} className="relative flex items-center gap-2 p-4 text-white hover:bg-black/40 transition duration-200">
             {children}
         </Link>
     )

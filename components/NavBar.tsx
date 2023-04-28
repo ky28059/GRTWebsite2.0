@@ -58,7 +58,7 @@ function NavLink(props: NavLinkProps) {
     const active = pathname.startsWith(href);
 
     return (
-        <Link href={href} className="relative p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+        <Link href={href} className="relative flex items-center gap-2 p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
             {children}
             {active && (
                 // CSS triangle; the width of the triangle is `2 * border-x-width`, and the height is

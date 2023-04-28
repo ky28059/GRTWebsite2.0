@@ -374,7 +374,7 @@ function Award(props: {name: string, children?: ReactNode}) {
 }
 
 // A <Banner> representing a FIRST blue banner won (regional winners, dean's list, or chairman's).
-// ___.
+// The name of the award should be passed via `props.name` and the regional it was awarded at via `props.event`.
 function Banner(props: {name: string, event: string}) {
     return (
         <div className="relative bg-[#0f4bcb] w-[140px] min-h-[170px] after:absolute after:bottom-[-20px] after:border-x-[#0f4bcb] after:border-b-transparent after:border-x-[70px] after:border-b-[20px] drop-shadow-lg">
