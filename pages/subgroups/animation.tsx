@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import SectionHeader from '../../components/SectionHeader';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
@@ -24,7 +25,7 @@ export default function Controls() {
             </p>
             {/* TODO: image of autodesk maya rendering? */}
 
-            <h3 className="text-lg font-medium mb-3">Projects</h3>
+            <SectionHeader id="projects">Projects</SectionHeader>
             <p className="font-light mb-6">
                 The animation team primarily participates in the Safety Animation and FIRST Competition projects. For
                 those competitions, we follow a certain theme announced by FIRST, creating a storyline and scenes and
@@ -48,7 +49,7 @@ export default function Controls() {
                 of the game visually.
             </p>
 
-            <h3 className="text-lg font-medium mb-3">Training</h3>
+            <SectionHeader id="training">Training</SectionHeader>
             <p className="font-light">
                 Animation team rookies are not required to have any animation knowledge prior to joining. At the beginning
                 of each year, the animation lead organizes 3D modeling sessions in which both rookies and veterans can

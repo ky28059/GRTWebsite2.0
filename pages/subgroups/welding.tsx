@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import SectionHeader from '../../components/SectionHeader';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
@@ -28,7 +29,7 @@ export default function Welding() {
                 other robot tasks; many enjoy machining or building bumpers, which work well into the end of the season.
             </p>
 
-            <h3 className="text-lg font-medium mb-3">Training</h3>
+            <SectionHeader id="training">Training</SectionHeader>
             <p className="font-light mb-6">
                 Welding rookies are not expected to have previous knowledge about welding, and typically sign up for
                 one-on-one training sessions with the welding lead in late fall and early winter. Other curious team
@@ -47,7 +48,7 @@ export default function Welding() {
                 season.
             </p>
 
-            <h3 className="text-lg font-medium mb-3">COVID-19</h3>
+            <SectionHeader id="covid-19">COVID-19</SectionHeader>
             <p className="font-light mb-6">
                 Due to the coronavirus pandemic, there was a period of time where no one was able to be trained in or
                 consistently practicing welding, and thus a lot of knowledge and skills were lost. The tight

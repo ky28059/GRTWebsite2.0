@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import SectionHeader from '../../components/SectionHeader';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
@@ -27,7 +28,7 @@ export default function Controls() {
                 All code written for competitions and outreach events are available at <a href="https://github.com/grt192" target="_blank" rel="noopener noreferrer">https://github.com/grt192.</a>
             </p>
 
-            <h3 className="text-lg font-medium mb-3">Swerve drive software</h3>
+            <SectionHeader id="swerve-drive-software">Swerve drive software</SectionHeader>
             <p className="font-light mb-6">
                 A historical achievement of the controls subgroup was software controlling the robot's omnidirectional
                 "swerve" drive{/* TODO: wording? */}. In 2017, GRT developed a swerve drivetrain with four omnidirectional
@@ -47,7 +48,7 @@ export default function Controls() {
                 {/* TODO: finish */}
             </p>
 
-            <h3 className="text-lg font-medium mb-3">Vision control</h3>
+            <SectionHeader id="vision-control">Vision control</SectionHeader>
             <p className="font-light mb-6">
                 In 2016, GRT developed a robot vision system using OpenCV to detect the goals (marked by reflective tape
                 on the field). During autonomous control, this vision system helped us consistently score high goal shots,
@@ -68,7 +69,7 @@ export default function Controls() {
             </p>
             {/* TODO: more images! the 2019 monitor, maybe 2022 vision stuff? */}
 
-            <h3 className="text-lg font-medium mb-3">Electrical systems</h3>
+            <SectionHeader id="electrical-systems">Electrical systems</SectionHeader>
             <p className="font-light mb-6">
                 In addition to writing software, controls is responsible for wiring, integrating, and troubleshooting all
                 the electrical components aboard the robot. The most important component (the "brain") on the robot is the

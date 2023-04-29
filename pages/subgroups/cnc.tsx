@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import SectionHeader from '../../components/SectionHeader';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
@@ -34,7 +35,7 @@ export default function CNC() {
                 group has been a consistent, highly skilled group within the team.
             </p>
 
-            <h3 className="text-lg font-medium mb-3">What we do</h3>
+            <SectionHeader id="what-we-do">What we do</SectionHeader>
             <p className="font-light mb-6">
                 Our primary role within the team is manufacturing the most complicated and intensive mill pieces that the
                 team produces: the plates for our custom gearboxes. Our gearboxes are freshly designed or iterated upon
@@ -56,7 +57,7 @@ export default function CNC() {
                 to save weight for competition requirements and add a little flair.
             </p>
 
-            <h3 className="text-lg font-medium mb-3">Challenges</h3>
+            <SectionHeader id="challenges">Challenges</SectionHeader>
             <p className="font-light">
                 The biggest challenge we encounter is workholding. We will often need to come up with creative solutions
                 to holding our stock metal, plastic, or whatever else we happen to be machining. The majority of our time

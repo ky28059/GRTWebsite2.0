@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import SectionHeader from '../../components/SectionHeader';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
@@ -26,7 +27,7 @@ export default function Pneumatics() {
                 Pneumatic solenoids used by GRT. {/* TODO: better wording / remove this caption entirely? */}
             </CaptionedImage>
 
-            <h3 className="text-lg font-medium mb-3">Training</h3>
+            <SectionHeader id="training">Training</SectionHeader>
             <p className="font-light">
                 To start pneumatics training, members learn how to be safe using compressed air, and then go on to
                 pneumatic components (e.g. tubing, actuators, solenoids, tanks, and safety equipment) so everyone

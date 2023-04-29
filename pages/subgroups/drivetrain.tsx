@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
+import SectionHeader from '../../components/SectionHeader';
 import CaptionedImage from '../../components/CaptionedImage';
 
 
@@ -26,7 +27,7 @@ export default function Drivetrain() {
                 important recent achievements is the implementation of "swerve" drive.
             </p>
 
-            <h3 className="text-lg font-medium mb-3">Swerve drive</h3>
+            <SectionHeader id="swerve-drive">Swerve drive</SectionHeader>
             <p className="font-light mb-6">
                 Swerve drive allows a robot to be omnidirectional: it can move from side to side without changing the
                 way the robot faces. Other omnidirectional drivetrains such as Mecanum often sacrifice grip to make this
@@ -50,7 +51,7 @@ export default function Drivetrain() {
             </CaptionedImage>
             {/* TODO: info about 2023 swerve? talk about strain wave planetary gearbox? */}
 
-            <h3 className="text-lg font-medium mb-3">2-speed drive</h3>
+            <SectionHeader id="2-speed-drive">2-speed drive</SectionHeader>
             <p className="font-light mb-6">
                 Earlier GRT drivetrains featured 2-speed, ball-shifting gearboxes. Pictured is a shifting gearbox with a
                 3-stage reduction, which allows the use of 6 inch or larger wheels (a larger wheel would otherwise gear up the
@@ -73,12 +74,12 @@ export default function Drivetrain() {
                 The 2014 shifter gearbox, accompanied by GRT's 3 engineering excellence awards that year.
             </CaptionedImage>
 
-            <h3 className="text-lg font-medium mb-3">Belt-in-tube transmission</h3>
+            <SectionHeader id="belt-in-tube-transmission">Belt-in-tube transmission</SectionHeader>
             <p className="font-light">
-                In tandem with the 2-speed drive gearbox, we have used a transmission that transfers power to the wheels
+                In tandem with 2-speed drive gearboxes, GRT has used transmissions that transfer power to the wheels
                 via a series of GT3 belts, laid inside box-beam transmission tubes. These box-beam tubes serve as effective
                 housing and as core components of the robot's structure. In response to the terrain obstacles of FIRST
-                Stronghold (2016), we adapted this arrangement in a bent-tube design, maintaining the characteristics of
+                Stronghold (2016), GRT adapted this arrangement in a bent-tube design, maintaining the characteristics of
                 our traditional design, while lifting the large front and back wheels off the ground to help us tackle
                 the worst of the obstacles.
             </p>
