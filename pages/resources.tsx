@@ -62,7 +62,7 @@ export default function Resources() {
             </section>
 
             <SectionHeader id="other-projects">Promotional materials</SectionHeader>
-            <section className="flex gap-8 flex-wrap mb-10">
+            <section className="flex flex-wrap gap-x-12 gap-y-8">
                 <PromotionalMaterial src="/assets/resources/dream-machines-grt-flyer.jpg" href="/resources/dream-machines-grt-flyer.pdf">
                     Dream Machines GRT flyer
                 </PromotionalMaterial>
@@ -101,7 +101,7 @@ function PromotionalMaterial(props: PromotionalMaterialProps) {
                 <img
                     src={props.src}
                     alt={props.children}
-                    className="max-h-80 max-w-[min(100%,_24rem)] outline outline-1 outline-gray-400 hover:ring-4 ring-secondary/40"
+                    className="max-h-80 max-w-full sm:max-w-sm outline outline-1 outline-gray-400 hover:ring-4 ring-secondary/40"
                 />
             </a>
             <p className="text-secondary text-sm">{props.children}</p>
