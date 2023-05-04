@@ -89,10 +89,10 @@ const routes: Routes = {
         {name: 'Updates', href: '/updates'},
     ],
     md: [
-        // {name: 'Resources', href: '/resources'},
         {name: 'Sponsors', href: '/#sponsors'},
     ],
     lg: [
+        {name: 'Resources', href: '/resources'},
         {name: 'Join', href: '/join'}
     ],
     xl: [
