@@ -1,6 +1,7 @@
 import {Metadata} from 'next';
 
 // Components
+import Section from '../../../components/Section';
 import SectionHeader from '../../../components/SectionHeader';
 import Attachment from '../../../components/Attachment';
 import Resource from './Resource';
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Resources() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Resources
             </h1>
@@ -71,7 +72,7 @@ export default function Resources() {
                     Dream Machines FIRST flyer
                 </PromotionalMaterial>
             </section>
-        </>
+        </Section>
     )
 }
 

@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
+import CaptionedImage from '../../../../components/CaptionedImage';
 
+
+export const metadata: Metadata = {
+    title: '2016'
+}
 
 export default function GRT2016() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2016 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     FIRST Stronghold
                 </h1>
@@ -21,9 +21,9 @@ export default function GRT2016() {
                     crossing elements of their opponents' outer works, scoring boulders in their opponents' tower goals, and
                     surrounding and scaling their opponents' tower itself.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Our robot: the Red Giant
                 </h2>
@@ -39,9 +39,9 @@ export default function GRT2016() {
                     cross defenses: wheels were added to the roller arm to move the portcullis up and over the robot,
                     while the entire roller arm is capable of moving up and down in order to cross the Cheval de Frise.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Shooter
                 </h2>
@@ -63,10 +63,10 @@ export default function GRT2016() {
                     to fine tune the arc of the ball upon initial launch. The entire mechanism is set on top of a Lazy
                     Susan that is attached to a motor, which allows the shooter a fairly wide range to aim and shoot.
                 </p>
-            </WriteupSection>
+            </Section>
 
             {/* TODO: images? + decide on whether to carry over the worm gearbox background image for this section */}
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Drivetrain
                 </h2>
@@ -85,9 +85,9 @@ export default function GRT2016() {
                     This has prepared us for the year's game, since many aspects of FRC Stronghold emphasize compactness
                     of design.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Space restrictions
                 </h2>
@@ -134,7 +134,7 @@ export default function GRT2016() {
                     to the quarterfinals at the other regionals attended. In order to achieve this, GRT worked diligently
                     throughout build season to engineer and fabricate a robot that ended up doing well during competition.
                 </p>
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

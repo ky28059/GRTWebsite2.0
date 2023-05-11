@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 import SectionHeader from '../../../../components/SectionHeader';
 import CaptionedImage from '../../../../components/CaptionedImage';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Welding() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Welding
             </h1>
@@ -57,6 +58,6 @@ export default function Welding() {
                 regained much of its expertise.{/* TODO: final "future" statement */}
             </p>
             <img src="/assets/subgroups/welding-masks.JPG" alt="Welding masks" className="w-full max-w-2xl mx-auto" />
-        </>
+        </Section>
     )
 }

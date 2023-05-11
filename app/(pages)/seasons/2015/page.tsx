@@ -1,16 +1,15 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 
+
+export const metadata: Metadata = {
+    title: '2015'
+}
 
 export default function GRT2015() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2015 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     Recycle Rush
                 </h1>
@@ -25,9 +24,9 @@ export default function GRT2015() {
                     with an additional 20 points awarded if the totes are stacked. Teams are also allowed to throw litter
                     into the opposing alliances side to gain 4 points per noodle.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection secondary>
+            <Section secondary>
                 {/* TODO: unsure how to handle this image. the aspect ratio combined with the low resolution makes it */}
                 {/* look bad on its own, but even in a flex layout there's still too much whitespace */}
                 <div className="flex flex-wrap-reverse md:flex-nowrap gap-6 md:gap-8">
@@ -45,9 +44,9 @@ export default function GRT2015() {
                         </p>
                     </div>
                 </div>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Tote stacker
                 </h2>
@@ -59,10 +58,10 @@ export default function GRT2015() {
                     that allows for conformity to the tote's underside while still collectively able to lift up to 3 totes
                     at once.
                 </p>
-            </WriteupSection>
+            </Section>
 
             {/* TODO: images? + decide on whether to carry over the worm gearbox background image for this section */}
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Drivetrain
                 </h2>
@@ -72,9 +71,9 @@ export default function GRT2015() {
                     of totes requires. Combined with our traditional belt-in-tube west-coast drive, it allowed for an
                     extremely smooth and steady drive that took up a minimal amount of space on the chassis.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Bin grabber
                 </h2>
@@ -84,7 +83,7 @@ export default function GRT2015() {
 
                 {/* TODO: more content would be nice, but 2015 was a long time ago and it's doubtful more can be */}
                 {/* added here. */}
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

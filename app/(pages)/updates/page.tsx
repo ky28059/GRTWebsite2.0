@@ -1,23 +1,15 @@
-import Head from 'next/head';
-import Layout from '../../components/Layout';
-import UpdatesDoc, {UpdatesDocProps} from '../../components/UpdatesDoc';
+import {Metadata} from 'next';
 import sharp from 'sharp';
 import {google} from 'googleapis';
+import Section from '../../../components/Section';
+import UpdatesDoc from './UpdatesDoc';
 
 
-export default function Updates(props: UpdatesDocProps) {
-    return (
-        <Layout>
-            <Head>
-                <title>Updates | GRT</title>
-            </Head>
-
-            <UpdatesDoc {...props} />
-        </Layout>
-    )
+export const metadata: Metadata = {
+    title: 'Updates'
 }
 
-export async function getStaticProps() {
+export default async function Updates() {
     const auth = new google.auth.GoogleAuth({
         credentials: {
             client_email: process.env.CLIENT_EMAIL,
@@ -67,8 +59,9 @@ export async function getStaticProps() {
             : `data:image/jpeg;base64,${(await img.jpeg().toBuffer()).toString('base64')}`;
     }
 
-    return {
-        props: {document: res.data, parsedUris},
-        // revalidate: 60
-    }
+    return (
+        <Section>
+            <UpdatesDoc document={res.data} parsedUris={parsedUris} />
+        </Section>
+    )
 }

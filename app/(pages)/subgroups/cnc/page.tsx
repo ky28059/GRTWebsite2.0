@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 import SectionHeader from '../../../../components/SectionHeader';
 import CaptionedImage from '../../../../components/CaptionedImage';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function CNC() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 CNC
             </h1>
@@ -67,6 +68,6 @@ export default function CNC() {
                 especially when those parts exceed Fluffy's travel range and require multiple CAMs and remounting, as zeroes
                 and orientation must be maintained when repositioning the part.
             </p>
-        </>
+        </Section>
     )
 }

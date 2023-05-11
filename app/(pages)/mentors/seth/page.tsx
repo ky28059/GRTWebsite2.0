@@ -1,10 +1,11 @@
+import Section from '../../../../components/Section';
 import MentorImage from '../MentorImage';
 import Question from '../Question';
 
 
 export default function Seth() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Interview with Seth Mallory
             </h1>
@@ -36,6 +37,6 @@ export default function Seth() {
                     off.
                 </Question>
             </div>
-        </>
+        </Section>
     )
 }

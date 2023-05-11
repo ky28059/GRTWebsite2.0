@@ -1,11 +1,11 @@
-import Head from 'next/head';
+import Section from '../../../../components/Section';
 import MentorImage from '../MentorImage';
 import Question from '../Question';
 
 
 export default function Phil() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Interview with Phil Roan
             </h1>
@@ -38,6 +38,6 @@ export default function Phil() {
                     to learn new things.
                 </Question>
             </div>
-        </>
+        </Section>
     )
 }

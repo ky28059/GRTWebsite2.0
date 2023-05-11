@@ -1,15 +1,15 @@
 import {ReactNode} from 'react';
-import Head from 'next/head';
-import Layout from '../../components/Layout';
+import {Metadata} from 'next';
+import Section from '../../../components/Section';
 
+
+export const metadata: Metadata = {
+    title: 'Accolades'
+}
 
 export default function Accolades() {
     return (
-        <Layout>
-            <Head>
-                <title>Accolades | GRT</title>
-            </Head>
-
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 GRT Awards by Year
             </h1>
@@ -326,7 +326,7 @@ export default function Accolades() {
                     </Events>
                 </Season>
             </div>
-        </Layout>
+        </Section>
     )
 }
 

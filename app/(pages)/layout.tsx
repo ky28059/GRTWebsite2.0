@@ -6,7 +6,7 @@ export default function Layout(props: {children: ReactNode}) {
     return (
         <>
             <NavBar />
-            <main className="container pt-16 pb-24 flex-grow">
+            <main className="pb-8 flex-grow">
                 {props.children}
             </main>
         </>

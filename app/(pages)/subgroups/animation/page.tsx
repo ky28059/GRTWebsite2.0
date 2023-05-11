@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 import SectionHeader from '../../../../components/SectionHeader';
 import CaptionedImage from '../../../../components/CaptionedImage';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Controls() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Animation
             </h1>
@@ -58,6 +59,6 @@ export default function Controls() {
                 angles, and rendering are all taught by the veterans most experienced in those areas.
             </p>
             {/* TODO: images; composition, rendering, etc. */}
-        </>
+        </Section>
     )
 }

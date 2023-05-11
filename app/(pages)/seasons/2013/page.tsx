@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
+import CaptionedImage from '../../../../components/CaptionedImage';
 
+
+export const metadata: Metadata = {
+    title: '2013'
+}
 
 export default function GRT2013() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2013 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     Ultimate Ascent
                 </h1>
@@ -32,11 +32,11 @@ export default function GRT2013() {
                 <CaptionedImage src="/assets/first/2013-robot.jpg" alt="2013 robot" className="max-w-3xl mx-auto">
                     The 2013 robot. {/* TODO: better caption */}
                 </CaptionedImage>
-            </WriteupSection>
+            </Section>
 
             {/* TODO: usually a "meet the robot" section goes here, but they don't seem to have one, and */}
             {/* neither do they seem to have a robot name */}
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Shooter
                 </h2>
@@ -49,9 +49,9 @@ export default function GRT2013() {
                 </p>
                 <img src="/assets/first/2013-robot-shooter.jpg" alt="2013 shooter" className="rounded w-full max-w-3xl mx-auto" />
                 {/* TODO: caption? */}
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Pickup
                 </h2>
@@ -59,10 +59,10 @@ export default function GRT2013() {
                     The pickup mechanism used on this year's robot used a chalupa design in order to pickup the frisbees
                     and drop them into the hopper. {/* TODO: expand; see TODO in `2015.tsx` */}
                 </p>
-            </WriteupSection>
+            </Section>
 
             {/* TODO: images? + decide on whether to carry over the worm gearbox background image for this section */}
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Drivetrain
                 </h2>
@@ -73,9 +73,9 @@ export default function GRT2013() {
                     allowed the gearbox to be very compact and were placed right next to the wheels. This gives more space
                     for the pickup and shooter mechanisms on the robot.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     The team
                 </h2>
@@ -86,7 +86,7 @@ export default function GRT2013() {
                     at Utah. Our robot was well built and shot frisbees quite consistently, allowing us to score goals
                     efficiently.
                 </p>
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

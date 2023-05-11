@@ -1,10 +1,11 @@
+import Section from '../../../../components/Section';
 import MentorImage from '../MentorImage';
 import Question from '../Question';
 
 
 export default function Kristina() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Interview with Kristina Granlund-Moyer
             </h1>
@@ -36,6 +37,6 @@ export default function Kristina() {
                     provides a much deeper teacher-student relationship than the typical classroom experience.
                 </Question>
             </div>
-        </>
+        </Section>
     )
 }

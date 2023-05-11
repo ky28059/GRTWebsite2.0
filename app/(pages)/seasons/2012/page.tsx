@@ -1,16 +1,15 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 
+
+export const metadata: Metadata = {
+    title: '2012'
+}
 
 export default function GRT2012() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2012 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     Rebound Rumble
                 </h1>
@@ -31,9 +30,9 @@ export default function GRT2012() {
                     with a robot from the opposing alliance however, can earn both robots valuable "Coopertition Points"
                     during the qualification stages.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Our robot: Steakhouse Rodriguez
                 </h2>
@@ -48,9 +47,9 @@ export default function GRT2012() {
                     from any location, range permitting. The same system allows for reliable autonomous scoring.
                 </p>
                 <img src="/assets/first/2012-steakhouse-rodriguez.jpg" alt="2012 robot" className="rounded w-full max-w-3xl mx-auto" />
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <div className="flex gap-8">
                     <img src="/assets/first/2012-shooter.jpg" alt="2012 shooter" className="rounded hidden md:block md:max-w-xs lg:max-w-md h-max" />
                     <div>
@@ -78,11 +77,11 @@ export default function GRT2012() {
                         </p>
                     </div>
                 </div>
-            </WriteupSection>
+            </Section>
 
             {/* TODO: images? + decide on whether to carry over the worm gearbox background image for this section */}
             {/* This is the only drivetrain section allowed to use the 2012 worm gear background image */}
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Drivetrain
                 </h2>
@@ -105,9 +104,9 @@ export default function GRT2012() {
                     designed and built, and won the Excellence in Engineering Design Award at the Chesapeake Bay Regional
                     2012.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Ball pickup
                 </h2>
@@ -123,7 +122,7 @@ export default function GRT2012() {
                 </p>
                 <img src="/assets/first/2012-ball-pickup.jpg" alt="2012 ball pickup" className="rounded w-full max-w-2xl mx-auto" />
                 {/* TODO: caption? */}
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

@@ -1,17 +1,15 @@
 import {ReactNode} from 'react';
-import Head from 'next/head';
-import WriteupLayout from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import CaptionedImage from '../../../../components/CaptionedImage';
 
 
-// TODO: is using `WriteupLayout` here appropriate?
+export const metadata: Metadata = {
+    title: '2022 Updates'
+}
+
 export default function Updates2022() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2022 Updates | GRT</title>
-            </Head>
-
+        <>
             <section className="space-y-16 py-16">
                 <Update name="January Update" className="container">
                     <p className="font-light mb-6">
@@ -98,7 +96,7 @@ export default function Updates2022() {
                     </div>
                 </Update>
             </section>
-        </WriteupLayout>
+        </>
     )
 }
 

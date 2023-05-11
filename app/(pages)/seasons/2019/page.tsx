@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
+import CaptionedImage from '../../../../components/CaptionedImage';
 
+
+export const metadata: Metadata = {
+    title: '2019'
+}
 
 export default function GRT2019() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2019 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     Destination: Deep Space
                 </h1>
@@ -25,9 +25,9 @@ export default function GRT2019() {
                 <CaptionedImage src="/assets/first/grt-2019.JPG" alt="GRT 2018-2019" className="max-w-3xl mx-auto">
                     GRT 2018-2019
                 </CaptionedImage>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Alpha
                 </h2>
@@ -42,9 +42,9 @@ export default function GRT2019() {
                 <CaptionedImage src="/assets/first/2019-del-mar.JPG" alt="Prototyping and design" className="max-w-3xl mx-auto">
                     Jonah at the 2019 Del Mar Regional.
                 </CaptionedImage>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <div className="flex flex-wrap-reverse md:flex-nowrap gap-6 md:gap-8 mb-16">
                     <img src="/assets/first/2019-jonah.jpg" alt="2019 robot" className="rounded md:max-w-xs lg:max-w-md mx-auto self-start" />
                     <div>
@@ -95,7 +95,7 @@ export default function GRT2019() {
                     showing our team spirit with a few new cheers. Overall, 2019 was a great season, and we're looking
                     forward to rising up to the challenge next year and beyond.
                 </p>
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

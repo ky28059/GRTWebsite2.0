@@ -1,9 +1,10 @@
+import Section from '../../../../components/Section';
 import Question from '../Question';
 
 
 export default function Zach() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Interview with Zach Walker
             </h1>
@@ -28,6 +29,6 @@ export default function Zach() {
                     just happened. It is such an amazing way to really understand the physics of our world.
                 </Question>
             </div>
-        </>
+        </Section>
     )
 }

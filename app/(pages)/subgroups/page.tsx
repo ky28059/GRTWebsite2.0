@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../components/Section';
 import ImageBox from '../../../components/ImageBox';
 
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Subgroups() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Subgroups
             </h1>
@@ -45,6 +46,6 @@ export default function Subgroups() {
                     Responsible for organizing outreach events and writing grants and essays.
                 </ImageBox>
             </section>
-        </>
+        </Section>
     )
 }

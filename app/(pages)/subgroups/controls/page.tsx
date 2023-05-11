@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 import SectionHeader from '../../../../components/SectionHeader';
 import CaptionedImage from '../../../../components/CaptionedImage';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Controls() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Controls
             </h1>
@@ -84,6 +85,6 @@ export default function Controls() {
             {/* TODO: auton? idk if we should talk about auton */}
 
             {/* TODO: training */}
-        </>
+        </Section>
     )
 }

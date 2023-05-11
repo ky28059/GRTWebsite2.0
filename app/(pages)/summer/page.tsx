@@ -1,5 +1,6 @@
 import {Metadata} from 'next';
 import Link from 'next/link';
+import Section from '../../../components/Section';
 import Question from './Question';
 
 
@@ -11,7 +12,7 @@ export default function Summer() {
     const showRegistration = true;
 
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Gunn Robotics Summer Camp
             </h1>
@@ -105,6 +106,6 @@ export default function Summer() {
             <p className="font-light">
                 Further questions? Send us an email at <a href="mailto:gunnrobotics192@gmail.com">gunnrobotics192@gmail.com</a>!
             </p>
-        </>
+        </Section>
     )
 }

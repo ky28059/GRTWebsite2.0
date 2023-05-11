@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 import SectionHeader from '../../../../components/SectionHeader';
 import CaptionedImage from '../../../../components/CaptionedImage';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Pneumatics() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Pneumatics
             </h1>
@@ -37,6 +38,6 @@ export default function Pneumatics() {
             </p>
 
             {/* TODO: this section is very bare bones; consider adding more */}
-        </>
+        </Section>
     )
 }

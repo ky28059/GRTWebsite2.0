@@ -1,5 +1,6 @@
 import {ReactNode} from 'react';
 import {Metadata} from 'next';
+import Section from '../../../components/Section';
 
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function FIRST() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 FIRST
             </h1>
@@ -39,7 +40,7 @@ export default function FIRST() {
                     </p>
                 </section>
 
-                <Section heading="A New Emphasis on Engineering">
+                <FIRSTSection heading="A New Emphasis on Engineering">
                     <p>
                         Where once there was nothing but a struggling class with eight students, there is now a thriving program
                         with 10 classes and 4 suggested pathways. GRT has been so successful that there is a new hunger at our
@@ -51,9 +52,9 @@ export default function FIRST() {
                         school.
                     </p>
                     <img src="/assets/first/mentor.jpg" className="brightness-105 contrast-[1.05] saturate-[1.2]" alt="Mentor" />
-                </Section>
+                </FIRSTSection>
 
-                <Section heading="Mentors to Veterans to Rookies">
+                <FIRSTSection heading="Mentors to Veterans to Rookies">
                     {/* TODO: rewrite to emphasize mentor hands-off-ness and student leadership */}
                     <p>
                         We bring in mentors from industry to help coach students along. These mentors do not work the
@@ -62,9 +63,9 @@ export default function FIRST() {
                         take a rookie with them every time they need to make something, so that the newer student can
                         be a helper and learn by working along.
                     </p>
-                </Section>
+                </FIRSTSection>
 
-                <Section heading="Cooperation and Competition">
+                <FIRSTSection heading="Cooperation and Competition">
                     <p>
                         We rely on two very strong motivators on this team: the team members' knowledge that their
                         designs may be in completion with other designs, and their knowledge that the rest of the team
@@ -72,13 +73,14 @@ export default function FIRST() {
                         why the students on the team work so hard to do well!
                     </p>
                     <img src="/assets/first/group.jpg" alt="Group" />
-                </Section>
+                </FIRSTSection>
             </div>
-        </>
+        </Section>
     )
 }
 
-function Section(props: {heading: string, children: ReactNode}) {
+// TODO: naming, can this be abstracted with the imported section?
+function FIRSTSection(props: {heading: string, children: ReactNode}) {
     return (
         <section className="space-y-6 font-light">
             <h3 className="text-2xl font-medium text-center">{props.heading}</h3>

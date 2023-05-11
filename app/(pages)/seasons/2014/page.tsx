@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
+import CaptionedImage from '../../../../components/CaptionedImage';
 
+
+export const metadata: Metadata = {
+    title: '2014'
+}
 
 export default function GRT2014() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2014 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     Aerial Assist
                 </h1>
@@ -36,9 +36,9 @@ export default function GRT2014() {
                     large bonuses for assists, which are earned for each robot that has possession of the ball in a zone
                     as the ball moves down the field.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Our robot: Redshift
                 </h2>
@@ -51,9 +51,9 @@ export default function GRT2014() {
                 </p>
                 <img src="/assets/first/2014-redshift.jpg" alt="2014 robot" className="rounded w-full max-w-3xl mx-auto" />
                 {/* TODO: caption? "Redshift at Nixon elementary school ..." */}
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Pickup
                 </h2>
@@ -72,10 +72,10 @@ export default function GRT2014() {
                     easily replaceable and breakable, we protect the more delicate metal parts and can quickly replace a
                     part.
                 </p>
-            </WriteupSection>
+            </Section>
 
             {/* TODO: images? + decide on whether to carry over the worm gearbox background image for this section */}
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Drivetrain
                 </h2>
@@ -84,9 +84,9 @@ export default function GRT2014() {
                     more space for onboard mechanisms.
                 </p>
                 {/* TODO: more content is needed, but hard; see TODO in `2015.tsx` */}
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Shooter
                 </h2>
@@ -98,7 +98,7 @@ export default function GRT2014() {
                 </p>
 
                 {/* TODO: see TODO in `2015.tsx` */}
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

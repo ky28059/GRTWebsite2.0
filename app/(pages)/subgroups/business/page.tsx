@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../../components/Section';
 import SectionHeader from '../../../../components/SectionHeader';
 import CaptionedImage from '../../../../components/CaptionedImage';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Business() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Business
             </h1>
@@ -50,6 +51,6 @@ export default function Business() {
             <CaptionedImage src="/assets/subgroups/2022-grt-may-fete.jpg" alt="May fete parade" className="max-w-2xl mx-auto">
                 GRT in the 2022 Palo Alto May Fete parade.
             </CaptionedImage>
-        </>
+        </Section>
     )
 }

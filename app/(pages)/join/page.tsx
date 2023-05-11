@@ -1,5 +1,6 @@
 import {ReactNode} from 'react';
 import {Metadata} from 'next';
+import Section from '../../../components/Section';
 import CaptionedImage from '../../../components/CaptionedImage';
 
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Join() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Join GRT
             </h1>
@@ -80,7 +81,7 @@ export default function Join() {
             <CaptionedImage src="/assets/join/2019-20Camping.jpeg" alt="GRT 2019-2020">
                 GRT 2019-2020
             </CaptionedImage>
-        </>
+        </Section>
     )
 }
 

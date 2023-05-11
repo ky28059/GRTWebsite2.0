@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import WriteupLayout, {WriteupSection} from '../../components/WriteupLayout';
-import CaptionedImage from '../../components/CaptionedImage';
+import {Metadata} from 'next';
+import Section from '../../../../components/Section';
+import CaptionedImage from '../../../../components/CaptionedImage';
 
+
+export const metadata: Metadata = {
+    title: '2018'
+}
 
 export default function GRT2018() {
     return (
-        <WriteupLayout>
-            <Head>
-                <title>2018 | GRT</title>
-            </Head>
-
-            <WriteupSection>
+        <>
+            <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
                     FIRST Power Up
                 </h1>
@@ -34,9 +34,9 @@ export default function GRT2018() {
                 <CaptionedImage src="/assets/first/grt-2018.JPG" alt="GRT 2017-2018" className="max-w-3xl mx-auto">
                     GRT 2017-2018
                 </CaptionedImage>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection secondary>
+            <Section secondary>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Design
                 </h2>
@@ -57,9 +57,9 @@ export default function GRT2018() {
                     for the autonomous period of the game, allowing the robot to cross the auto line and place a cube on
                     the switch.
                 </p>
-            </WriteupSection>
+            </Section>
 
-            <WriteupSection>
+            <Section>
                 <h2 className="text-2xl font-medium text-center mb-6">
                     Competition
                 </h2>
@@ -91,7 +91,7 @@ export default function GRT2018() {
                 </p>
                 <img src="/assets/first/2018-comps.JPG" alt="2018 robot at competition" className="rounded w-full max-w-2xl mx-auto" />
                 {/* TODO: caption? where is this? */}
-            </WriteupSection>
-        </WriteupLayout>
+            </Section>
+        </>
     )
 }

@@ -1,10 +1,11 @@
+import Section from '../../../../components/Section';
 import MentorImage from '../MentorImage';
 import Question from '../Question';
 
 
 export default function Karl() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Interview with Karl Van Dyk
             </h1>
@@ -36,6 +37,6 @@ export default function Karl() {
                     that is gratifying for me.
                 </Question>
             </div>
-        </>
+        </Section>
     )
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import {createContext, useContext} from 'react';
 import {docs_v1} from 'googleapis';
 

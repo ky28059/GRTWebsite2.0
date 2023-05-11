@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../components/Section';
 import ImageBox from '../../../components/ImageBox';
 
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Mentors() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-6 text-center">
                 Meet Our Mentors
             </h1>
@@ -51,6 +52,6 @@ export default function Mentors() {
                     Mentor, Senior Manager at Lucid Motors.
                 </ImageBox>
             </section>
-        </>
+        </Section>
     )
 }

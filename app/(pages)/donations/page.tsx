@@ -1,4 +1,5 @@
 import {Metadata} from 'next';
+import Section from '../../../components/Section';
 
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Donations() {
     return (
-        <>
+        <Section>
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Donations
             </h1>
@@ -59,6 +60,6 @@ export default function Donations() {
                 ways to fill our needs. If you have experience working in machine shops, engineering, computer science,
                 or with an organization like FIRST, please let us know! We would love to have your expertise. Thank you!
             </p>
-        </>
+        </Section>
     )
 }
