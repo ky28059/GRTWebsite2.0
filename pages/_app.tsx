@@ -1,6 +1,9 @@
 import {AppProps} from 'next/app';
 import {Roboto} from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
+
+// Components
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 import '../styles/globals.css';
 
@@ -13,8 +16,9 @@ const roboto = Roboto({
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <main className={'relative h-full flex flex-col ' + roboto.className}>
+            <NavBar />
             <Component {...pageProps} />
-            <Analytics />
+            <Footer />
         </main>
     );
 }

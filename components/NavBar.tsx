@@ -1,6 +1,8 @@
+'use client'
+
 import {ReactNode} from 'react';
 import Link from 'next/link';
-import {useRouter} from 'next/router';
+import {useSelectedLayoutSegment, useSelectedLayoutSegments} from 'next/navigation';
 import {Popover} from '@headlessui/react';
 
 // Components
@@ -62,7 +64,7 @@ export default function NavBar() {
 type NavLinkProps = {href: string, children: ReactNode};
 function NavLink(props: NavLinkProps) {
     const {href, children} = props;
-    const {pathname} = useRouter();
+    const pathname = '/' + useSelectedLayoutSegments().join('/');
     const active = pathname.startsWith(href);
 
     return (
@@ -84,10 +86,10 @@ type NavDropdownProps = {
     children: ReactNode
 }
 function NavDropdown(props: NavDropdownProps) {
-    const {pathname} = useRouter();
+    const pathname = useSelectedLayoutSegment();
 
     // Active if any sub-route matches
-    const active = props.routes.some(({href}) => pathname.startsWith(href));
+    const active = props.routes.some(({href}) => pathname?.startsWith(href.slice(1)));
 
     return (
         <Popover className="relative flex">
@@ -115,14 +117,14 @@ function NavDropdown(props: NavDropdownProps) {
 type MatchProps = {href: string, children: ReactNode};
 function Match(props: MatchProps) {
     const {href, children} = props;
-    const {pathname} = useRouter();
+    const pathname = useSelectedLayoutSegment();
 
-    if (!pathname.startsWith(href)) return null;
+    if (!pathname?.startsWith(href.slice(1))) return null;
     return <>{children}</>;
 }
 
 function SubNavLink(props: NavLinkProps) {
-    const {pathname} = useRouter();
+    const pathname = '/' + useSelectedLayoutSegments().join('/');
     const active = pathname === props.href;
 
     return (

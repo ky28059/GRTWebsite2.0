@@ -1,6 +1,6 @@
 import {ReactNode} from 'react';
 import Link from 'next/link';
-import {useRouter} from 'next/router';
+import {useSelectedLayoutSegment, useSelectedLayoutSegments} from 'next/navigation';
 import {Disclosure, Popover} from '@headlessui/react';
 import AnimatedPopover from './AnimatedPopover';
 
@@ -120,7 +120,7 @@ function renderRoutes(
 // TODO: abstract into own file?
 export function PopoverNavLink(props: {href: string, children: ReactNode}) {
     const {href, children} = props;
-    const {pathname} = useRouter();
+    const pathname = '/' + useSelectedLayoutSegments().join('/');
     const active = pathname.startsWith(href);
 
     return (

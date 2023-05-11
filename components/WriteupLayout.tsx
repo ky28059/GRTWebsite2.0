@@ -1,19 +1,13 @@
 import {ReactNode} from 'react';
-import NavBar from './NavBar';
-import Footer from './Footer';
 
 
 // A special layout for the year-by-year writeups in `/FIRST`.
 // TODO: is this component needed?
 export default function WriteupLayout(props: {children: ReactNode}) {
     return (
-        <>
-            <NavBar />
-            <main className="pb-8 flex-grow">
-                {props.children}
-            </main>
-            <Footer />
-        </>
+        <main className="pb-8 flex-grow">
+            {props.children}
+        </main>
     )
 }
 

@@ -1,11 +1,12 @@
 import {ReactNode} from 'react';
+import HomeNavBar from './HomeNavBar';
 
 
-// The layout for all pages except for the home page.
 export default function Layout(props: {children: ReactNode}) {
     return (
-        <main className="container pt-16 pb-24 flex-grow">
+        <>
+            <HomeNavBar />
             {props.children}
-        </main>
+        </>
     )
 }
