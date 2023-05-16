@@ -49,33 +49,31 @@ export default function GRT2012() {
                 <img src="/assets/first/2012-steakhouse-rodriguez.jpg" alt="2012 robot" className="rounded w-full max-w-3xl mx-auto" />
             </Section>
 
-            <Section>
-                <div className="flex gap-8">
-                    <img src="/assets/first/2012-shooter.jpg" alt="2012 shooter" className="rounded hidden md:block md:max-w-xs lg:max-w-md h-max" />
-                    <div>
-                        <h2 className="text-2xl font-medium text-center md:text-left mb-6">
-                            Shooter
-                        </h2>
-                        <p className="font-light mb-6">
-                            Our shooter went through seven vastly different iterations before becoming the final version
-                            it is now. The final shooting mechanism features twin 6" flywheels powered by two Fisher-Price
-                            motors with a 4:1 gear reduction. This combination allows the shooter to have the top speed
-                            to launch the ball across the field. On the way out of the shooter, the ball glides between
-                            the flywheels, rolling along three plastic ABS plastic plates at the back. Behind the three
-                            flexible plates is a pushing mechanism, powered by a motor with a lead screw. By pushing the
-                            flexible plates into different curvatures, this lead screw mechanism provides precise angle
-                            adjustment.
-                        </p>
-                        <p className="font-light">
-                            The shooter is mounted on a 15" Lazy Susan, powered via timing belt by a window motor. On the
-                            front is a centered Axis camera. Vision tracking, paired with the rotating turret, allows for
-                            quick automatic vision tracking. The entire shooter, including motors, camera, and rotation
-                            mechanism, weighs under 8 pounds. Through extensive testing, our shooter shot 30 shots from
-                            the key in a row, from 3 different arbitrary locations on the key, and scored 27 balls. This
-                            90% accuracy is attributed to completely automatic code tracking algorithms as well as the
-                            robustness of the mechanical design, and it qualifies this shooter as one of the best.
-                        </p>
-                    </div>
+            <Section className="flex gap-8">
+                <img src="/assets/first/2012-shooter.jpg" alt="2012 shooter" className="rounded hidden md:block md:max-w-xs lg:max-w-md h-max" />
+                <div>
+                    <h2 className="text-2xl font-medium text-center md:text-left mb-6">
+                        Shooter
+                    </h2>
+                    <p className="font-light mb-6">
+                        Our shooter went through seven vastly different iterations before becoming the final version
+                        it is now. The final shooting mechanism features twin 6" flywheels powered by two Fisher-Price
+                        motors with a 4:1 gear reduction. This combination allows the shooter to have the top speed
+                        to launch the ball across the field. On the way out of the shooter, the ball glides between
+                        the flywheels, rolling along three plastic ABS plastic plates at the back. Behind the three
+                        flexible plates is a pushing mechanism, powered by a motor with a lead screw. By pushing the
+                        flexible plates into different curvatures, this lead screw mechanism provides precise angle
+                        adjustment.
+                    </p>
+                    <p className="font-light">
+                        The shooter is mounted on a 15" Lazy Susan, powered via timing belt by a window motor. On the
+                        front is a centered Axis camera. Vision tracking, paired with the rotating turret, allows for
+                        quick automatic vision tracking. The entire shooter, including motors, camera, and rotation
+                        mechanism, weighs under 8 pounds. Through extensive testing, our shooter shot 30 shots from
+                        the key in a row, from 3 different arbitrary locations on the key, and scored 27 balls. This
+                        90% accuracy is attributed to completely automatic code tracking algorithms as well as the
+                        robustness of the mechanical design, and it qualifies this shooter as one of the best.
+                    </p>
                 </div>
             </Section>
 

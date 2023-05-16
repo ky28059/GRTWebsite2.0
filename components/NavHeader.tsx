@@ -92,6 +92,7 @@ const routes: Routes = {
         {name: 'Sponsors', href: '/#sponsors'},
     ],
     lg: [
+        {name: 'Outreach', href: '/outreach'},
         {name: 'Resources', href: '/resources'},
         {name: 'Join', href: '/join'}
     ],
