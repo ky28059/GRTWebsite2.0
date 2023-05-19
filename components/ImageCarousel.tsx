@@ -14,7 +14,7 @@ export default function ImageCarousel(props: ImageCarouselProps) {
     const [index, setIndex] = useState(0);
 
     return (
-        <div className={'flex sm:gap-4 justify-between' + (className ? ` ${className}` : '')}>
+        <div className={'relative flex sm:gap-4 justify-between' + (className ? ` ${className}` : '')}>
             <button className="w-6 sm:w-8 flex-none flex items-center justify-center text-2xl" onClick={() => setIndex((((index - 1) % sources.length) + sources.length) % sources.length)}>
                 <BsChevronCompactLeft />
             </button>
@@ -33,6 +33,15 @@ export default function ImageCarousel(props: ImageCarouselProps) {
             <button className="w-6 sm:w-8 flex-none flex items-center justify-center text-2xl" onClick={() => setIndex((index + 1) % sources.length)}>
                 <BsChevronCompactRight />
             </button>
+
+            <div className={'absolute inset-x-0 flex gap-1 justify-center ' + (captions ? '-top-3.5' : '-bottom-3.5')}>
+                {sources.map((_, i) => (
+                    <button
+                        className={'w-[1.625rem] h-[0.275rem] transition duration-100 ' + (index === i ? 'bg-gray-500' : 'bg-gray-300')}
+                        onClick={() => setIndex(i)}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

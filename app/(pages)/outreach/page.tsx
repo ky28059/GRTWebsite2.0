@@ -66,7 +66,7 @@ export default function Outreach() {
                     <h2 className="text-2xl font-medium mb-4">Annual outreach</h2>
 
                     <SectionHeader id="haunted-house">Haunted House</SectionHeader>
-                    <p className="mb-6">
+                    <p className="mb-8">
                         Every October, we design and showcase a haunted house for Juana Briones Elementary School. This
                         partnership has been going on for the past few years and helps establish a connection between
                         younger and older students. Many current GRT students are Briones alums!
@@ -83,7 +83,7 @@ export default function Outreach() {
                     />
 
                     <SectionHeader id="fll">FLL</SectionHeader>
-                    <p className="mb-6">
+                    <p className="mb-8">
                         Every November, GRT organizes and hosts a First Lego League competition for local Bay Area teams.
                         Every GRT member plays a role in putting on this event. Find local FLL events on the{' '}
                         <a href="https://www.playingatlearning.org/events/categories/fll/" target="_blank" rel="noopener noreferrer">FIRST NorCal website</a>.
