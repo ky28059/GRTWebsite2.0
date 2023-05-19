@@ -85,7 +85,8 @@ export default function Outreach() {
                     <SectionHeader id="fll">FLL</SectionHeader>
                     <p className="mb-6">
                         Every November, GRT organizes and hosts a First Lego League competition for local Bay Area teams.
-                        Every GRT member plays a role in putting on this event. Find local FLL events here.
+                        Every GRT member plays a role in putting on this event. Find local FLL events on the{' '}
+                        <a href="https://www.playingatlearning.org/events/categories/fll/" target="_blank" rel="noopener noreferrer">FIRST NorCal website</a>.
                     </p>
                     <ImageCarousel
                         sources={['/assets/outreach/fll-1.jpg', '/assets/outreach/fll-2.jpg']}
