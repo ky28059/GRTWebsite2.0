@@ -34,10 +34,10 @@ export default function ImageCarousel(props: ImageCarouselProps) {
                 <BsChevronCompactRight />
             </button>
 
-            <div className={'absolute inset-x-0 flex gap-1 justify-center ' + (captions ? '-top-3.5' : '-bottom-3.5')}>
+            <div className="absolute inset-x-0 flex gap-1 justify-center bottom-4">
                 {sources.map((_, i) => (
                     <button
-                        className={'w-[1.625rem] h-[0.275rem] transition duration-100 ' + (index === i ? 'bg-gray-500' : 'bg-gray-300')}
+                        className={'w-[1.625rem] h-[0.275rem] transition duration-100 ' + (index === i ? 'bg-white/90' : 'bg-white/30')}
                         onClick={() => setIndex(i)}
                     />
                 ))}
