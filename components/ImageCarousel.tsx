@@ -14,7 +14,7 @@ export default function ImageCarousel(props: ImageCarouselProps) {
     const [index, setIndex] = useState(0);
 
     return (
-        <div className={'relative flex sm:gap-4 justify-between' + (className ? ` ${className}` : '')}>
+        <div className={'relative flex sm:gap-4 justify-center' + (className ? ` ${className}` : '')}>
             <button className="w-6 sm:w-8 flex-none flex items-center justify-center text-2xl" onClick={() => setIndex((((index - 1) % sources.length) + sources.length) % sources.length)}>
                 <BsChevronCompactLeft />
             </button>

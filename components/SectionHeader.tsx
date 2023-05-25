@@ -7,7 +7,7 @@ export default function SectionHeader(props: SectionHeaderProps) {
     return (
         <div className="relative mb-3">
             <span id={props.id} className="absolute -top-24" />
-            <a href={`#${props.id}`} className="text-inherit group flex gap-1.5 items-center hover:underline decoration-1 underline-offset-4 decoration-secondary dark:decoration-secondary-dark decoration-dotted">
+            <a href={`#${props.id}`} className="text-inherit group flex gap-1.5 items-center hover:underline decoration-1 underline-offset-4 decoration-secondary decoration-dotted">
                 <h3 className="text-lg font-medium">
                     {props.children}
                 </h3>

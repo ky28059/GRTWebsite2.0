@@ -41,7 +41,10 @@ export default function Outreach() {
                             <a href="#haunted-house" className="hover:underline">Haunted House</a>
                         </li>
                         <li>
-                            <a href="#fll" className="hover:underline">FLL</a>
+                            <a href="#fll-tournament" className="hover:underline">FLL Tournament</a>
+                        </li>
+                        <li>
+                            <a href="#fll-team" className="hover:underline">FLL Team</a>
                         </li>
                         <li>
                             <a href="#showcases" className="hover:underline">Showcases</a>
@@ -82,7 +85,7 @@ export default function Outreach() {
                         className="mb-20"
                     />
 
-                    <SectionHeader id="fll">FLL</SectionHeader>
+                    <SectionHeader id="fll-tournament">FLL Tournament</SectionHeader>
                     <p className="mb-6">
                         Every November, GRT organizes and hosts a First Lego League competition for local Bay Area teams.
                         Every GRT member plays a role in putting on this event. Find local FLL events on the{' '}
@@ -92,6 +95,19 @@ export default function Outreach() {
                         sources={['/assets/outreach/fll-1.jpg', '/assets/outreach/fll-2.jpg']}
                         alts={['FLL competition', 'GRT team photo']}
                         captions={['Teams competing at our 2022 tournament.', 'GRT team photo post-tournament.']}
+                        className="mb-16"
+                    />
+
+                    <SectionHeader id="fll-team">FLL Team</SectionHeader>
+                    <p className="mb-6">
+                        Since 2022, GRT has collaborated with the YMCA to organize and teach an FLL Explore after-school
+                        program for their elementary school students. Our members visit the YMCA classrooms to teach the
+                        design process through hands-on LEGO challenges.
+                    </p>
+                    <ImageCarousel
+                        sources={['/assets/outreach/fll-3.jpg', '/assets/outreach/fll-4.jpg']}
+                        alts={['FLL coding', 'FLL kids explore LEGO kits']}
+                        captions={['GRT member helping a student code his LEGO creation.', 'Classroom full of students exploring LEGO Spike kits.']}
                         className="mb-16"
                     />
 
