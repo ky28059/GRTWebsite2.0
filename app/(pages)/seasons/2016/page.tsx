@@ -31,7 +31,7 @@ export default function GRT2016() {
                     For FIRST Stronghold, GRT built the 'Red Giant', a short robot specially engineered to overcome the
                     challenging terrain presented in the game.
                 </p>
-                <img src="/assets/first/2016-red-giant.jpg" alt="2016 robot" className="rounded w-full max-w-3xl mx-auto mb-6" />
+                <img src="/assets/seasons/2016-red-giant.jpg" alt="2016 robot" className="rounded w-full max-w-3xl mx-auto mb-6" />
                 <p className="font-light">
                     The pickup mechanism on the Red Giant uses two car window motors attached to a roller arm to move
                     the ball into the shooter mechanism. The roller arm consists of a metal roller to which was tied

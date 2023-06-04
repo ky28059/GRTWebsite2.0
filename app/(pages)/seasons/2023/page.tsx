@@ -101,9 +101,9 @@ export default function GRT2023() {
                     className="lg:hidden mb-10"
                 />
                 <div className="hidden lg:flex gap-1.5 mb-10">
-                    <img src="/assets/first/2023-utah-2.jpg" alt="Utah triple balance" className="min-w-0 rounded-sm" />
-                    <img src="/assets/first/2023-utah-3.jpg" alt="Utah pit-crew work" className="min-w-0 rounded-sm" />
-                    <img src="/assets/first/2023-utah-1.jpg" alt="Utah team cheer" className="min-w-0 rounded-sm" />
+                    <img src="/assets/seasons/2023-utah-2.jpg" alt="Utah triple balance" className="min-w-0 rounded-sm" />
+                    <img src="/assets/seasons/2023-utah-3.jpg" alt="Utah pit-crew work" className="min-w-0 rounded-sm" />
+                    <img src="/assets/seasons/2023-utah-1.jpg" alt="Utah team cheer" className="min-w-0 rounded-sm" />
                 </div>
 
                 <h3 className="text-lg font-medium mb-3">

@@ -30,7 +30,7 @@ export default function GRT2015() {
                 {/* TODO: unsure how to handle this image. the aspect ratio combined with the low resolution makes it */}
                 {/* look bad on its own, but even in a flex layout there's still too much whitespace */}
                 <div className="flex flex-wrap-reverse md:flex-nowrap gap-6 md:gap-8">
-                    <img src="/assets/first/2015-brontosaurus-rex.jpg" alt="2015 robot" className="rounded mx-auto mb-6 md:mb-0" />
+                    <img src="/assets/seasons/2015-brontosaurus-rex.jpg" alt="2015 robot" className="rounded mx-auto mb-6 md:mb-0" />
                     <div>
                         <h2 className="text-2xl font-medium text-center md:text-left mb-6">
                             Our robot: Brontosaurus Rex
