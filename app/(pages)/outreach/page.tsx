@@ -145,7 +145,7 @@ export default function Outreach() {
                     />
 
                     <SectionHeader id="upcoming">Upcoming</SectionHeader>
-                    <p>In the works: Hand-Raising, T-Shirt Launcher, and a new FLL program at the YMCA!</p>
+                    <p>In the works: Hand-Raising, T-Shirt Launcher, and a new FLL program at Fletcher Middle School!</p>
                 </div>
             </Section>
         </>

@@ -29,7 +29,7 @@ export default function GRT2013() {
                     the human players may not put any colored discs in play until teleoperated, scoring in the pyramid
                     is not possible in autonomous. Teams can score points as follows by scoring discs into goals.
                 </p>
-                <CaptionedImage src="/assets/first/2013-robot.jpg" alt="2013 robot" className="max-w-3xl mx-auto">
+                <CaptionedImage src="/assets/seasons/2013-robot.jpg" alt="2013 robot" className="max-w-3xl mx-auto">
                     The 2013 robot. {/* TODO: better caption */}
                 </CaptionedImage>
             </Section>

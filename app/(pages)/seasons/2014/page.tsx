@@ -63,7 +63,7 @@ export default function GRT2014() {
                     hold out the essential mechanism. The roller itself is powered by a single chain-driven motor, easily
                     capable of dragging the large ball over the bumper.
                 </p>
-                <CaptionedImage src="/assets/first/2014-redshift-pickup.jpg" alt="2014 robot" className="max-w-2xl mx-auto mb-4">
+                <CaptionedImage src="/assets/seasons/2014-redshift-pickup.jpg" alt="2014 robot" className="max-w-2xl mx-auto mb-4">
                     Redshift outside the robotics shop. {/* TODO: citation needed */}
                 </CaptionedImage>
                 <p className="font-light">

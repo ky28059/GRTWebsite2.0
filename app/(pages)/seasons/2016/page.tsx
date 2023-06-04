@@ -55,7 +55,7 @@ export default function GRT2016() {
                     and accelerates up to appropriate speed. The pneumatics then drop the flywheel down onto the ball,
                     launching the ball at the goal.
                 </p>
-                <CaptionedImage src="/assets/first/2016-outreach.jpg" alt="2016 robot on display" className="max-w-2xl mx-auto mb-4">
+                <CaptionedImage src="/assets/seasons/2016-outreach.jpg" alt="2016 robot on display" className="max-w-2xl mx-auto mb-4">
                     The Red Giant on display. {/* TODO: "at ..." */}
                 </CaptionedImage>
                 <p className="font-light">
@@ -98,7 +98,7 @@ export default function GRT2016() {
                     that could be made to the robot's design to create a wider range for the shooter to rotate.
                     This made it easier to aim the shooter when shooting the ball.
                 </p>
-                <CaptionedImage src="/assets/first/2016-red-giant-render.jpg" alt="2016 robot render" className="max-w-2xl mx-auto mb-4">
+                <CaptionedImage src="/assets/seasons/2016-red-giant-render.jpg" alt="2016 robot render" className="max-w-2xl mx-auto mb-4">
                     A render of the robot CAD. {/* TODO: wording */}
                 </CaptionedImage>
                 <p className="font-light mb-16">

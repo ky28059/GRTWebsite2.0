@@ -27,18 +27,23 @@ export default function GRT2023() {
                 </p>
             </Section>
 
-            <Section secondary>
-                <h2 className="text-2xl font-medium mb-6">
-                    VERMILION — OUR 2023 ROBOT
-                </h2>
-                <div className="flex gap-8">
+            <Section secondary className="flex flex-col-reverse lg:flex-row gap-x-12 gap-y-8 justify-center">
+                <img
+                    src="/assets/seasons/2023-robot.jpg"
+                    alt="2023 robot"
+                    className="rounded w-full max-w-md mx-auto lg:mx-0"
+                />
+                <div className="lg:py-4">
+                    <h2 className="text-2xl font-medium mb-6">
+                        VERMILION — OUR 2023 ROBOT
+                    </h2>
                     <div className="font-light">
                         <p className="flex gap-2">
                             <strong className="font-medium">Name:</strong>
                             Vermilion
                         </p>
                         <p className="flex gap-2">
-                            <strong className="font-medium">Descriptions:</strong>
+                            <strong className="font-medium">Dimensions:</strong>
                             26.5” W x 33.25” L x 38.5” H
                         </p>
                         <p className="flex gap-2">
@@ -46,14 +51,13 @@ export default function GRT2023() {
                             100 lbs
                         </p>
                         <p><strong className="font-medium">Features:</strong></p>
-                        <ul className="list-inside list-disc pl-4">
+                        <ul className="list-outside list-disc pl-8">
                             <li>Student-designed and manufactured swerve drivetrain reaching 16.7 ft/s max speed</li>
                             <li>2-stage, fixed-angle, cascade-strung elevator capable of reaching all 3 grid levels</li>
                             <li>Roller intake with gripping feature, capable of intaking and holding cubes and cones</li>
                             <li>Auto-balance and auto-deposit sequences</li>
                         </ul>
                     </div>
-                    <img />
                 </div>
             </Section>
 

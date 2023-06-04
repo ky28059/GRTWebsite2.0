@@ -22,7 +22,7 @@ export default function GRT2019() {
                     and the addition of the 15 second sandstorm phase, in which drivers' vision of the field was obscured,
                     Deep Space proved to be an engaging and skill-testing game.
                 </p>
-                <CaptionedImage src="/assets/first/grt-2019.JPG" alt="GRT 2018-2019" className="max-w-3xl mx-auto">
+                <CaptionedImage src="/assets/seasons/grt-2019.JPG" alt="GRT 2018-2019" className="max-w-3xl mx-auto">
                     GRT 2018-2019
                 </CaptionedImage>
             </Section>
@@ -39,7 +39,7 @@ export default function GRT2019() {
                     plethora of wooden models of possible game-piece manipulators, a few which ended up becoming our
                     robot's mechanisms. Our robot, Jonah, was on its way to becoming a reality.
                 </p>
-                <CaptionedImage src="/assets/first/2019-del-mar.JPG" alt="Prototyping and design" className="max-w-3xl mx-auto">
+                <CaptionedImage src="/assets/seasons/2019-del-mar.JPG" alt="Prototyping and design" className="max-w-3xl mx-auto">
                     Jonah at the 2019 Del Mar Regional.
                 </CaptionedImage>
             </Section>
