@@ -35,8 +35,9 @@ export default function ImageCarousel(props: ImageCarouselProps) {
             </button>
 
             <div className="absolute inset-x-0 flex gap-1 justify-center bottom-4">
-                {sources.map((_, i) => (
+                {sources.map((source, i) => (
                     <button
+                        key={source}
                         className={'w-[1.625rem] h-[0.275rem] transition duration-100 ' + (index === i ? 'bg-white/90' : 'bg-white/30')}
                         onClick={() => setIndex(i)}
                     />

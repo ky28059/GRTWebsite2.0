@@ -100,7 +100,7 @@ export default function GRT2023() {
                 </div>
                 {/* Transitions between an image carousel on small screens, and just displaying all 3 images on large screens. */}
                 <ImageCarousel
-                    sources={['/assets/first/2023-utah-2.jpg', '/assets/first/2023-utah-3.jpg', '/assets/first/2023-utah-1.jpg']}
+                    sources={['/assets/seasons/2023-utah-2.jpg', '/assets/seasons/2023-utah-3.jpg', '/assets/seasons/2023-utah-1.jpg']}
                     alts={['Utah triple balance', 'Utah pit-crew work', 'Utah team cheer']}
                     className="lg:hidden mb-10"
                 />
