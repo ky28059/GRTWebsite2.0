@@ -33,7 +33,7 @@ export default function GRT2023() {
                     alt="2023 robot"
                     className="rounded w-full max-w-md mx-auto lg:mx-0"
                 />
-                <div className="lg:py-4">
+                <div className="lg:py-4 lg:max-w-lg">
                     <h2 className="text-2xl font-medium mb-6">
                         VERMILION — OUR 2023 ROBOT
                     </h2>
@@ -89,14 +89,14 @@ export default function GRT2023() {
                     Utah Regional
                 </h3>
                 <div className="mb-5 pl-6 border-l-4 border-secondary/50">
-                    <p className="flex gap-2">
-                        <strong className="font-medium">Rank:</strong> 8
+                    <p className="flex gap-2 font-light">
+                        <strong className="font-normal">Rank:</strong> 8
                     </p>
-                    <p className="flex gap-2">
-                        <strong className="font-medium">Semifinalists with 3rd-seed alliance:</strong>
+                    <p className="flex gap-2 font-light">
+                        <strong className="font-normal">Semifinalists with 3rd-seed alliance:</strong>
                         5851, 192, 9037
                     </p>
-                    <p className="font-medium">Autonomous award</p>
+                    <p>Autonomous award</p>
                 </div>
                 {/* Transitions between an image carousel on small screens, and just displaying all 3 images on large screens. */}
                 <ImageCarousel
@@ -114,14 +114,14 @@ export default function GRT2023() {
                     Monterey Bay Regional
                 </h3>
                 <div className="mb-5 pl-6 border-l-4 border-secondary/50">
-                    <p className="flex gap-2">
-                        <strong className="font-medium">Rank:</strong> 22
+                    <p className="flex gap-2 font-light">
+                        <strong className="font-normal">Rank:</strong> 22
                     </p>
-                    <p className="flex gap-2">
-                        <strong className="font-medium">Quarterfinalists with 5th-seed alliance:</strong>
+                    <p className="flex gap-2 font-light">
+                        <strong className="font-normal">Quarterfinalists with 5th-seed alliance:</strong>
                         2486, 192, 6884
                     </p>
-                    <p className="font-medium">Quality award</p>
+                    <p>Quality award</p>
                 </div>
                 {/* TODO: photos */}
             </Section>
