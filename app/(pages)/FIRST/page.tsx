@@ -32,27 +32,15 @@ export default function FIRST() {
                         <p>(<a href="https://firstinspires.org">firstinspires.org</a>)</p>
                     </div>
 
-                    <p className="font-light">
+                    <p className="font-light mb-6">
                         GRT was one of the first FRC teams in the state of California when it was founded in 1997. We have
                         since competed in countless FIRST Robotics competitions, earning numerous awards. More importantly,
                         however, we serve as a model for FIRST programs and other engineering opportunities around the
                         San Francisco Bay Area.
                     </p>
-                </section>
 
-                <FIRSTSection heading="A New Emphasis on Engineering">
-                    <p>
-                        Where once there was nothing but a struggling class with eight students, there is now a thriving program
-                        with 10 classes and 4 suggested pathways. GRT has been so successful that there is a new hunger at our
-                        school for project-based classes that connect students to the real world. Engineering instructor Bakari
-                        Holmes has introduced Digital Electronics and Introduction to Engineering Design, both of which are
-                        Project Lead the Way® courses, and both of which feed into our Engineering Technology classes. Mr. Holmes
-                        and Mr. Dunbar have worked closely with Josh Paley, our computer science instructor, to create cohesive
-                        pathways for students that give them meaningful, contextual engineering experience while still in high
-                        school.
-                    </p>
                     <img src="/assets/first/mentor.jpg" className="brightness-105 contrast-[1.05] saturate-[1.2]" alt="Mentor" />
-                </FIRSTSection>
+                </section>
 
                 <FIRSTSection heading="Mentors to Veterans to Rookies">
                     {/* TODO: rewrite to emphasize mentor hands-off-ness and student leadership */}

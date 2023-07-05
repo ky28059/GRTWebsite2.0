@@ -54,7 +54,7 @@ export default function Outreach() {
                     <h4 className="font-medium mb-1">Special projects</h4>
                     <ul className="list-disc list-outside pl-8 flex flex-col gap-1">
                         <li>
-                            <a href="#trumpet" className="hover:underline">Trumpet</a>
+                            <a href="#trumpet-assist" className="hover:underline">Trumpet Assist</a>
                         </li>
                         <li>
                             <a href="#soccerduck" className="hover:underline">SoccerDuck</a>
@@ -70,9 +70,9 @@ export default function Outreach() {
 
                     <SectionHeader id="haunted-house">Haunted House</SectionHeader>
                     <p className="mb-6">
-                        Every October, we design and showcase a haunted house for Juana Briones Elementary School. This
-                        partnership has been going on for the past few years and helps establish a connection between
-                        younger and older students. Many current GRT students are Briones alums!
+                        Since 2010 GRT has designed and showcased a haunted house for Juana Briones Elementary School each
+                        Halloween season.  This partnership helps establish a connection between younger and older students.
+                        Many current GRT students are Briones alums!
                     </p>
                     <ImageCarousel
                         sources={['/assets/outreach/haunted-house-1.jpg', '/assets/outreach/haunted-house-2.JPG', '/assets/outreach/haunted-house-3.jpg']}
@@ -87,8 +87,8 @@ export default function Outreach() {
 
                     <SectionHeader id="fll-tournament">FLL Tournament</SectionHeader>
                     <p className="mb-6">
-                        Every November, GRT organizes and hosts a First Lego League competition for local Bay Area teams.
-                        Every GRT member plays a role in putting on this event. Find local FLL events on the{' '}
+                        Since 2017 GRT has organized and hosted a FIRST LEGO League tournament each November, attended by
+                        teams from all over the Bay Area. Every GRT member plays a role in putting on this event. Find local FLL events on the{' '}
                         <a href="https://www.playingatlearning.org/events/categories/fll/" target="_blank" rel="noopener noreferrer">FIRST NorCal website</a>.
                     </p>
                     <ImageCarousel
@@ -119,8 +119,9 @@ export default function Outreach() {
 
                     <h2 className="text-2xl font-medium mb-4">Special projects</h2>
 
-                    <SectionHeader id="trumpet">Trumpet</SectionHeader>
+                    <SectionHeader id="trumpet-assist">Trumpet Assist</SectionHeader>
                     <p className="mb-6">
+                        {/* TODO: rewrite */}
                         A local elementary school student with cerebral palsy contacted GRT in search of a device that
                         would help him play trumpet. Check out the <Link href="/resources">Resources</Link> tab for more
                         information, the User Guide, and related files for 3D printing.
@@ -133,6 +134,7 @@ export default function Outreach() {
 
                     <SectionHeader id="soccerduck">SoccerDuck</SectionHeader>
                     <p className="mb-6">
+                        {/* TODO: rewrite */}
                         After Joel’s parents contacted GRT seeking a device that would enable Joel to play soccer with
                         his brother, GRT students spent the next few months designing and building a custom wheelchair
                         attachment. Check out the <Link href="/resources">Resources</Link> tab for more information and

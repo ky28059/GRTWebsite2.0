@@ -11,17 +11,21 @@ export default function Timeline() {
                 <div className="flex flex-row-reverse lg:flex-col gap-5">
                     <div className="flex flex-col lg:flex-row gap-3 lg:gap-2">
                         <TimelineItem>
-                            GRT was founded In 1996 by Bill Dunbar, a mechanical engineer turned physics teacher at Henry M.
-                            Gunn High School in Palo Alto, CA. The team took over the campus wood and metal shop, at the time
-                            abandoned and slated for demolition.
+                            GRT was founded In 1996 by Bill Dunbar, a mechanical engineer turned physics teacher at Henry
+                            M. Gunn High School in Palo Alto, CA. The team  entered the FIRST Robotics competition in 1997,
+                            and that summer traveled to the National Championships in Orlando, FL.
                         </TimelineItem>
                         <TimelineItem>
-                            The Gunn Robotics Team entered the FIRST Robotics competition in 1997, and that summer traveled
-                            to the National Championships in Orlando, Florida.
+                            Since 1998 GRT has been a popular program at Henry M. Gunn HS, with two full classes meeting
+                            throughout the school year plus regular after-hour and weekend shop sessions.  The team has a
+                            reputation for designing and building its own custom gearboxes - including GRT's first "swerve"
+                            design for the 2017 FIRST Robotics competition season - and for students taking responsibility
+                            for all troubleshooting and hands-on robot repairs at competitions.
                         </TimelineItem>
                         <TimelineItem>
-                            GRT has grown into a popular program at Henry M. Gunn HS, with two full classes meeting throughout
-                            the school year, plus regular after-hour and weekend shop sessions.
+                            As an established robotics team with 20+ years of experience, GRT is a learning community for
+                            aspiring prototypers, mechanical designers, software coders, animators and leaders.  Check out
+                            the Seasons tab for a list of the many awards presented to GRT since its founding.
                         </TimelineItem>
                     </div>
                     <hr className="border-l-2 lg:border-l-0 lg:border-t-2 border-secondary h-auto" />

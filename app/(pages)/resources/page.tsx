@@ -21,14 +21,14 @@ export default function Resources() {
             <SectionHeader id="robots">Robots</SectionHeader>
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
                 <Resource name="GRT Technical Binder 2023" src="/assets/resources/2023-technical-binder.jpg" href="/resources/2023-technical-binder.pdf">
-                    Our 2023 Technical Binder highlights our Charged Up season robot, Vermillion. We provide comprehensive
+                    The 2023 Technical Binder highlights our Charged Up season robot, Vermillion. Click to find comprehensive
                     documentation of our design process including: strategy, timelines, custom swerve, prototyping, mechanism
                     iterations, and software.
                 </Resource>
                 <Resource name="GRT Impact Booklet 2023" src="/assets/resources/2023-impact-booklet.jpg" href="/resources/2023-impact-booklet.pdf">
-                    Our 2023 Impact Booklet celebrates our team growth and outreach during the 2022-2023 school year and
-                    includes our Impact Award submission for the Charged Up season. We feature preseason events, our new
-                    FLL Explore Team, our moonshot projects, and a variety of annual GRT outreach traditions.
+                    The 2023 Impact Booklet celebrates GRT's team growth and outreach during the 2022-2023 school year and
+                    includes our Impact Award submission for the Charged Up season. Click to learn about preseason events,
+                    our new FLL Explore Team, real-world projects, and a variety of annual GRT outreach traditions.
                 </Resource>
             </section>
 

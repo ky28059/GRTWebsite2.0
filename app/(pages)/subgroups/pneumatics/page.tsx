@@ -18,7 +18,7 @@ export default function Pneumatics() {
             {/* <h3 className="text-lg font-medium mb-3">About</h3> */}
             <p className="font-light mb-6">
                 Pneumatics is the branch of engineering that involves the transmission of power using pressurized air
-                (instead of, for instance, electricity). Typically, pressurized air ({'<'}100 pise) is stored in a tank
+                (instead of, for instance, electricity). Typically, pressurized air ({'<'}100 psi) is stored in a tank
                 using a compressor, and then it's released from the tank using pressure regulators, valves, and tubing.
                 GRT's robots often have pneumatic systems powering mechanical parts, especially mechanisms that require
                 motion.

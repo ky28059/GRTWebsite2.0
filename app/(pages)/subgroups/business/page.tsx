@@ -33,10 +33,11 @@ export default function Business() {
 
             <SectionHeader id="fundraising">Fundraising</SectionHeader>
             <p className="font-light mb-6">
-                GRT revenue is primarily from student work and sponsorships. The Business Manager oversees parent donations
-                from our summer camp and facilitates our partnership with Stanford Concessions. GRT members staff eight
-                to ten Stanford sports games every fall as our largest annual fundraiser. During the off-season, the business
-                team applies for grants and sponsorships to support our additional expenses.
+                GRT generates funds for robot materials, machine shop maintenance, and competition fees primarily through
+                student work and corporate sponsorships. The business team organizes and manages GRT members who staff
+                concession stands at Stanford University sports events (8-10 events each year), and who plan and staff a
+                summer robotics camp (2 weeks each summer). The business team also applies for grants and sponsorships to
+                defray team expenses.
             </p>
             <CaptionedImage src="/assets/subgroups/2023-nixon-science-night.jpg" alt="Nixon Science Night" className="max-w-2xl mx-auto mb-10">
                 GRT at the 2023 Nixon Science Night.

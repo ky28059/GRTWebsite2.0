@@ -52,7 +52,8 @@ export default function GRT2023() {
                         </p>
                         <p><strong className="font-medium">Features:</strong></p>
                         <ul className="list-outside list-disc pl-8">
-                            <li>Student-designed and manufactured swerve drivetrain reaching 16.7 ft/s max speed</li>
+                            <li>Student-designed and manufactured</li>
+                            <li>Swerve drivetrain reaching 16.7 ft/s max speed</li>
                             <li>2-stage, fixed-angle, cascade-strung elevator capable of reaching all 3 grid levels</li>
                             <li>Roller intake with gripping feature, capable of intaking and holding cubes and cones</li>
                             <li>Auto-balance and auto-deposit sequences</li>
