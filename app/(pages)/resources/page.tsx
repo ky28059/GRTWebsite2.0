@@ -35,15 +35,9 @@ export default function Resources() {
             <SectionHeader id="other-projects">Other Projects</SectionHeader>
             <section className="flex flex-col gap-8 mb-16">
                 <Resource name="Trumpet User Guide" src="/assets/resources/trumpet-mechanism-user-guide.jpg" href="/resources/trumpet-mechanism-user-guide.pdf">
-                    <p className="mb-3.5">
-                        GRT designed a trumpet assisting mechanism during the 2022 season for a Palo Alto student with
-                        cerebral palsy. It attaches to a music stand to mitigate strain from holding up the instrument.
-                        The servo-powered mechanism depresses the trumpet valves based on inputs to the three corresponding
-                        buttons which take low force to press.
-                    </p>
                     <p className="mb-5">
-                        3D print the following STL (or STEP) files and purchase a music stand{/* TODO: link? */} to build your own trumpet assisting
-                        mechanism. Follow the user guide for assembly instructions. Please contact us for more information.
+                        During the 2021 and 2022 seasons, GRT designed and built a trumpet assisting mechanism for a Palo
+                        Alto student with cerebral palsy.
                     </p>
                     <div className="text-black flex flex-wrap gap-4">
                         <Attachment name="Trumpet STL assembly" href="/resources/GRT Trumpet Mechanism Assembly.stl">
@@ -56,10 +50,8 @@ export default function Resources() {
                 </Resource>
                 {/* TODO: cover */}
                 <Resource name="Wheelchair User Guide" src="/assets/resources/wheelchair-project-user-guide.jpg" href="/resources/wheelchair-project-user-guide.pdf">
-                    GRT designed the SoccerDuck during the 2022 season for a Palo Alto student with spinal muscular atrophy.
-                    It attaches to and rolls beside a properly set up wheelchair. The flywheel mechanism stores and shoots
-                    soccer balls. Please contact us for more information on how we built the SoccerDuck if you have a similar
-                    project.
+                    During the 2021 and 2022 seasons GRT designed and built the SoccerDuck for a Palo Alto student with
+                    spinal muscular atrophy.
                 </Resource>
             </section>
 

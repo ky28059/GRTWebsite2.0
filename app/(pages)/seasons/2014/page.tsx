@@ -12,7 +12,7 @@ export default function GRT2014() {
         <>
             <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
-                    Aerial Assist
+                    FIRST | Aerial Assist
                 </h1>
                 <h3 className="text-lg text-center mb-6">GRT 2013-2014</h3>
                 <p className="font-light mb-6">

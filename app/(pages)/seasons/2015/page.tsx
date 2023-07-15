@@ -11,7 +11,7 @@ export default function GRT2015() {
         <>
             <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
-                    Recycle Rush
+                    FIRST | Recycle Rush
                 </h1>
                 <h3 className="text-lg text-center mb-6">GRT 2014-2015</h3>
                 <p className="font-light">

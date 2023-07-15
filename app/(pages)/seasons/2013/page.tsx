@@ -12,7 +12,7 @@ export default function GRT2013() {
         <>
             <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
-                    Ultimate Ascent
+                    FIRST | Ultimate Ascent
                 </h1>
                 <h3 className="text-lg text-center mb-6">GRT 2012-2013</h3>
                 <p className="font-light mb-6">

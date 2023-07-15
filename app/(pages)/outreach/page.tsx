@@ -121,10 +121,9 @@ export default function Outreach() {
 
                     <SectionHeader id="trumpet-assist">Trumpet Assist</SectionHeader>
                     <p className="mb-6">
-                        {/* TODO: rewrite */}
-                        A local elementary school student with cerebral palsy contacted GRT in search of a device that
-                        would help him play trumpet. Check out the <Link href="/resources">Resources</Link> tab for more
-                        information, the User Guide, and related files for 3D printing.
+                        A local elementary school teacher contacted GRT about a student with cerebral palsy in search of
+                        a device that would help him play trumpet. Check out the <Link href="/resources">Resources</Link>
+                        tab for more information.
                     </p>
                     <ImageCarousel
                         sources={['/assets/outreach/trumpet-1.jpg', '/assets/outreach/trumpet-2.jpg']}
@@ -134,11 +133,10 @@ export default function Outreach() {
 
                     <SectionHeader id="soccerduck">SoccerDuck</SectionHeader>
                     <p className="mb-6">
-                        {/* TODO: rewrite */}
-                        After Joel’s parents contacted GRT seeking a device that would enable Joel to play soccer with
-                        his brother, GRT students spent the next few months designing and building a custom wheelchair
-                        attachment. Check out the <Link href="/resources">Resources</Link> tab for more information and
-                        the User Guide.
+                        Another local school aide contacted GRT seeking a device that would enable a student with spinal
+                        muscular atrophy to play soccer with his brother. GRT students spent the next few months designing
+                        and building a custom wheelchair attachment. Check out the <Link href="/resources">Resources</Link>
+                        tab for more information.
                     </p>
                     <ImageCarousel
                         sources={['/assets/outreach/wheelchair-1.jpg', '/assets/outreach/wheelchair-2.jpg']}

@@ -12,7 +12,7 @@ export default function GRT2016() {
         <>
             <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
-                    FIRST Stronghold
+                    FIRST | Stronghold
                 </h1>
                 <h3 className="text-lg text-center mb-6">GRT 2015-2016</h3>
                 <p className="font-light">

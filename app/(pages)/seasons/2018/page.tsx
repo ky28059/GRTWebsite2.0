@@ -12,7 +12,7 @@ export default function GRT2018() {
         <>
             <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
-                    FIRST Power Up
+                    FIRST | Power Up
                 </h1>
                 <h3 className="text-lg text-center mb-6">GRT 2017-2018</h3>
                 <p className="font-light mb-6">

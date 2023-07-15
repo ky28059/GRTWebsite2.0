@@ -11,7 +11,7 @@ export default function GRT2012() {
         <>
             <Section>
                 <h1 className="text-4xl font-medium mb-3 text-center">
-                    Rebound Rumble
+                    FIRST | Rebound Rumble
                 </h1>
                 <h3 className="text-lg text-center mb-6">GRT 2011-2012</h3>
                 <p className="font-light mb-6">
