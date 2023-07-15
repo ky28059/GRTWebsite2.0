@@ -1,28 +1,37 @@
+'use client'
+
 import {ReactNode} from 'react';
 import Link from 'next/link';
-import {useRouter} from 'next/router';
-import NavHeader from './NavHeader';
+import {useSelectedLayoutSegment, useSelectedLayoutSegments} from 'next/navigation';
+import {Popover} from '@headlessui/react';
+
+// Components
+import NavHeader, {PopoverNavLink, RouteSegment} from './NavHeader';
+import AnimatedPopover from './AnimatedPopover';
+
+// Icons
+import {AiFillCaretDown} from 'react-icons/ai';
 
 
 // The red navbar displayed on evey page except for the home page.
 export default function NavBar() {
     return (
         <div>
-            <NavHeader component={NavLink} className="bg-theme" />
+            <NavHeader component={NavLink} dropdownComponent={NavDropdown} className="bg-theme" />
 
             {/* Subnav */}
             <div className="overflow-x-auto bg-black text-white">
                 <nav className="flex w-max mx-auto min-h-[1rem] px-5">
-                    <Match href="/FIRST">
-                        <SubNavLink href="/FIRST">FIRST</SubNavLink>
-                        <SubNavLink href="/FIRST/accolades">Accolades</SubNavLink>
-                        <SubNavLink href="/FIRST/2019">2019</SubNavLink>
-                        <SubNavLink href="/FIRST/2018">2018</SubNavLink>
-                        <SubNavLink href="/FIRST/2016">2016</SubNavLink>
-                        <SubNavLink href="/FIRST/2015">2015</SubNavLink>
-                        <SubNavLink href="/FIRST/2014">2014</SubNavLink>
-                        <SubNavLink href="/FIRST/2013">2013</SubNavLink>
-                        <SubNavLink href="/FIRST/2012">2012</SubNavLink>
+                    <Match href="/seasons">
+                        <SubNavLink href="/seasons">Accolades</SubNavLink>
+                        <SubNavLink href="/seasons/2023">2023</SubNavLink>
+                        <SubNavLink href="/seasons/2019">2019</SubNavLink>
+                        <SubNavLink href="/seasons/2018">2018</SubNavLink>
+                        <SubNavLink href="/seasons/2016">2016</SubNavLink>
+                        <SubNavLink href="/seasons/2015">2015</SubNavLink>
+                        <SubNavLink href="/seasons/2014">2014</SubNavLink>
+                        <SubNavLink href="/seasons/2013">2013</SubNavLink>
+                        <SubNavLink href="/seasons/2012">2012</SubNavLink>
                     </Match>
                     <Match href="/subgroups">
                         <SubNavLink href="/subgroups">Subgroups</SubNavLink>
@@ -52,14 +61,15 @@ export default function NavBar() {
     )
 }
 
+// TODO: move this and dropdown into own file?
 type NavLinkProps = {href: string, children: ReactNode};
 function NavLink(props: NavLinkProps) {
     const {href, children} = props;
-    const {pathname} = useRouter();
+    const pathname = '/' + useSelectedLayoutSegments().join('/');
     const active = pathname.startsWith(href);
 
     return (
-        <Link href={href} className="relative p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+        <Link href={href} className="relative flex items-center gap-2 p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
             {children}
             {active && (
                 // CSS triangle; the width of the triangle is `2 * border-x-width`, and the height is
@@ -72,6 +82,35 @@ function NavLink(props: NavLinkProps) {
     )
 }
 
+type NavDropdownProps = {
+    routes: RouteSegment[],
+    children: ReactNode
+}
+function NavDropdown(props: NavDropdownProps) {
+    const pathname = useSelectedLayoutSegment();
+
+    // Active if any sub-route matches
+    const active = props.routes.some(({href}) => pathname?.startsWith(href.slice(1)));
+
+    return (
+        <Popover className="relative flex">
+            {({open}) => (<>
+                <Popover.Button className="relative flex items-center gap-2 p-4 text-white hover:bg-[rgb(97_0_0)] transition duration-200">
+                    {props.children} <AiFillCaretDown className={'transition-transform duration-200' + (open ? ' rotate-180' : '')} />
+                    {active && (
+                        <span className="absolute bottom-0 inset-x-0 mx-auto w-0 h-0 border-b-[12px] border-b-black border-x-[16px] border-x-transparent" />
+                    )}
+                </Popover.Button>
+                <AnimatedPopover className="absolute top-full left-0 z-10 rounded-lg py-3 bg-black/60 shadow-lg backdrop-blur-sm">
+                    {props.routes.map(({name, href}) => (
+                        <PopoverNavLink href={href} key={name}>{name}</PopoverNavLink>
+                    ))}
+                </AnimatedPopover>
+            </>)}
+        </Popover>
+    )
+}
+
 // A `<Match>` component which renders its children if the current path matches the provided `href`.
 // TODO: does this component need to exist?
 // TODO: is there a better way of implementing subnavs? This still does not work with hover without complicating
@@ -79,14 +118,14 @@ function NavLink(props: NavLinkProps) {
 type MatchProps = {href: string, children: ReactNode};
 function Match(props: MatchProps) {
     const {href, children} = props;
-    const {pathname} = useRouter();
+    const pathname = useSelectedLayoutSegment();
 
-    if (!pathname.startsWith(href)) return null;
+    if (!pathname?.startsWith(href.slice(1))) return null;
     return <>{children}</>;
 }
 
 function SubNavLink(props: NavLinkProps) {
-    const {pathname} = useRouter();
+    const pathname = '/' + useSelectedLayoutSegments().join('/');
     const active = pathname === props.href;
 
     return (
