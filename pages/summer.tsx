@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 
 
 export default function Summer() {
-    const showRegistration = true;
+    const showRegistration = false;
 
     return (
         <Layout>
