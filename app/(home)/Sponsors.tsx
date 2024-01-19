@@ -7,11 +7,6 @@ export default function Sponsors() {
         <section id="sponsors" className="container pt-16 pb-24">
             <h3 className="text-2xl font-medium text-center">SPONSORS</h3>
             <div className="divide-y divide-gray-400">
-                <Sponsor name="Bosch" src="/assets/sponsors/bosch.svg" href="https://www.bosch.us/">
-                    Bosch, a leading home appliance and auto parts manufacturer, sponsors many FRC teams. They have
-                    graciously supported GRT for eight years both financially and through engineering mentorships. They
-                    continue to be a major team sponsor.
-                </Sponsor>
                 <Sponsor name="KLA Foundation" src="/assets/sponsors/kla.svg" href="https://www.kla.foundation/">
                     The KLA foundation is a nonprofit that supports the community with four areas of focus: STEM Education,
                     Wellness, Local Community and International Community. They graciously sponsor many FRC teams, including
