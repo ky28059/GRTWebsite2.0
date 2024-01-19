@@ -9,60 +9,31 @@ export const metadata: Metadata = {
 export default function Updates2024() {
     return(
         <>
-            <section className="space-y-16 py-16">
-                <Update name="November Update" className="container">
-                    <p className="font-light mb-6 px-12">
-                        shop project
-                        - explain basics
+            <section className="space-y-16 py-14">
+                <Update name="Build Season: January Update" className='container'>
+                    <p className='font-light pb-2.5'>
+                        This 2024 season, our annual kickoff potluck lasted from 8-2 on the first Saturday. 
+                        After breakfast, we watched the game live stream together and brainstormed ideas. 
+                        This year's game involves shooting rings into narrow spaces. After discussing potential 
+                        robot ideas, we split into groups to discuss the game rules, and then joined together to 
+                        share thoughts.
                     </p>
-                    <div className="flex justify-center gap-2">
-                        shop proj images
-                    </div>
-                    <p className="font-light mb-6 px-12">
-                        FLL that we hosted
-                        - robot demo
+                    <h2 className='text-xl font-light italic text-slate-600 py-1.5'>
+                        Week 1:
+                    </h2>
+                    <p className='font-light py-2.5'>
+                        In the first week, our four mech groups started by brainstorming, developing, and prototyping
+                        ideas for full robot designs. This concluded in a town hall-style meeting on Wednesday in 
+                        which we established an agreed-upon robot design. Groups then diligently made their first 
+                        CAD models which were critiqued by our mentors during several design reviews.
                     </p>
-                    <div className="flex justify-center gap-2">
-                        FLL images
-                    </div>
-                </Update>
-                <Update name="October Update" className="container">
-                    <p className="font-light mb-6 px-12">
-                        Haunted House
-                        - introduce the mechs
+                    <p className='font-light py-2.5'>
+                    The subgroups have been hard at work as the season begins. Drivetrain has been working on swerve
+                     modules, and controls has been programming each mechanism and swerve for our first robot iteration. 
+                     The business subgroup has been working on competition awards, and animations recently submitted 
+                     the Digital Animation Award on January 18th.
                     </p>
-                    <p className="font-light mb-6 px-12">
-                        mention subgroup training?
-                    </p>
-                    <div className="flex justify-center gap-2">
-                        haunted house images
-                    </div>
-                </Update>
-                <Update name="September Update" className="container">
-                    <p className="font-light mb-6 px-12">
-                        This month our rookies took part in shop training to learn new skills applicable to the team. This was taught through four
-                        rotations consisting of CAD, lathe, mill, and hand tools. 
-                        - explain shop training
-                        - mention cad plus
-                    </p>
-                    <div className="flex justify-center gap-2">
-                        shop training images
-                    </div>
-                    <p className="font-light mb-6 px-12" >
-                        - concession started (include?)
-                    </p>
-                    <p className="font-light mb-6 px-12">
-                        - we went camping
-                    </p>
-                    <div className="flex justify-center gap-2">
-                        camping images
-                    </div>
-                    <p className="font-light mb-6 px-12">
-                        FLL (include?)
-                    </p>
-                    <div className="flex justify-center gap-2">
-                        FLL images
-                    </div>
+                    {/* <img src='/assets/updates/2024/animation.png' className='p-2.5 h-'/> */}
                 </Update>
             </section>
         </>
