@@ -15,7 +15,7 @@ export default function ImageCarousel(props: ImageCarouselProps) {
 
     return (
         <div className={'relative flex sm:gap-4 justify-center' + (className ? ` ${className}` : '')}>
-            <button className="w-6 sm:w-8 flex-none flex items-center justify-center text-2xl" onClick={() => setIndex((((index - 1) % sources.length) + sources.length) % sources.length)}>
+            <button className="w-6 sm:w-8 flex-none flex hover:opacity-100 hover:text-4xl opacity-50 items-center justify-center text-2xl" onClick={() => setIndex((((index - 1) % sources.length) + sources.length) % sources.length)}>
                 <BsChevronCompactLeft />
             </button>
             <div className="relative max-w-2xl">
@@ -30,7 +30,7 @@ export default function ImageCarousel(props: ImageCarouselProps) {
                     </p>
                 )}
             </div>
-            <button className="w-6 sm:w-8 flex-none flex items-center justify-center text-2xl" onClick={() => setIndex((index + 1) % sources.length)}>
+            <button className="w-6 sm:w-8 flex-none flex hover:opacity-100 hover:text-4xl opacity-50 items-center justify-center text-2xl" onClick={() => setIndex((index + 1) % sources.length)}>
                 <BsChevronCompactRight />
             </button>
 
