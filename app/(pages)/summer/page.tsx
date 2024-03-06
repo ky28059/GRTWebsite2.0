@@ -39,8 +39,9 @@ export default function Summer() {
                     </>
                 ) : (
                     <>
-                        Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
-                        back next year for more information!
+                        The 2024 Gunn Robotics Summer Camp is currently in the works! Please check back in soon for registration information.
+                        {/* Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
+                        back next year for more information! */}
                     </>
                 )}
             </div>
@@ -66,10 +67,10 @@ export default function Summer() {
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>
             <div className="flex flex-col gap-3 mb-8">
                 <Question name="When is the camp? How long are camp sessions?">
-                    We're running two sessions of the camp, one during the week of June 12th and the second during the
+                    We're running two sessions of the camp, in June. Exact dates and times are still being determined. {/*one during the week of June 12th and the second during the
                     week of June 19th. Each session consists of 5 days (Monday through Friday), and each day runs from
                     9am to 3pm. On the registration form, students can select which session they'd prefer -- both sessions
-                    cover the same content.
+                    cover the same content. */}
                 </Question>
                 <Question name="What will my student learn?">
                     We'll be teaching students to build a robot for competition, covering every aspect from designing to programming. 
