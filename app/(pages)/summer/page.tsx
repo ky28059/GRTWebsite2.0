@@ -103,7 +103,7 @@ export default function Summer() {
             </div>
 
             <p className="font-light">
-                Further questions? Send us an email at <a href="mailto:gunnrobotics192@gmail.com">gunnrobotics192@gmail.com</a>!
+                Further questions? Send us an email at <a href="mailto:grtsummercamp@gmail.com">grtsummercamp@gmail.com</a>!
             </p>
         </Section>
     )
