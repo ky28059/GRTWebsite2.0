@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Summer() {
-    const showRegistration = false;
+    const showRegistration = true;
 
     return (
         <Section>
@@ -22,15 +22,15 @@ export default function Summer() {
                     <>
                         <div className="flex flex-col pt-1.5 items-center">
                             <p className="mb-2">
-                                The GRT Summer Camp is back with two sessions in 2023, held in-person at Gunn High School
+                                The GRT Summer Camp is back with two sessions in 2024, held in-person at Gunn High School
                                 for rising 5th-8th grade students!
                             </p>
-                            <p className="flex gap-3 mb-1"><strong className="font-medium">Session 1:</strong> June 12-16, 9am-3pm</p>
-                            <p className="flex gap-3"><strong className="font-medium">Session 2:</strong> June 19-23, 9am-3pm</p>
+                            <p className="flex gap-3 mb-1"><strong className="font-medium">Session 1:</strong> June 10-14, 9am-3pm</p>
+                            <p className="flex gap-3"><strong className="font-medium">Session 2:</strong> June 17-21, 9am-3pm</p>
                         </div>
                         <a
                             className="mx-auto mt-2"
-                            href="https://tinyurl.com/GRTSummerCamp2023"
+                            href="https://forms.gle/XPueR9AxxkdwELHZ6"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -67,10 +67,10 @@ export default function Summer() {
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>
             <div className="flex flex-col gap-3 mb-8">
                 <Question name="When is the camp? How long are camp sessions?">
-                    We're running two sessions of the camp, in June. Exact dates and times are still being determined. {/*one during the week of June 12th and the second during the
-                    week of June 19th. Each session consists of 5 days (Monday through Friday), and each day runs from
+                    We're running two sessions of the camp in June, one during the week of June 10th and the second during the
+                    week of June 17th. Each session consists of 5 days (Monday through Friday), and each day runs from
                     9am to 3pm. On the registration form, students can select which session they'd prefer -- both sessions
-                    cover the same content. */}
+                    cover the same content. 
                 </Question>
                 <Question name="What will my student learn?">
                     We'll be teaching students to build a robot for competition, covering every aspect from designing to programming. 
