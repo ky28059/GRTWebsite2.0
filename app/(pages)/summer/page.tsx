@@ -86,7 +86,7 @@ export default function Summer() {
                 <Question name="What will my student need?">
                     Students do not need prior experience! During the camp itself, students will need a laptop with a USB port and
                     the ability to connect to the internet. If bringing such a device is a difficulty for you and your student, please 
-                    reach out to us at <a href="mailto:gunnrobotics192@gmail.com">gunnrobotics192@gmail.com</a>!
+                    reach out to us at <a href="mailto:gunnsummercamp192@gmail.com">gunnsummercamp@gmail.com</a>!
                 </Question>
                 <Question name="Is the camp in-person?">
                     Yes! The camp will be held in-person in GRT's shop at Gunn High School.
