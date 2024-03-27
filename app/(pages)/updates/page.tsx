@@ -51,6 +51,38 @@ export default function Updates2024() {
                      to our longstanding tradition by once again dying our hair a bright hue of red!
                     </p>
                 </Update>
+                <Update name="Build Season: February and March Update" className='container flex flex-col justify-center items-center'>
+                    <p className='font-light pb-2.5'>      
+                    We learnt a great deal from our recent competition at SVR. Our robot was accustomed the old game pieces, and struggled 
+                    to adjust to the new ones. Currently, we are actively practicing with both the old and updated game pieces in order to mitigate
+                     this problem. Our climb mechanism also string began unraveling the opposite direction at a certain point, so we increased 
+                     the length of our string that pulls the robot upwards. Alongside the technical aspects, the tournament was just as much fun.
+                    We got to interact with GRT alumni, cheer OUICHA per usual, and stress about the robot in the pits together!
+                    </p>
+                    <div className='w-1/2 py-10'>
+                        <img src='/assets/updates/2024/SVR.png'/>
+                    </div>
+                    <p className='font-light pb-2.5'>      
+                    We recently competed in the Idaho Regional. Throughout the competition, we faced countless issues with controls and 
+                    mechs to overcome. Our swerve’s tread fell off, we had CAN issues, and various hard collisions heavily damaged our robot
+                     all around. Thus, we lost our first few matches, ranking last place with zero ranking points. Our intake’s Falcon burnt out 
+                     and our spare motor couldn't connect, forcing us to borrow a Falcon from Peninsula Robotics (6036). This let us get the 
+                     robot back up and running during lunch, win our next two matches, and bring us up to 21st out of the 43 teams. Later, 
+                     one of our swerve modules stopped working after collisions that pushed the battery until it broke the mounting zip ties 
+                     and broke a circuit. 
+                    </p>
+                    <p className="font-light pb-2.5">
+                    After overcoming many over our controls and mech-related issues, we made it to the playoffs as a first-pick team on the 
+                    7th Alliance. Our alliance consisted of the Tators(2122) and Bullbots(1891). In our first match, Match 3, we played the 
+                    2nd ranked alliance, we won with a final score of 104-61. In our next match, Match 8, we lost 72-76, sending us to the
+                     lower bracket. Although disappointed, we still maintained high morale. We continued to win Matches 10, 12, and 13, 
+                     eventually advancing us to the finals! Although the odds were against us, we were so proud to have made it this far. We 
+                     won both the first and third finals rounds, winning  the competition as a whole and bringing home a prized blue banner!
+                    </p>
+                    <div className='w-1/2 py-10'>
+                        
+                    </div>
+                </Update>
             </section>
         </>
     )
