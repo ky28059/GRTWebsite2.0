@@ -21,7 +21,7 @@ export default function Updates2024() {
                     built the game pieces. Our kickoff weekend concluded with a humanized version of the game, with 
                     team members playing the robots.
                     </p>
-                    <div className='w-1/2 py-10'>
+                    <div className='w-full md:w-1/2 py-10'>
                         <img src='/assets/updates/2024/gamefield.png'/>
                     </div>
                     <p className='font-light py-2.5'>
@@ -56,7 +56,7 @@ export default function Updates2024() {
                      the length of our string that pulls the robot upwards. Alongside the technical aspects, the tournament was just as much fun.
                     We got to interact with GRT alumni, cheer OUICHA per usual, and stress about the robot in the pits together!
                     </p>
-                    <div className='w-1/3 py-10'>
+                    <div className='w-full md:w-1/3 py-10'>
                         <img src='/assets/updates/2024/SVR.png'/>
                     </div>
                     <p className='font-light pb-2.5'>      
@@ -76,11 +76,11 @@ export default function Updates2024() {
                      eventually advancing us to the finals! Although the odds were against us, we were so proud to have made it this far. We 
                      won both the first and third finals rounds, winning  the competition as a whole and bringing home a prized blue banner!
                     </p>
-                    <div className='w-1/3 py-4 pt-8 h-1/3 gap-4 flex flex-col md:flex-row justify-center'>
+                    <div className='w-full md:w-1/3 py-4 pt-8 h-1/3 gap-4 flex flex-col md:flex-row justify-center'>
                         <img src='/assets/updates/2024/IdahoTeam.png'/>
                         <img src='/assets/updates/2024/IdahoDrive.png'/>
                     </div>
-                    <div className='w-1/3 pb-4 gap-4 flex flex-row'>
+                    <div className='w-full md:w-1/3 pb-4 gap-4 flex flex-row'>
                         {/* <img src='/assets/updates/2024/IdahoCheer.png'/> */}
                         <img src='/assets/updates/2024/IdahoFlag.png'/>
                     </div>
