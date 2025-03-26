@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Summer() {
-    const showRegistration = true;
+    const showRegistration = false;
 
     return (
         <Section>
@@ -22,7 +22,7 @@ export default function Summer() {
                     <>
                         <div className="flex flex-col pt-1.5 items-center">
                             <p className="mb-2">
-                                The GRT Summer Camp is back with two sessions in 2024, held in-person at Gunn High School
+                                The GRT Summer Camp is back with two sessions in 2025, held in-person at Gunn High School
                                 for rising 5th-8th grade students!
                             </p>
                             <p className="flex gap-3 mb-1"><strong className="font-medium">Session 1:</strong> June 10-14, 9am-3pm</p>
@@ -39,7 +39,7 @@ export default function Summer() {
                     </>
                 ) : (
                     <>
-                        The 2024 Gunn Robotics Summer Camp is currently in the works! Please check back in soon for registration information.
+                        The 2025 Gunn Robotics Summer Camp is currently in the works! Please check back in soon for registration information.
                         {/* Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
                         back next year for more information! */}
                     </>
