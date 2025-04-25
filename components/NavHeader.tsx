@@ -84,7 +84,7 @@ const routes: Routes = {
             {name: 'Subgroups', href: '/subgroups'},
             {name: 'Mentors', href: '/mentors'}
         ]},
-        {name: 'Summer', href: '/summer'},
+        {name: 'Summer Camp', href: '/summer'},
         {name: 'Seasons', href: '/seasons'},
         {name: 'Updates', href: '/updates'},
     ],

@@ -5,7 +5,7 @@ import Question from './Question';
 
 
 export const metadata: Metadata = {
-    title: 'Summer'
+    title: 'Summer Camp'
 }
 
 export default function Summer() {
