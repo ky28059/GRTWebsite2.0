@@ -1,8 +1,6 @@
 import {Metadata} from 'next';
 import Section from '../../../../components/Section';
-import CaptionedImage from '../../../../components/CaptionedImage';
 import Resource from '../../resources/Resource';
-import ImageCarousel from '../../../../components/ImageCarousel';
 import AutoCarousel from '../../../../components/AutoCarousel';
 
 export const metadata: Metadata = {
@@ -27,7 +25,7 @@ export default function GRT2025(){
                 </p>
                 <p className="font-light">
                 Read more about the 2025 FRC game in the <a href="https://firstfrc.blob.core.windows.net/frc2025/Manual/2025GameManual.pdf" 
-                target = "_blank" rel="noopener noreferrer" >Game Manual</a>  and watch the <a href="https://www.youtube.com/watch?v=YWbxcjlY9JY&ab_channel=FIRSTRoboticsCompetition" target="_blank" rel="noopener noreferrer">game animation video </a>on YouTube.
+                target = "_blank" rel="noopener noreferrer" >game manual</a>  and watch the <a href="https://www.youtube.com/watch?v=YWbxcjlY9JY&ab_channel=FIRSTRoboticsCompetition" target="_blank" rel="noopener noreferrer">game animation video </a>on YouTube.
                 </p>
             </Section>
             <Section secondary className="flex flex-col-reverse lg:flex-row gap-x-12 gap-y-8 justify-center">

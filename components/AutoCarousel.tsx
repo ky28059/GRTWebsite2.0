@@ -1,12 +1,14 @@
 'use client'
 import "slick-carousel/slick/slick.css";
-import '/styles/AutoCarousel.css';
+import styles from './AutoCarousel.module.css';
 import Slider from "react-slick";
 import {BsChevronCompactLeft, BsChevronCompactRight} from 'react-icons/bs';
+import {useState} from 'react';
 
 export type AutoCarouselProps = {sources: string[], alts: string[], captions?: string[]};
 export default function AutoCarousel(props: AutoCarouselProps){
     const {sources, alts, captions} = props;
+    const[currentSlide, setCurrentSlide] = useState(0);
     const settings={
         className: "center",
         infinite: true, 
@@ -17,6 +19,7 @@ export default function AutoCarousel(props: AutoCarouselProps){
         centerPadding: "350px",
         nextArrow:<NextArrow/>, 
         prevArrow:<PrevArrow/>,
+        beforeChange:(oldIndex:number, newIndex:number)=>setCurrentSlide(newIndex),
         responsive:[
             {
                 breakpoint:1280,
@@ -38,8 +41,12 @@ export default function AutoCarousel(props: AutoCarouselProps){
     return (
         <div className = "slider-container mx-auto overflow-hidden w-full ">
             <Slider {...settings}>
-                {sources.map((source, i)=> (
-                    <div key = {i} className="flex flex-col overflow-hidden items-center justify-center">
+                {sources.map((source, i)=> {
+                    const slides =i==currentSlide 
+                    ? styles.slickCenter
+                    : styles.slickSlide;
+                return (
+                    <div key = {i} className={`${slides} flex flex-col overflow-hidden items-center justify-center`}>
                         <img 
                             src={sources[i]} 
                             alt={alts[i]}
@@ -51,7 +58,7 @@ export default function AutoCarousel(props: AutoCarouselProps){
                         </p> 
                     )}
                     </div>
-            ))}
+                )})}
             </Slider>
         </div>
     ); 
@@ -65,7 +72,7 @@ function NextArrow({ className, style, onClick }: any) {
         style={{ ...style}}
         onClick={onClick}
         aria-label="Next slide"
-    >
+        >
         <BsChevronCompactRight />
         </button>
     );
@@ -78,7 +85,7 @@ return (
         onClick={onClick}
         aria-label="Previous slide"
         >
-            <BsChevronCompactLeft />
+        <BsChevronCompactLeft />
     </button>
 );
 }

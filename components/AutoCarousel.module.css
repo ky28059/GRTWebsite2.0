@@ -1,24 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.slick-slide {
+.slickSlide {
     opacity: 0.3;
     transform: scale(.8333);
     transition-duration: 1000ms;
 }
 
-.slick-center {
+.slickCenter {
     opacity: 1;
     transform: scale(1);
 }
 
-.slick-list {
+.slickList {
 overflow: hidden !important;
 }
 
 @media (max-width: 1025px){
-    .slick-slide {
+    .slickSlide {
         opacity: 1;
         transform: scale(1);
         transition-duration:1000ms;
