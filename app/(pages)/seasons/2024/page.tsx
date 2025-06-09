@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: '2024'
 }
 
-export default function GRT2023() {
+export default function GRT2024() {
     return (
         <>
             <Section>
@@ -25,7 +25,7 @@ export default function GRT2023() {
                     (another vertical slot objective that could only be accessed through the climb objective).
                 </p>
                 <p className="font-light">
-                    Read more about the FRC game in the <a href="https://firstfrc.blob.core.windows.net/frc2024/Manual/2024GameManual.pdf" target="_blank" rel="noopener noreferrer">game manual</a>{' '}
+                    Read more about the 2024 FRC game in the <a href="https://firstfrc.blob.core.windows.net/frc2024/Manual/2024GameManual.pdf" target="_blank" rel="noopener noreferrer">game manual</a>{' '}
                     and watch the <a href="https://www.youtube.com/watch?v=9keeDyFxzY4" target="_blank" rel="noopener noreferrer">game animation video</a> on YouTube.
                 </p>
             </Section>

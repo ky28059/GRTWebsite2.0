@@ -9,7 +9,7 @@ export default function Resource(props: ResourceProps) {
                 <img
                     src={props.src}
                     alt={props.name}
-                    className="mx-auto max-h-80 max-w-sm outline outline-1 outline-gray-400 hover:ring-4 ring-secondary/40"
+                    className="mx-auto max-h-80 max-w-sm outline outline-1 outline-gray-400 hover:ring-4 ring-secondary/80"
                 />
             </a>
             <div>
