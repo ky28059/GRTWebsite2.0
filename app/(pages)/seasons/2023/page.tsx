@@ -22,7 +22,7 @@ export default function GRT2023() {
                     During the endgame, robots balanced the charge station, an 8ft-long pivoting platform.
                 </p>
                 <p className="font-light">
-                    Read more about the 2023 FRC game in the <a href="https://firstfrc.blob.core.windows.net/frc2023/Manual/2023FRCGameManual.pdf" target="_blank" rel="noopener noreferrer">game manual</a>{' '}
+                    Read more about the FRC game in the <a href="https://firstfrc.blob.core.windows.net/frc2023/Manual/2023FRCGameManual.pdf" target="_blank" rel="noopener noreferrer">game manual</a>{' '}
                     and watch the <a href="https://www.youtube.com/watch?v=0zpflsYc4PA" target="_blank" rel="noopener noreferrer">game animation video</a> on YouTube.
                 </p>
             </Section>
@@ -105,6 +105,11 @@ export default function GRT2023() {
                     alts={['Utah triple balance', 'Utah pit-crew work', 'Utah team cheer']}
                     className="lg:hidden mb-10"
                 />
+                <div className="hidden lg:flex gap-1.5 mb-10">
+                    <img src="/assets/seasons/2023-utah-2.jpg" alt="Utah triple balance" className="min-w-0 rounded-sm" />
+                    <img src="/assets/seasons/2023-utah-3.jpg" alt="Utah pit-crew work" className="min-w-0 rounded-sm" />
+                    <img src="/assets/seasons/2023-utah-1.jpg" alt="Utah team cheer" className="min-w-0 rounded-sm" />
+                </div>
 
                 <h3 className="text-lg font-medium mb-3">
                     Monterey Bay Regional
@@ -118,11 +123,6 @@ export default function GRT2023() {
                         2486, 192, 6884
                     </p>
                     <p>Quality award</p>
-                </div>
-                <div className="hidden lg:flex gap-1.5 mb-10">
-                    <img src="/assets/seasons/2023-utah-2.jpg" alt="Utah triple balance" className="min-w-0 rounded-sm" />
-                    <img src="/assets/seasons/2023-utah-3.jpg" alt="Utah pit-crew work" className="min-w-0 rounded-sm" />
-                    <img src="/assets/seasons/2023-utah-1.jpg" alt="Utah team cheer" className="min-w-0 rounded-sm" />
                 </div>
                 {/* TODO: photos */}
             </Section>

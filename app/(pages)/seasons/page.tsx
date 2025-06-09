@@ -16,13 +16,6 @@ export default function Accolades() {
             </h1>
 
             <div className="flex flex-col gap-8">
-                <Season year = "2025">
-                    <Events>
-                        <Event name = "Idaho Regional">
-                            <Award name = 'Spirit Award'/>
-                        </Event>
-                    </Events>
-                </Season>
                 <Season year="2024">
                     <Events>
                         <Event name="Idaho Regional">
@@ -33,7 +26,8 @@ export default function Accolades() {
                         <Banner name='Winner' event='Idaho Regional'/>
                     </Banners>
                 </Season>
-         
+            </div>
+            <div className="flex flex-col gap-8">
                 <Season year="2023">
                     <Events>
                         <Event name="Utah Regional">
