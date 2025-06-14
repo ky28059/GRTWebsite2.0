@@ -1,91 +1,71 @@
 import {Metadata} from 'next';
 import { ReactNode } from 'react';
-
+import Section from '../../../components/Section';
+import ImageCarousel from '../../../components/ImageCarousel';
+import CaptionedImage from '../../../components/CaptionedImage';
 
 export const metadata: Metadata = {
-    title: "2024 Updates"
+    title: "2025 Updates"
 }
 
-export default function Updates2024() {
+export default function Updates2025() {
     return(
         <>
-            <section className="space-y-16 py-14 px-28">
-                <Update name="Build Season: January Update" className='container flex flex-col justify-center items-center'>
+            <Section className="space-y-16 py-14">
+                <Update name="Preseason Update" className='container flex flex-col justify-center items-center'>
+                    <div className="flex flex-col gap-y-8 justify-center">
                     <p className='font-light pb-2.5'>
-                    This season began with our annual kickoff potluck, where the team got together to analyze the 
-                    2024 FRC game <a href = 'https://www.youtube.com/watch?v=9keeDyFxzY4'>2024 FIRST Robotics Competition CRESCENDO presented by Haas Game Animation</a>
-                    . Summarized, the game is designed for robots to deliver foam rings to different areas on the map. 
-                    This year's game also consisted of an unusual climb, in which the robot must hang on a chain alongside
-                    other robots after the two minute game period.  After breakfast, the team watched the game reveal
-                    live stream video and brainstormed potential ideas. Over 20 generous GRT alums visited the shop and 
-                    built the game pieces. Our kickoff weekend concluded with a humanized version of the game, with 
-                    team members playing the robots.
+                        From fall to winter, our team spent time preparing for build season in the spring. We reviewed safe machining practices, 
+                        learned new procedures, and practiced these skills on a mandatory “evaluation part”. Members used 
+                        their leadership and collaboration skills during a blue-box challenge (using limited materials to knock down cups) 
+                        and during an annual shop project robot competition between class periods. 
                     </p>
-                    <div className='w-full md:w-1/2 py-10'>
-                        <img src='/assets/updates/2024/gamefield.png'/>
+                    <div className="hidden lg:flex gap-1.5 mb-10 w-full justify-center items-center">
+                        <img src='/assets/updates/2025/Bluebox.jpg' alt='Bluebox'className='max-h-64 h-auto w-auto'/> 
+                        <img src='/assets/updates/2025/Safety.jpg' alt='safety' className='max-h-64 h-auto w-auto'/> 
+                        <img src='/assets/updates/2025/Lathe.jpg' alt='lathe'className='max-h-64 h-auto w-auto'/>  
                     </div>
-                    <p className='font-light py-2.5'>
-                    In our first week of kickoff our four mechanism groups, the climb, intake, shooter and elevator, brainstormed 
-                    potential ideas for full robot designs. We then established our full robot in a town-hall style meeting with the
-                    team, mechanism leads, and mentors. The shooter and intake provided unique difficulties this year, since the 
-                    ring must be capable of reaching several areas on the map and be picked up at different angles. After designing, 
-                    machining and assembling our first robot, we used lessons learnt in its creation to make an improved robot two. 
+                    <p className='font-light pb-2.5'>
+                        During this time we also designed moving mechanisms for a haunted house which we presented at a local elementary school. This year,
+                        the house featured a chomping “among-us” figure, a startling clown, a dangling spider, a poking skeleton head, a rabbit popping out 
+                        of a box, a Minecraft creeper cracking open, and a mummy peering out the window.
                     </p>
-                    <p className='font-light py-2.5'>
-                    In this time, subgroups have been hard at work on their designated aspects of the team. Recently, the drivetrain
-                     has been machining the swerve drive for our second robot. The controls subgroup is programming the autonomous 
-                     section of the competition, which involves picking up and placing the rings on a foot tall wooden stage. Business just 
-                     finished the Impact Award (formerly known as The Chairman's Award), capable of sending us to The World 
-                     Championships if won, and the animation subgroup recently submitted the Digital Animation Award:
-                    </p>
-                    <div className='py-10'>
-                        <iframe width="610" height="365" src="https://www.youtube.com/embed/lR_LU8zNb8M?si=cD__IWdGPiK20-Yg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                    <div className="hidden lg:flex gap-1.5 mb-10 w-full justify-center items-center">
+                        <img src='/assets/updates/2025/HHphoto.jpg' alt='Haunted house' className='max-h-64 h-auto w-auto'/>
+                        <img src='/assets/updates/2025/HHBuilding.jpg' alt='Building'className='max-h-64 h-auto w-auto'/>  
+                        <img src='/assets/updates/2025/HHclown.jpg' alt='Clown'className='max-h-64 h-auto w-auto'/>  
                     </div>
-                    <p className='font-light py-2.5'>
-                    We are excited to watch our finalized robot in action as we wrap up the final weeks of the build season. This year we
-                     will be attending the Silicon Valley Regional (SVR), for the first time in competition week one, and the Idaho Regional 
-                     during week four. Please feel free to visit us during tournaments! In preparation for competitions, our members adhered 
-                     to our longstanding tradition by once again dying our hair a bright hue of red!
-                    </p>
-                </Update>
-                <Update name="Build Season: February and March Update" className='container flex flex-col justify-center items-center'>
-                    <p className='font-light pb-2.5'>      
-                    We learnt a great deal from our recent competition at SVR. Our robot was accustomed the old game pieces, and struggled 
-                    to adjust to the new ones. Currently, we are actively practicing with both the old and updated game pieces in order to mitigate
-                     this problem. Our climb mechanism also string began unraveling the opposite direction at a certain point, so we increased 
-                     the length of our string that pulls the robot upwards. Alongside the technical aspects, the tournament was just as much fun.
-                    We got to interact with GRT alumni, cheer OUICHA per usual, and stress about the robot in the pits together!
-                    </p>
-                    <div className='w-full md:w-1/3 py-10'>
-                        <img src='/assets/updates/2024/SVR.png'/>
-                    </div>
-                    <p className='font-light pb-2.5'>      
-                    We recently competed in the Idaho Regional. Throughout the competition, we faced countless issues with controls and 
-                    mechs to overcome. Our swerve’s tread fell off, we had CAN issues, and various hard collisions heavily damaged our robot
-                     all around. Thus, we lost our first few matches, ranking last place with zero ranking points. Our intake’s Falcon burnt out 
-                     and our spare motor couldn't connect, forcing us to borrow a Falcon from Peninsula Robotics (6036). This let us get the 
-                     robot back up and running during lunch, win our next two matches, and bring us up to 21st out of the 43 teams. Later, 
-                     one of our swerve modules stopped working after collisions that pushed the battery until it broke the mounting zip ties 
-                     and broke a circuit. 
-                    </p>
-                    <p className="font-light pb-2.5">
-                    After overcoming many over our controls and mech-related issues, we made it to the playoffs as a first-pick team on the 
-                    7th Alliance. Our alliance consisted of the Tators(2122) and Bullbots(1891). In our first match, Match 3, we played the 
-                    2nd ranked alliance, we won with a final score of 104-61. In our next match, Match 8, we lost 72-76, sending us to the
-                     lower bracket. Although disappointed, we still maintained high morale. We continued to win Matches 10, 12, and 13, 
-                     eventually advancing us to the finals! Although the odds were against us, we were so proud to have made it this far. We 
-                     won both the first and third finals rounds, winning  the competition as a whole and bringing home a prized blue banner!
-                    </p>
-                    <div className='w-full md:w-1/3 py-4 pt-8 h-1/3 gap-4 flex flex-col md:flex-row justify-center'>
-                        <img src='/assets/updates/2024/IdahoTeam.png'/>
-                        <img src='/assets/updates/2024/IdahoDrive.png'/>
-                    </div>
-                    <div className='w-full md:w-1/3 pb-4 gap-4 flex flex-row'>
-                        {/* <img src='/assets/updates/2024/IdahoCheer.png'/> */}
-                        <img src='/assets/updates/2024/IdahoFlag.png'/>
                     </div>
                 </Update>
-            </section>
+                <Update name="Competition Update" className='container flex flex-col justify-center items-center'>
+                    <div className="flex flex-col gap-y-8 justify-center">
+                    <p className='font-light pb-2.5'> 
+                        In the first week of build season, we spent a lot of time discussing optimal strategy for the Reefscape game. 
+                        Although this discussion continued throughout the season, we settled on prioritizing coral scoring on all four levels with a source 
+                        intake. We first worked on robot 1 which revealed some design flaws that were overlooked before. After a few design reviews, we started 
+                        on robot 2 which had improved mechanisms. Notably, we added spring bearings to the elevator and fixed the center of mass for climb.
+                    <br/>
+                        After weeks of intense work, we competed in the Pinnacles Regional early on in the competition season. There, we discovered some of our
+                        robot’s strengths (scoring on barge) and weaknesses (pivot stability and intake geometry). Even though we didn’t qualify for play-offs, 
+                        being at Pinnacles helped us to prepare for Idaho. In our four weeks between Pinnacles and Idaho, we had to decide whether we wanted to 
+                        alter our intake or start with a completely new design. In the end, we decided to alter the intake and shift our focus toward algae 
+                        scoring. We capped off our season at the Idaho Regional, where each sub group played a crucial role in building a robot we’re proud of. 
+                    </p>
+                    <div className="hidden lg:flex gap-1.5 mb-10 w-full justify-center items-center">
+                        <img src ='/assets/updates/2025/ReefAndRobot.jpg'alt='reef' className='max-h-80 h-auto w-auto'/> 
+                        <img src ='/assets/updates/2025/Drivers.jpg' alt='drivers'  className='max-h-80 h-auto w-auto'/> 
+                        <video src='/assets/updates/2025/Autoalign.MP4' className='max-h-80 h-auto w-auto' autoPlay loop muted/>
+                    </div>
+                    </div>
+                </Update>
+                <Update name="Postseason Update" className='container flex flex-col justify-center items-center'>
+                    <p className='font-light pb-2.5'>
+                    With the competition season wrapped up, we're turning our attention to outreach, training, and planning for the year ahead. To prepare for life outside of highschool, we spend time researching and 
+                    presenting different topics to the class as well as curating our resumes. Towards the end of the year, we start organizing 
+                    for our hands-on summer camp to teach elementary and middle schoolers more about robotics. 
+                    </p>
+                </Update>
+            </Section>
         </>
     )
 }

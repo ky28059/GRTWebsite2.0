@@ -17,7 +17,7 @@ export default function Summer() {
                 Gunn Robotics Summer Camp
             </h1>
 
-            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg bg-black/90 text-white text-sm mb-8 flex flex-col space-y-4 text-center">
+            <div className="px-6 py-4 -mx-1.5 md:-mx-4 rounded-lg shadow-lg  bg-gray-100 text-white text-sm mb-8 flex flex-col space-y-4 text-center">
                 {showRegistration ? (
                     <>
                         <div className="flex flex-col pt-1.5 items-center">

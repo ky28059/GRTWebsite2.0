@@ -24,6 +24,7 @@ export default function NavBar() {
                 <nav className="flex w-max mx-auto min-h-[1rem] px-5">
                     <Match href="/seasons">
                         <SubNavLink href="/seasons">Accolades</SubNavLink>
+                        <SubNavLink href="/seasons/2025">2025</SubNavLink>
                         <SubNavLink href="/seasons/2024">2024</SubNavLink>
                         <SubNavLink href="/seasons/2023">2023</SubNavLink>
                         <SubNavLink href="/seasons/2019">2019</SubNavLink>
@@ -53,7 +54,8 @@ export default function NavBar() {
                         <SubNavLink href="/mentors/zach">Zach</SubNavLink>
                     </Match>
                     <Match href="/updates">
-                        <SubNavLink href="/updates">2024</SubNavLink>
+                        <SubNavLink href="/updates">2025</SubNavLink>
+                        <SubNavLink href="/updates/2024">2024</SubNavLink>
                         <SubNavLink href="/updates/2023">2023</SubNavLink>
                         <SubNavLink href="/updates/2022">2022</SubNavLink>
                     </Match>
