@@ -1,7 +1,7 @@
 import {Metadata} from 'next';
 import Section from '../../../../components/Section';
 import Resource from '../../resources/Resource';
-import AutoCarousel from '../../../../components/AutoCarousel';
+import AutoCarousel from '../AutoCarousel';
 
 export const metadata: Metadata = {
     title: '2025'
@@ -54,7 +54,7 @@ export default function GRT2025(){
                         <p><strong className="font-medium">Features:</strong></p>
                         <ul className="list-outside list-disc pl-8">
                             <li>3 Stage elevator</li>
-                            <li>4 Roller dual-purpose intake (picks up coral and algae)</li>
+                            <li>4 Roller dual-purpose intake (picks up Coral and Algae)</li>
                             <li>Dual-climb hooks for deep climb </li>
                             <li>Optimized acceleration to sprint 16 ft in 1.1 seconds</li>
                         </ul>
@@ -101,13 +101,9 @@ export default function GRT2025(){
                 </div>
                 <div className="py-3 px-10">
                 <AutoCarousel
-                    sources ={[ '/assets/seasons/2025/RobotEatAlgae.jpg', '/assets/updates/2025/ReefAndRobot.jpg', '/assets/updates/2025/HangingRobot.jpg']}
-                    alts={[ 'Intaking Algae', 'Reef and Robot', 'Hanging Robot']}
-                    captions = {['Intaking Algae' , 'Reef and Robot', 'Hanging Robot']}
-
-                    // sources ={[ '/assets/seasons/2025/JesseAndTony.jpg', '/assets/seasons/2025/MishaAndLucca.jpg', '/assets/seasons/2025/RobotEatAlgae.jpg']}
-                    // alts={['Students calibrating vision', 'Drive team', 'Intaking Algae']}
-                    // captions = {[ 'Calibrating vision', 'Drive team', 'Intaking Algae']}
+                    sources ={[ '/assets/seasons/2025/Cheering.jpg', '/assets/seasons/2025/Calibrating.jpg', '/assets/seasons/2025/RobotEatAlgae.jpg', '/assets/seasons/2025/DriveTeam.jpg', '/assets/seasons/2025/HangingRobot.jpg' , '/assets/seasons/2025/RobotInAction.MP4']}
+                    alts={[ 'Cheering', 'Students calibrating vision', 'Intaking Algae' , 'Driveteam' , 'Robot hanging on cage' , '']}
+                    captions = {['Cheering', 'Students calibrating vision', 'Intaking Algae' , 'Driveteam' , 'Robot hanging on cage' , 'Robot in action']}
                 />
                 </div>
             </Section>

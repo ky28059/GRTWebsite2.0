@@ -1,0 +1,34 @@
+.slickSlide {
+    opacity: 0.3;
+    transform: scale(.8333);
+    transition-duration: 1000ms;
+}
+.slickSlide video{
+    transform:rotate(0) !important;
+}
+
+.slickCenter {
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+.slickCenter video {
+    transform:rotate(180);
+}
+
+.slickList {
+overflow: hidden !important;
+}
+
+@media (max-width: 1025px){
+    .slickSlide {
+        opacity: 1;
+        transform: scale(1);
+        transition-duration:1000ms;
+    }
+    .slickCenter video {
+        transform:rotate(0) !important;
+    }
+
+}
