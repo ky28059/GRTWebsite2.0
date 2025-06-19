@@ -62,10 +62,10 @@ export default function GRT2025(){
                 </div>
             </Section>
             <Section className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <Resource name="Technical Binder" src="/assets/resources/2025-technical-binder.jpeg" href="/resources/2025-technical-binder.pdf">
+                <Resource name="Technical Binder" src="/assets/resources/2025-Technical-Binder.jpeg" href="/resources/2025-technical-binder.pdf">
                     Our 2025 Technical Binder 
                 </Resource>
-                <Resource name="Drivetrain Binder" src="/assets/resources/2025-DT-binder.jpg" href="/resources/2025-DT-binder.pdf">
+                <Resource name="Drivetrain Binder" src="/assets/resources/2025-DT-Binder.jpg" href="/resources/2025-DT-binder.pdf">
                     Our 2025 Drivetrain Technical Binder
                 </Resource>
             </Section>
