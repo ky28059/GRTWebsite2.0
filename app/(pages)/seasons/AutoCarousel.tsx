@@ -39,7 +39,7 @@ export default function AutoCarousel(props: AutoCarouselProps){
     };
 
     return (
-        <div className = "slider-container mx-auto overflow-hidden w-full">
+        <div className = "slider-container mx-auto overflow-hidden w-full min-h-[300px] items-center">
             <Slider {...settings}>
                 {sources.map((source, i)=> {
                     const slides = i ==currentSlide 
@@ -47,7 +47,7 @@ export default function AutoCarousel(props: AutoCarouselProps){
                     : styles.slickSlide;
                 return (
 
-                    <div key = {i} className={`${slides} flex overflow-hidden items-center justify-center `}>
+                    <div key = {i} className={`flex overflow-hidden items-center ${slides} min-h-[300px] justify-center `}>
                         {IsVideo(sources[i])
                             ? <video 
                                 src={sources[i]}

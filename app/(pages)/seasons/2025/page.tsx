@@ -101,7 +101,7 @@ export default function GRT2025(){
                 </div>
                 <div className="py-3 px-10">
                 <AutoCarousel
-                    sources ={[ '/assets/seasons/2025/Cheering.jpg', '/assets/seasons/2025/Calibrating.jpg', '/assets/seasons/2025/RobotEatAlgae.jpg', '/assets/seasons/2025/DriveTeam.jpg', '/assets/seasons/2025/HangingRobot.jpg' , '/assets/seasons/2025/RobotinAction.MP4']}
+                    sources ={[ '/assets/seasons/2025/Cheering.jpg', '/assets/seasons/2025/Calibrating.jpg', '/assets/seasons/2025/RobotEatAlgae.jpg', '/assets/seasons/2025/DriveTeam.jpg', '/assets/seasons/2025/HangingRobot.jpg' , '/assets/seasons/2025/RobotInAction.MP4']}
                     alts={[ 'Cheering', 'Students calibrating vision', 'Intaking Algae' , 'Driveteam' , 'Robot hanging on cage' , '']}
                     captions = {['Cheering', 'Students calibrating vision', 'Intaking Algae' , 'Driveteam' , 'Robot hanging on cage' , 'Robot in action']}
                 />

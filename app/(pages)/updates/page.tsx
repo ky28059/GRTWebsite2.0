@@ -17,11 +17,11 @@ export default function Updates2025() {
                     <p className='font-light pb-2.5'>
                         From fall to winter, our team spent time preparing for build season in the spring. We reviewed safe machining practices, 
                         learned new procedures, and practiced these skills on a mandatory “evaluation part”. Members used 
-                        their leadership and collaboration skills during a blue-box challenge (using limited materials to knock down cups) 
-                        and during an annual shop project robot competition between class periods. 
+                        their leadership and collaboration skills during the blue-box challenge (using limited materials to knock down cups) 
+                        and during our annual shop project, a robot competition between class periods. 
                     </p>
                     <div className="hidden lg:flex gap-1.5 mb-10 w-full justify-center items-center">
-                        <img src='/assets/updates/2025/Bluebox.jpg' alt='Bluebox'className='max-h-64 h-auto w-auto'/> 
+                        <img src='/assets/updates/2025/BlueBox.jpg' alt='Bluebox'className='max-h-64 h-auto w-auto'/> 
                         <img src='/assets/updates/2025/Safety.jpg' alt='safety' className='max-h-64 h-auto w-auto'/> 
                         <img src='/assets/updates/2025/Lathe.jpg' alt='lathe'className='max-h-64 h-auto w-auto'/>  
                     </div>
@@ -47,22 +47,22 @@ export default function Updates2025() {
                     <br/>
                         After weeks of intense work, we competed in the Pinnacles Regional early on in the competition season. There, we discovered some of our
                         robot’s strengths (scoring on barge) and weaknesses (pivot stability and intake geometry). Even though we didn’t qualify for play-offs, 
-                        being at Pinnacles helped us to prepare for Idaho. In our four weeks between Pinnacles and Idaho, we had to decide whether we wanted to 
+                        being at Pinnacles helped us to prepare for Idaho. In our four weeks between the Pinnacles and Idaho Regionals, we had to decide whether we wanted to 
                         alter our intake or start with a completely new design. In the end, we decided to alter the intake and shift our focus toward algae 
-                        scoring. We capped off our season at the Idaho Regional, where each sub group played a crucial role in building a robot we’re proud of. 
+                        scoring. We capped off our season at the Idaho Regional, where we not only advanced to the quarter-finals, but also won the Team Spirit Award. 
                     </p>
                     <div className="hidden lg:flex gap-1.5 mb-10 w-full justify-center items-center">
                         <img src ='/assets/updates/2025/ReefAndRobot.jpg'alt='reef' className='max-h-80 h-auto w-auto'/> 
                         <img src ='/assets/updates/2025/Drivers.jpg' alt='drivers'  className='max-h-80 h-auto w-auto'/> 
-                        <video src='/assets/updates/2025/Autoalign.MP4' className='max-h-80 h-auto w-auto' autoPlay loop muted/>
+                        <video src='/assets/updates/2025/autoalign.MP4' className='max-h-80 h-auto w-auto' autoPlay loop muted/>
                     </div>
                     </div>
                 </Update>
                 <Update name="Postseason Update" className='container flex flex-col justify-center items-center'>
                     <p className='font-light pb-2.5'>
-                    With the competition season wrapped up, we're turning our attention to outreach, training, and planning for the year ahead. To prepare for life outside of highschool, we spend time researching and 
-                    presenting different topics to the class as well as curating our resumes. Towards the end of the year, we start organizing 
-                    for our hands-on summer camp to teach elementary and middle schoolers more about robotics. 
+                    With the competition season wrapped up, we've turned our attention to outreach, training, and planning for the year ahead. To prepare for life outside of highschool, we've spent time researching and 
+                    presenting different topics to the class as well as curating our resumes. Towards the end of the year, we've started to organize 
+                    our hands-on summer camp to teach elementary and middle schoolers more about robotics. 
                     </p>
                 </Update>
             </Section>
