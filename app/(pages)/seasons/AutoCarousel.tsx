@@ -55,6 +55,8 @@ export default function AutoCarousel(props: AutoCarouselProps){
                                 autoPlay
                                 loop
                                 muted
+                                controls
+                                playsInline
                             />
                             : <img 
                                 src={sources[i]} 

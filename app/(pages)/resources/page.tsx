@@ -20,8 +20,8 @@ export default function Resources() {
 
             <SectionHeader id="robots">Robots</SectionHeader>
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                <Resource name="GRT Technical Binder 2024" src="/assets/resources/2024-technical-binder.jpg" href="/resources/2024-technical-binder.pdf">
-                    The 2024 Technical Binder highlights our Crescendo season robot, Dissonance. Click to find comprehensive
+                <Resource name="GRT Technical Binder 2025" src="/assets/resources/2025-technical-binder.jpeg" href="/resources/2025-technical-binder.pdf">
+                    The 2025 Technical Binder highlights our REEFSCAPE season robot, Incarnadine. Click to find comprehensive
                     documentation of our design process including: strategy, timelines, custom swerve, prototyping, mechanism
                     iterations, and software.
                 </Resource>

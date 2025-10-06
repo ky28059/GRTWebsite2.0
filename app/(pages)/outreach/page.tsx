@@ -98,9 +98,38 @@ export default function Outreach() {
                         className="mb-16"
                     />
 
+                    <SectionHeader id="showcases">Showcases</SectionHeader>
+                    <p className="mb-16">
+                        GRT showcases our robot at various locations around the Bay including the Palo Alto May Fete Parade,
+                        middle and elementary school events, and local career fairs, sparking excitement and curiosity 
+                        towards stem.
+                    </p>
+                    <ImageCarousel
+                        sources={['/assets/outreach/JLSshowcase.jpg', '/assets/outreach/MayFete.jpg']}
+                        alts={['showcase', 'May Fete parade']}
+                        captions={['GRT showcasing robot at local middle school', 'GRT at the May Fete parade']}
+                        className="mb-16"
+                    />
+
+                    <SectionHeader id="rulebreakers">Rule Breakers</SectionHeader>
+                    <p className="mb-6">
+                        On April 25, GRT and Gunn High School jointly hosted a public screening of Rule Breakers, 
+                        a movie about the Afghan Dreamers FRC team. The movie was followed by a panel discussion featuring director 
+                        Bill Guttentag and Amber Afzali, who played Esin in the movie. The event provided an opportunity for students,
+                        mentors, and community members to engage in meaningful conversation and celebrate the collaborative nature of engineering.
+                    </p>
+                    <div className="relative max-w-2xl mx-auto">
+                        <img src='/assets/outreach/RuleBreakers.JPG' alt='Rule Breakers Panel' className="rounded w-full mx-auto aspect-video object-cover object-center"/>
+                        <p className="absolute top-[calc(100%_+_0.5rem)] text-sm text-secondary italic col-start-2">
+                            Discussion panel after Rule Breakers movie
+                        </p>
+                    </div>
+                    <br />
+                    <br /> 
+
                     <SectionHeader id="fll-team">FLL Team</SectionHeader>
                     <p className="mb-6">
-                        Since 2022, GRT has collaborated with the YMCA to organize and teach an FLL Explore after-school
+                        Previously, GRT has collaborated with the YMCA to organize and teach an FLL Explore after-school
                         program for their elementary school students. Our members visit the YMCA classrooms to teach the
                         design process through hands-on LEGO challenges.
                     </p>
@@ -110,12 +139,6 @@ export default function Outreach() {
                         captions={['GRT member helping a student code his LEGO creation.', 'Classroom full of students exploring LEGO Spike kits.']}
                         className="mb-16"
                     />
-
-                    <SectionHeader id="showcases">Showcases</SectionHeader>
-                    <p className="mb-16">
-                        GRT showcases our robot at various locations around the Bay, including local middle and elementary
-                        Back-to-School nights!
-                    </p>
 
                     <h2 className="text-2xl font-medium mb-4">Special projects</h2>
 
@@ -143,9 +166,13 @@ export default function Outreach() {
                         alts={['Preparing the mechanism', 'Testing with Joel']}
                         className="mb-10"
                     />
+                    <SectionHeader id="tshirtlauncher">T-shirt Launcher</SectionHeader>
+                    <p className="mb-6">
+                        To support school spirit, GRT made a launcher to shoot T-shirts during school assemblies. 
+                    </p>
 
                     <SectionHeader id="upcoming">Upcoming</SectionHeader>
-                    <p>In the works: Hand-Raising, T-Shirt Launcher, and a new FLL program at Fletcher Middle School!</p>
+                    <p>In the works: Hand-Raising, and a new FLL program at Fletcher Middle School!</p>
                 </div>
             </Section>
         </>

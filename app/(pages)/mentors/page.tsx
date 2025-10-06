@@ -1,6 +1,8 @@
 import {Metadata} from 'next';
 import Section from '../../../components/Section';
 import ImageBox from '../../../components/ImageBox';
+import Link from 'next/link';
+
 
 
 export const metadata: Metadata = {
@@ -41,16 +43,29 @@ export default function Mentors() {
                 <ImageBox name="Seth Mallory" src="/assets/mentors/Seth.jpg" href="/mentors/seth">
                     Supervising mentor, Transit Mechanic at VTA.
                 </ImageBox>
-                <ImageBox name="Karl Van Dyk" src="/assets/mentors/Karl.jpg" href="/mentors/karl">
-                    Mentor, Mechanical Engineer. {/* TODO: position */}
-                </ImageBox>
                 <ImageBox name="Phil Roan" src="/assets/mentors/Phil.jpg" href="/mentors/phil">
                     Mentor, Principal Engineer of Robotics at BSH Home Appliances.
                 </ImageBox>
+                <ImageBox name="Michael Dresser" src="/assets/mentors/Michael.jpg" href="/mentors/michael">
+                    Mentor, Autonomy Engineer.
+                </ImageBox>
+                <ImageBox name="Jack B." src="/assets/mentors/JackB.jpg" href="/mentors/jack">
+                    Mentor, Engineer at Nvidia.
+                </ImageBox>
+                <ImageBox name="Karl Van Dyk" src="/assets/mentors/Karl.jpg" href="/mentors/karl">
+                    Mentor, Mechanical Engineer. {/* TODO: position */}
+                </ImageBox>
                 {/* TODO: image */}
-                <ImageBox name="Zach Walker" src="/assets/mentors/Zach.jpg" href="/mentors/zach">
+                <ImageBox name="Zach Walker" src="/assets/mentors/JustGrey.jpg" href="/mentors/zach">
                     Mentor, Senior Manager at Lucid Motors.
                 </ImageBox>
+                <ImageBox name="Ryan Mast" src="/assets/mentors/JustGrey.jpg" href="/mentors/ryan">
+                    Mentor, Cybersecurity Engineer.
+                </ImageBox>
+                <ImageBox name="Tom Keeble" src="/assets/mentors/JustGrey.jpg" href="/mentors/tom">
+                    Mentor, Engineer.
+                </ImageBox>
+
             </section>
         </Section>
     )

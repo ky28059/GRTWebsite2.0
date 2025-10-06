@@ -54,7 +54,7 @@ export default function Updates2025() {
                     <div className="hidden lg:flex gap-1.5 mb-10 w-full justify-center items-center">
                         <img src ='/assets/updates/2025/ReefAndRobot.jpg'alt='reef' className='max-h-80 h-auto w-auto'/> 
                         <img src ='/assets/updates/2025/Drivers.jpg' alt='drivers'  className='max-h-80 h-auto w-auto'/> 
-                        <video src='/assets/updates/2025/autoalign.MP4' className='max-h-80 h-auto w-auto' autoPlay loop muted/>
+                        <video src='/assets/updates/2025/autoalign.MP4' className='max-h-80 h-auto lg:w-auto lg:block' autoPlay loop controls playsInline muted/>
                     </div>
                     </div>
                 </Update>

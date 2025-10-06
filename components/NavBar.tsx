@@ -52,6 +52,9 @@ export default function NavBar() {
                         <SubNavLink href="/mentors/karl">Karl</SubNavLink>
                         <SubNavLink href="/mentors/phil">Phil</SubNavLink>
                         <SubNavLink href="/mentors/zach">Zach</SubNavLink>
+                        <SubNavLink href="/mentors/jack">Jack</SubNavLink>
+                        <SubNavLink href="/mentors/michael">Michael</SubNavLink>
+                        <SubNavLink href="/mentors/tom">Tom</SubNavLink>
                     </Match>
                     <Match href="/updates">
                         <SubNavLink href="/updates">2025</SubNavLink>

@@ -7,18 +7,9 @@ export default function Sponsors() {
         <section id="sponsors" className="container pt-16 pb-24">
             <h3 className="text-2xl font-medium text-center">SPONSORS</h3>
             <div className="divide-y divide-gray-400">
-                <Sponsor name="KLA Foundation" src="/assets/sponsors/kla.svg" href="https://www.kla.foundation/">
-                    The KLA foundation is a nonprofit that supports the community with four areas of focus: STEM Education,
-                    Wellness, Local Community and International Community. They graciously sponsor many FRC teams, including
-                    supporting GRT for three years. KLA continues to be a valuable sponsor.
-                </Sponsor>
                 <Sponsor name="Partners in Education" src="/assets/sponsors/papie.png" href="http://https//papie.org/">
                     PiE is a non-profit education foundation dedicated to supporting all Palo Alto public schools. PAUSD
                     generously provides funds for team coaches. {/* TODO: "and ..." */}
-                </Sponsor>
-                <Sponsor name="FIRST NorCal" src="/assets/sponsors/FIRST-horizontal.png" href="https://www.firstinspires.org/robotics/frc">
-                    FIRST NorCal runs FRC competitions in Northern California and has graciously supported GRT along with
-                    many other local FRC teams.
                 </Sponsor>
             </div>
         </section>

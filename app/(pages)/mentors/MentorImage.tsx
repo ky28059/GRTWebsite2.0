@@ -5,5 +5,5 @@ import CaptionedImage, {CaptionedImageProps} from '../../../components/Captioned
 // Pass the caption as children, and the image `src` and `alt` as props.
 // TODO: does this component need to exist?
 export default function MentorImage(props: CaptionedImageProps) {
-    return <CaptionedImage {...props} className="w-full max-w-3xl mb-8 mx-auto" />
+    return <CaptionedImage {...props} className="w-full max-w-3xl mb-8 mx-auto [&>img]:max-h-[450px] [&>img]:object-contain " />
 }
