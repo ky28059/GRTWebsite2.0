@@ -32,7 +32,7 @@ export default function Mentors() {
                 giving us the tools we need to find answers and innovate; they "teach us to fish."
             </p>
             <p className="font-light mb-10">
-                GRT would like to thank our 5 amazing mentors:
+                GRT would like to thank our amazing mentors:
             </p>
 
             {/* TODO: replace images with better / more recent ones instead of repeating the ones on the page? */}
@@ -52,15 +52,15 @@ export default function Mentors() {
                 <ImageBox name="Jack B." src="/assets/mentors/JackB.jpg" href="/mentors/jack">
                     Mentor, Engineer at Nvidia.
                 </ImageBox>
+                <ImageBox name="Ryan Mast" src="/assets/mentors/Ryan_Mast.jpeg" href="/mentors/ryan">
+                    Mentor, Cybersecurity Engineer.
+                </ImageBox>
                 <ImageBox name="Karl Van Dyk" src="/assets/mentors/Karl.jpg" href="/mentors/karl">
                     Mentor, Mechanical Engineer. {/* TODO: position */}
                 </ImageBox>
                 {/* TODO: image */}
                 <ImageBox name="Zach Walker" src="/assets/mentors/JustGrey.jpg" href="/mentors/zach">
                     Mentor, Senior Manager at Lucid Motors.
-                </ImageBox>
-                <ImageBox name="Ryan Mast" src="/assets/mentors/JustGrey.jpg" href="/mentors/ryan">
-                    Mentor, Cybersecurity Engineer.
                 </ImageBox>
                 <ImageBox name="Tom Keeble" src="/assets/mentors/JustGrey.jpg" href="/mentors/tom">
                     Mentor, Engineer.

@@ -9,6 +9,10 @@ export default function Ryan() {
             <h1 className="text-4xl font-medium mb-8 text-center">
                 Interview with Ryan Mast
             </h1>
+            
+            <MentorImage src="/assets/mentors/Ryan_Mast.jpeg" alt="Ryan">
+                            Ryan Mast
+            </MentorImage>
 
             <div className="space-y-6">
                 <Question name="What area of expertise do you bring to GRT?">
