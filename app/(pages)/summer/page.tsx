@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Summer() {
-    const showRegistration = true;
+    const showRegistration = false;
 
     return (
         <Section>
@@ -38,9 +38,9 @@ export default function Summer() {
                     </>
                 ) : (
                     <>
-                        The 2025 Gunn Robotics Summer Camp is currently in the works! Please check back in soon for registration information.
-                        {/* Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
-                        back next year for more information! */}
+                        {/* The 2025 Gunn Robotics Summer Camp is currently in the works! Please check back in soon for registration information. */}
+                        Unfortunately, sign-ups for the Gunn Robotics Summer Camp are closed as of this time. Please check
+                        back next year for more information!
                     </>
                 )}
             </div>
