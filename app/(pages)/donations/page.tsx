@@ -28,7 +28,7 @@ export default function Donations() {
             </p>
             <div className="flex flex-col gap-3 mb-8">
                 <Question name="Donate via check">
-                    To donate on paper, please make checks payable to <strong>GRT Boosters</strong> and <strong>include your email in the memo</strong>:
+                    Please make checks payable to <strong>GRT Boosters</strong> and <strong>include your email in the memo</strong>:
                     <div className="border-l-4 border-gray-100 bg-gray-50 px-6 py-4 mb-4">
                         <p>Gunn Robotics Team Boosters</p>
                         <p>780 Arastradero Rd.</p>
@@ -36,11 +36,14 @@ export default function Donations() {
                     </div>
                 </Question>
                 <Question name="Donate via Paypal">
-                    To donate via Paypal, send payments to <strong>grtboosters@gmail.com</strong> using this button:&nbsp;
+                    Use this button:&nbsp;
                     <a href='https://www.paypal.com/fundraiser/charity/1467737' className={styles.donationButton} rel='noopener' target ='_blank'>Paypal</a>
                 </Question>
+                <Question name="Donate using other giving or matching programs">
+                    Our non-profit 501c-3 Tax ID (EIN) is: 47-5237023
+                </Question>
                 <Question name="Donate to fund the new CNC">
-                    To donate specifically for the new CNC, refer to this page: <a href ='https://docs.google.com/document/d/e/2PACX-1vRDVBSkO8xOSebwLyEJbGVcMOWFhpIpgHONC1nExUvTbLt-mLlY6wegInR9pBSJKRjdSXOV4RLawQK2/pub' target ='_blank'>CNC Fundraising</a>.
+                    Refer to this page: <a href ='https://docs.google.com/document/d/e/2PACX-1vRDVBSkO8xOSebwLyEJbGVcMOWFhpIpgHONC1nExUvTbLt-mLlY6wegInR9pBSJKRjdSXOV4RLawQK2/pub' target ='_blank'>CNC Fundraising</a>.
                 </Question>
             </div>
             
