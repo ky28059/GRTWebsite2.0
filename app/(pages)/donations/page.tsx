@@ -26,7 +26,7 @@ export default function Donations() {
                 helps cover purchasing and maintenance of equipment and tools, materials, and costs associated with
                 competition. To donate, there are several options:
             </p>
-            <div className="flex flex-col gap-3 mb-8">
+            <div className="flex flex-col gap-3 mb-5 ml-9">
                 <Question name="Donate via check">
                     Please make checks payable to <strong>GRT Boosters</strong> and <strong>include your email in the memo</strong>:
                     <div className="border-l-4 border-gray-100 bg-gray-50 px-6 py-4 mb-4">
@@ -36,17 +36,13 @@ export default function Donations() {
                     </div>
                 </Question>
                 <Question name="Donate via Paypal">
-                    Use this button:&nbsp;
-                    <a href='https://www.paypal.com/fundraiser/charity/1467737' className={styles.donationButton} rel='noopener' target ='_blank'>Paypal</a>
+                    Donate via 
+                    <a href='https://www.paypal.com/fundraiser/charity/1467737' rel='noopener' target ='_blank'> PayPal Giving Fund to GRT Boosters</a>
                 </Question>
                 <Question name="Donate using other giving or matching programs">
                     Our non-profit 501c-3 Tax ID (EIN) is: 47-5237023
                 </Question>
-                <Question name="Donate to fund the new CNC">
-                    Refer to this page: <a href ='https://docs.google.com/document/d/e/2PACX-1vRDVBSkO8xOSebwLyEJbGVcMOWFhpIpgHONC1nExUvTbLt-mLlY6wegInR9pBSJKRjdSXOV4RLawQK2/pub' target ='_blank'>CNC Fundraising</a>.
-                </Question>
             </div>
-            
             <p className="font-light mb-10">
                 To see your donation in action, please feel free to stop by the shop (room L-5 at Gunn High
                 School) for a tour! To set up a time, please email us at <a href="mailto:gunnrobotics192@gmail.com">gunnrobotics192@gmail.com</a>.

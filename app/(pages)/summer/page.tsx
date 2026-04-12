@@ -61,7 +61,7 @@ export default function Summer() {
 
             {/* TODO: can this be abstracted with FIRST's <Section>s? */}
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>
-            <div className="flex flex-col gap-3 mb-8">
+            <div className="flex flex-col gap-3 mb-8 ml-9">
                 <Question name="When is the camp? How long are camp sessions?">
                     There will be two sessions of the camp in June, one during the week of June 9th and the second during the week of June 16th.
                 </Question>
@@ -89,9 +89,9 @@ export default function Summer() {
                 </Question>
                 <Question name="What is the price?">
                     No payment is required for our summer camp, but we would greatly appreciate a tax-deductible donation of any amount (recommended 
-                    $400) to help us cover costs and keep our team running year after year. Please send donations to our PayPal
-                    at <Link href="/donations">GRT Boosters / grtboosters@gmail.com</Link> or via check as detailed on our&nbsp;
-                    <Link href="/donations">donations page</Link>.
+                    $400) to help us cover costs and keep our team running year after year. Donate via
+                    <a href="https://www.paypal.com/fundraiser/charity/1467737" rel='noopener' target ='_blank'> Paypal Giving Fund to GRT Boosters </a> 
+                    or via check as detailed on our&nbsp;<Link href="/donations">donations page</Link>.
                 </Question>
             </div>
 
