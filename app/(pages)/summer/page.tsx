@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Summer() {
-    const showRegistration = false;
+    const showRegistration = true;
 
     return (
         <Section>
@@ -22,14 +22,14 @@ export default function Summer() {
                     <>
                         <div className="flex flex-col pt-1.5 items-center">
                             <p className="mb-2">
-                                There will be two sessions of the camp in June, one during the week of June 9th and the second during the week of June 16th.
+                                There will be two sessions of the camp, one during the week of June 8th, and the second during the week of June 15th.
                                 Each session consists of 5 days (Monday through Friday), and each day runs from 9am to 3pm. On the registration form,
                                 either session can be selected -- both sessions cover the same content.                            
                             </p>
                         </div>
                         <a
                             className="mx-auto mt-2"
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSeGTpPbO-uWFsa5C5rvnVmshqhRWHWinTx2s1E1k2BmoUSTcw/viewform"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfB8fNbLu7KRidzuQwVZj_8md4EZcAmTFHh1LkS4DjrFNDGyw/formResponse"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
