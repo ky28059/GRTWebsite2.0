@@ -22,7 +22,7 @@ export default function Summer() {
                     <>
                         <div className="flex flex-col pt-1.5 items-center">
                             <p className="mb-2">
-                                There will be two sessions of the camp, one during the week of June 8th, and the second during the week of June 15th.
+                                There will be two sessions of the camp, one during the week of June 8th, and the second during the week of June 22th.
                                 Each session consists of 5 days (Monday through Friday), and each day runs from 9am to 3pm. On the registration form,
                                 either session can be selected -- both sessions cover the same content.                            
                             </p>
