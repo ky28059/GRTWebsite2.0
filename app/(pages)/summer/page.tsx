@@ -89,7 +89,7 @@ export default function Summer() {
                 </Question>
                 <Question name="What is the price?">
                     No payment is required for our summer camp, but we would greatly appreciate a tax-deductible donation of any amount (recommended 
-                    $400) to help us cover costs and keep our team running year after year. Donate via
+                    $500) to help us cover costs and keep our team running year after year. Donate via
                     <a href="https://www.paypal.com/fundraiser/charity/1467737" rel='noopener' target ='_blank'> Paypal Giving Fund to GRT Boosters </a> 
                     or via check as detailed on our&nbsp;<Link href="/donations">donations page</Link>.
                 </Question>
