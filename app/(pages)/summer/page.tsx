@@ -63,7 +63,8 @@ export default function Summer() {
             <h3 className="text-2xl font-medium text-center mb-6">Q&A</h3>
             <div className="flex flex-col gap-3 mb-8 ml-9">
                 <Question name="When is the camp? How long are camp sessions?">
-                    There will be two sessions of the camp in June, one during the week of June 9th and the second during the week of June 16th.
+                    There will be two sessions of the camp in June, one during the week of June 8th and the second during the week of June 22th. Each session consists of 5 days (Monday through Friday), and each day runs from 9am to 3pm. On the registration form,
+                    either session can be selected -- both sessions cover the same content.          
                 </Question>
                 <Question name="What will my child learn?">
                     We'll be teaching campers to build a robot for competition, covering every aspect from designing to programming. 
